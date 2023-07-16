@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="79.686" viewBox="0 0 16.373 79.686">
+  <g id="Groupe_1880" data-name="Groupe 1880" transform="translate(-952.314 -707.5)">
+    <path id="Ligne_458" data-name="Ligne 458" d="M.5,78.5h-1V0h1Z" transform="translate(960.5 707.5)" fill="#fff"/>
+    <g id="Groupe_1879" data-name="Groupe 1879" transform="translate(960.5 771.521) rotate(45)">
+      <path id="Ligne_459" data-name="Ligne 459" d="M0,11.077a.5.5,0,0,1-.5-.5V0A.5.5,0,0,1,0-.5.5.5,0,0,1,.5,0V10.577A.5.5,0,0,1,0,11.077Z" transform="translate(10.577 0)" fill="#fff"/>
+      <path id="Ligne_460" data-name="Ligne 460" d="M0,11.077a.5.5,0,0,1-.5-.5V0A.5.5,0,0,1,0-.5.5.5,0,0,1,.5,0V10.577A.5.5,0,0,1,0,11.077Z" transform="translate(10.577 10.577) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

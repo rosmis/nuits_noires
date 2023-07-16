@@ -6,9 +6,36 @@
         position: fixed;
         inset: 0;
 
-        .cta-trigger {
+        .cta-svg {
             position: absolute;
             top: 0;
+            left: 20%;
+        }
+
+        .svg-trigger {
+            position: absolute;
+            top: 30%;
+            left: 0%;
+            cursor: pointer;
+
+            .svg-arrow-wrapper {
+                position: absolute;
+                top: -60%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                transition: 0.2s all ease-in-out;
+            }
+
+            &:hover {
+                p {
+                    opacity: 0;
+                }
+            }
         }
 
         .top-sea-home {

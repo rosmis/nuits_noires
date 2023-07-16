@@ -281,9 +281,30 @@ header.nav-fullpage ul.main-nav-links li a {
   position: fixed;
   inset: 0;
 }
-.home_wrapper .sea-wrapper .cta-trigger {
+.home_wrapper .sea-wrapper .cta-svg {
   position: absolute;
   top: 0;
+  left: 20%;
+}
+.home_wrapper .sea-wrapper .svg-trigger {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  cursor: pointer;
+}
+.home_wrapper .sea-wrapper .svg-trigger .svg-arrow-wrapper {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home_wrapper .sea-wrapper .svg-trigger p {
+  color: white;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+}
+.home_wrapper .sea-wrapper .svg-trigger:hover p {
+  opacity: 0;
 }
 .home_wrapper .sea-wrapper .top-sea-home {
   width: 100%;

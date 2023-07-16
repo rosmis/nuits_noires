@@ -4,6 +4,9 @@ const navbar = document.querySelector(".navbar")
 const triggerScreen = document.querySelectorAll(".cta-trigger")
 const hamburger = document.querySelector(".hamburger")
 
+const svgTrigger = document.querySelector(".cta-svg")
+const svg = document.querySelector(".svg-trigger")
+
 
 let t1 = gsap.timeline({ paused: true });
 let t2 = gsap.timeline({ paused: true });
@@ -75,6 +78,60 @@ menuToggleSound.forEach(toggle => {
         t2.play()
     })
 })
+
+
+gsap.registerPlugin(MorphSVGPlugin);
+
+
+const outer_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+    outer_triangle = document.getElementById("outer_triangle");
+
+const inner_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+    inner_triangle = document.getElementById("inner_triangle");
+
+let timeline_arrow = gsap.timeline({ paused: true });
+
+outer_svg_timeline.to(outer_triangle, {morphSVG:{
+  shape: "#outer_circle",
+}}, {
+  ease: Power4.easeInOut,
+})
+
+inner_svg_timeline.to(inner_triangle, {morphSVG:{
+  shape: "#inner_circle",
+}}, {
+  ease: Power4.easeInOut,
+})
+
+timeline_arrow.to(".svg-arrow-wrapper", {
+  top: '-20%',
+  duration: 0.15,
+  ease: Power3.easeInOut,
+});
+
+svg.addEventListener('mouseenter', () => {
+  timeline_arrow.play()
+  outer_svg_timeline.play()
+  inner_svg_timeline.play()
+})
+
+svg.addEventListener('mouseleave', () => {
+  timeline_arrow.reverse()
+  outer_svg_timeline.reverse()
+  inner_svg_timeline.reverse()
+})
+
+// svgTrigger.addEventListener('click', () => {
+//   outer_svg_timeline.reverse()
+//   inner_svg_timeline.reverse()
+// })
+
+
+
+
+
+
+// SCROLL Trigger to fade next sea animation - still WIP
 
 gsap.registerPlugin(ScrollTrigger);
 
