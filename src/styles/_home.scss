@@ -1,0 +1,54 @@
+.home_wrapper {
+    height: 100%;
+    .sea-wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+
+        .cta-trigger {
+            position: absolute;
+            top: 0;
+        }
+
+        .top-sea-home {
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+    
+        .activate-sound-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3em;
+            position: absolute;
+            bottom: -25%;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            width: 100%;
+    
+            h1 {
+                font-size: 2.5em;
+                text-align: center;
+                color: white;
+                span {
+                    color: $brown;
+                }
+            }
+    
+            p {
+                font-size: 1.5em;
+                text-align: center;
+                color: white;
+                margin-top: 0.5em;
+            }
+    
+            .cta-wrapper {
+                @include flex(space-between);
+                gap: 1.5em;
+            }
+        }
+    }
+}

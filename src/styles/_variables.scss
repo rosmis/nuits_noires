@@ -1,0 +1,13 @@
+// HELPERS & MIXINS
+
+@mixin flex($justifyContent) {
+    display: flex;
+    align-items: center;
+    justify-content: $justifyContent;
+  }
+
+
+// COLORS VARIABLE
+
+$brown: #C9961B
+
