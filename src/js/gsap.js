@@ -1,11 +1,10 @@
 
 const menuToggleSound = document.querySelectorAll(".cta-home")
 const navbar = document.querySelector(".navbar")
-const triggerScreen = document.querySelectorAll(".cta-trigger")
 const hamburger = document.querySelector(".hamburger")
 
 const svgTrigger = document.querySelector(".cta-svg")
-const svg = document.querySelector(".svg-trigger")
+const svg = document.querySelectorAll(".svg-trigger")
 
 
 let t1 = gsap.timeline({ paused: true });
@@ -49,7 +48,7 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle("toggle");
 })
 
-triggerScreen.forEach(trigger => {
+svg.forEach(trigger => {
   trigger.addEventListener('click', () => triggerNextScreen(counter))
 })
 
@@ -82,26 +81,7 @@ menuToggleSound.forEach(toggle => {
 
 gsap.registerPlugin(MorphSVGPlugin);
 
-
-const outer_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
-    outer_triangle = document.getElementById("outer_triangle");
-
-const inner_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
-    inner_triangle = document.getElementById("inner_triangle");
-
 let timeline_arrow = gsap.timeline({ paused: true });
-
-outer_svg_timeline.to(outer_triangle, {morphSVG:{
-  shape: "#outer_circle",
-}}, {
-  ease: Power4.easeInOut,
-})
-
-inner_svg_timeline.to(inner_triangle, {morphSVG:{
-  shape: "#inner_circle",
-}}, {
-  ease: Power4.easeInOut,
-})
 
 timeline_arrow.to(".svg-arrow-wrapper", {
   top: '-20%',
@@ -109,26 +89,69 @@ timeline_arrow.to(".svg-arrow-wrapper", {
   ease: Power3.easeInOut,
 });
 
-svg.addEventListener('mouseenter', () => {
-  timeline_arrow.play()
-  outer_svg_timeline.play()
-  inner_svg_timeline.play()
+let svgTimelines = []
+
+svg.forEach((_trigger, index) => {
+  const outer_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+    outer_triangle = document.getElementById(`outer_triangle_${index}`);
+
+  const inner_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+      inner_triangle = document.getElementById(`inner_triangle_${index}`);
+
+    svgTimelines.push({
+      outer_svg: {
+        timeline: outer_svg_timeline, 
+        triangle: outer_triangle
+      },
+      inner_svg: {
+        timeline: inner_svg_timeline, 
+        triangle: inner_triangle
+      },
+    })
 })
 
-svg.addEventListener('mouseleave', () => {
-  timeline_arrow.reverse()
-  outer_svg_timeline.reverse()
-  inner_svg_timeline.reverse()
+
+svg.forEach((trigger, index) => {
+  trigger.addEventListener('mouseenter', () => {
+    playSvgTriggerAnimation(index).play()
+    timeline_arrow.play()
+  })
 })
 
-// svgTrigger.addEventListener('click', () => {
-//   outer_svg_timeline.reverse()
-//   inner_svg_timeline.reverse()
-// })
+svg.forEach((trigger, index) => {
+  trigger.addEventListener('mouseleave', () => {
+    playSvgTriggerAnimation(index).reverse()
+    timeline_arrow.reverse()
+  })
+})
 
+function playSvgTriggerAnimation(index) {
+  const innerTimeline = svgTimelines[index].inner_svg.timeline
+  const outerTimeline = svgTimelines[index].outer_svg.timeline
 
+  outerTimeline.to(svgTimelines[index].outer_svg.triangle, {morphSVG:{
+    shape: `#outer_circle_${index}`,
+  }}, {
+    ease: Power4.easeInOut,
+  })
 
+  innerTimeline.to(svgTimelines[index].inner_svg.triangle, {morphSVG:{
+    shape: `#inner_circle_${index}`,
+  }}, {
+    ease: Power4.easeInOut,
+  })
 
+  return {
+    play: () => {
+      outerTimeline.play()
+      innerTimeline.play()
+    },
+    reverse: () => {
+      outerTimeline.reverse()
+      innerTimeline.reverse()
+    },
+  }
+}
 
 
 // SCROLL Trigger to fade next sea animation - still WIP
@@ -144,7 +167,6 @@ videoContainers.forEach((video, index) => {
     start: "top bottom",
     end: "+=199%",
     onEnter: () => {
-        console.log('enters')
     //     if(index === 0) {
     //         gsap.to(videoContainers[0], { opacity: 1, duration: 1 }); 
     //         console.log('enters')

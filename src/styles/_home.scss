@@ -6,16 +6,11 @@
         position: fixed;
         inset: 0;
 
-        .cta-svg {
-            position: absolute;
-            top: 0;
-            left: 20%;
-        }
-
         .svg-trigger {
             position: absolute;
-            top: 30%;
-            left: 0%;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
             cursor: pointer;
 
             .svg-arrow-wrapper {

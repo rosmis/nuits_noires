@@ -281,15 +281,11 @@ header.nav-fullpage ul.main-nav-links li a {
   position: fixed;
   inset: 0;
 }
-.home_wrapper .sea-wrapper .cta-svg {
-  position: absolute;
-  top: 0;
-  left: 20%;
-}
 .home_wrapper .sea-wrapper .svg-trigger {
   position: absolute;
-  top: 30%;
-  left: 0%;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
 }
 .home_wrapper .sea-wrapper .svg-trigger .svg-arrow-wrapper {
