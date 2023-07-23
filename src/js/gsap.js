@@ -68,7 +68,14 @@ function triggerNextScreen(index) {
 
 
 window.addEventListener('load', () => {
-    t1.play()
+  const toggleSoundWrapper = document.querySelector('.activate-sound-wrapper')
+  if(!toggleSoundWrapper) {
+    navbar.classList.add('display-navbar')
+    navbar.classList.add('background')
+    return
+  }
+
+  t1.play()
 })
 
 menuToggleSound.forEach(toggle => {
