@@ -348,17 +348,74 @@ header.nav-fullpage ul.main-nav-links li a {
   width: 100vw;
 }
 .realisations-wrapper .category-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
   position: fixed;
   inset: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 10% 0;
 }
-.realisations-wrapper .category-wrapper::before {
-  content: "";
+.realisations-wrapper .category-wrapper .gray-filter {
   position: absolute;
   inset: 0;
   background-color: rgba(9, 9, 9, 0.5);
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
+  z-index: -1;
+}
+.realisations-wrapper .category-wrapper .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.realisations-wrapper .category-wrapper .title-wrapper h2 {
+  font-weight: 400;
+  font-size: 1em;
+}
+.realisations-wrapper .category-wrapper .title-wrapper h1 {
+  font-size: 2.5em;
+}
+.realisations-wrapper .category-wrapper .title-wrapper h1, .realisations-wrapper .category-wrapper .title-wrapper h2 {
+  color: white;
+}
+.realisations-wrapper .category-wrapper .description-wrapper p {
+  text-align: center;
+  color: white;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  padding: 0 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper .controller {
+  position: relative;
+  cursor: pointer;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper .controller p {
+  opacity: 0;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: all 0.1s ease-in;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper .controller p:first-child {
+  left: -40%;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper .controller p:last-child {
+  left: -10%;
+}
+.realisations-wrapper .category-wrapper .controllers-wrapper .controller:hover p {
+  opacity: 1;
 }

@@ -1,25 +1,16 @@
+console.log('home')
 
 const menuToggleSound = document.querySelectorAll(".cta-home")
-const navbar = document.querySelector(".navbar")
-const hamburger = document.querySelector(".hamburger")
+const navbarHome = document.querySelector(".navbar")
 
 const svgTrigger = document.querySelector(".cta-svg")
 const svg = document.querySelectorAll(".svg-trigger")
 
 
-let t1 = gsap.timeline({ paused: true });
 let t2 = gsap.timeline({ paused: true });
 let t3 = gsap.timeline({ paused: true });
-let t4 = gsap.timeline({ paused: true });
 
 let counter = 0
-
-t1.to(".activate-sound-wrapper", {
-  duration: 1,
-  opacity: 1,
-  bottom: '25%',
-  ease: Power1.easeInOut,
-});
 
 t2.to(".activate-sound-wrapper", {
   duration: 1,
@@ -28,25 +19,7 @@ t2.to(".activate-sound-wrapper", {
   ease: Power3.easeInOut,
 });
 
-t4.to(".nav-fullpage", {
-  display: 'block',
-  opacity: 1,
-  duration: 1,
-  ease: Power3.easeInOut,
-});
 
-hamburger.addEventListener('click', () => {
-  if(hamburger.classList.contains('toggle')) {
-    t4.timeScale(2);
-    t4.reverse()
-
-    hamburger.classList.toggle("toggle");
-    return
-  }
-
-  t4.play()
-  hamburger.classList.toggle("toggle");
-})
 
 svg.forEach(trigger => {
   trigger.addEventListener('click', () => triggerNextScreen(counter))
@@ -66,21 +39,9 @@ function triggerNextScreen(index) {
   counter ++
 } 
 
-
-window.addEventListener('load', () => {
-  const toggleSoundWrapper = document.querySelector('.activate-sound-wrapper')
-  if(!toggleSoundWrapper) {
-    navbar.classList.add('display-navbar')
-    navbar.classList.add('background')
-    return
-  }
-
-  t1.play()
-})
-
 menuToggleSound.forEach(toggle => {
     toggle.addEventListener('click', () => {
-        navbar.classList.add('display-navbar')
+        navbarHome.classList.add('display-navbar')
         t2.play()
     })
 })

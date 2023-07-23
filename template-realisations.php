@@ -31,6 +31,9 @@ $i=0;
     ?>
 
     <div class="category-wrapper" style="background-image: url(<?php echo $bg?>); z-index: <?php echo $z_index - $i ?>">
+        <div class="gray-filter"></div>
+
+        <div></div>
 
         <div class="title-wrapper">
             <h2>Réalisation</h1>
@@ -40,7 +43,54 @@ $i=0;
         <div class="description-wrapper">
             <p><?php echo $description ?></p>
         </div>
+
+        <div class="controllers-wrapper">
+            <div class="controller previous">
+                <?php if($i === 1) :?>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 83 71" style="transform: rotate(-30deg)">
+                        <path id="outer_triangle_<?php echo $i - 1?>" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
+                        <path id="outer_circle_<?php echo $i - 1?>" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
+
+                        <path id="inner_triangle_<?php echo $i - 1?>" data-name="Polygone 2" d="M26.5,1.971,1.749,44h49.5L26.5,1.971M26.5,0,53,45H0Z" transform="translate(68 52) rotate(180)" fill="#fff"/>
+                        <path id="inner_circle_<?php echo $i - 1?>" data-name="Polygone 2" style="visibility: hidden" d="M26.5,15.7a14.148,14.148,0,1,0,12.191,6.969A14.02,14.02,0,0,0,26.5,15.7m0-1a15.148,15.148,0,1,1-13.053,7.461A15.011,15.011,0,0,1,26.5,14.7Z" transform="translate(41.671 45) rotate(180)" fill="#fff"/>
+                    </svg>
+                <?php else : ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 83 71" style="transform: rotate(-30deg)">
+                        <path id="outer_triangle_<?php echo $i?>" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
+                        <path id="outer_circle_<?php echo $i?>" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
+
+                        <path id="inner_triangle_<?php echo $i?>" data-name="Polygone 2" d="M26.5,1.971,1.749,44h49.5L26.5,1.971M26.5,0,53,45H0Z" transform="translate(68 52) rotate(180)" fill="#fff"/>
+                        <path id="inner_circle_<?php echo $i?>" data-name="Polygone 2" style="visibility: hidden" d="M26.5,15.7a14.148,14.148,0,1,0,12.191,6.969A14.02,14.02,0,0,0,26.5,15.7m0-1a15.148,15.148,0,1,1-13.053,7.461A15.011,15.011,0,0,1,26.5,14.7Z" transform="translate(41.671 45) rotate(180)" fill="#fff"/>
+                    </svg>
+                <?php endif?>
+                
+                <p>Patrimoine</p>
+            </div>
+
+            <div class="controller next">
+                <?php if($i === 1) :?>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 83 71" style="transform: rotate(30deg)">
+                        <path id="outer_triangle_<?php echo $i?>" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
+                        <path id="outer_circle_<?php echo $i?>" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
+
+                        <path id="inner_triangle_<?php echo $i?>" data-name="Polygone 2" d="M26.5,1.971,1.749,44h49.5L26.5,1.971M26.5,0,53,45H0Z" transform="translate(68 52) rotate(180)" fill="#fff"/>
+                        <path id="inner_circle_<?php echo $i?>" data-name="Polygone 2" style="visibility: hidden" d="M26.5,15.7a14.148,14.148,0,1,0,12.191,6.969A14.02,14.02,0,0,0,26.5,15.7m0-1a15.148,15.148,0,1,1-13.053,7.461A15.011,15.011,0,0,1,26.5,14.7Z" transform="translate(41.671 45) rotate(180)" fill="#fff"/>
+                    </svg>
+                <?php else : ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 83 71" style="transform: rotate(30deg)">
+                        <path id="outer_triangle_<?php echo $i + 1?>" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
+                        <path id="outer_circle_<?php echo $i + 1?>" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
+
+                        <path id="inner_triangle_<?php echo $i + 1?>" data-name="Polygone 2" d="M26.5,1.971,1.749,44h49.5L26.5,1.971M26.5,0,53,45H0Z" transform="translate(68 52) rotate(180)" fill="#fff"/>
+                        <path id="inner_circle_<?php echo $i + 1?>" data-name="Polygone 2" style="visibility: hidden" d="M26.5,15.7a14.148,14.148,0,1,0,12.191,6.969A14.02,14.02,0,0,0,26.5,15.7m0-1a15.148,15.148,0,1,1-13.053,7.461A15.011,15.011,0,0,1,26.5,14.7Z" transform="translate(41.671 45) rotate(180)" fill="#fff"/>
+                    </svg>
+                <?php endif?>
+                <p>Patrimoine</p>
+            </div> 
+        </div>
+
         
+
     </div>
 
     <?php endwhile;?>
