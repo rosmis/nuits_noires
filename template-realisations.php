@@ -23,7 +23,7 @@ get_header()
             </svg>
             
         
-        <p>Patrimoine</p>
+        <p class="title-previous"></p>
     </div>
 
     <div class="controller next">
@@ -34,7 +34,8 @@ get_header()
                 <path id="right_inner_triangle" data-name="Polygone 2" d="M26.5,1.971,1.749,44h49.5L26.5,1.971M26.5,0,53,45H0Z" transform="translate(68 52) rotate(180)" fill="#fff"/>
                 <path id="right_inner_circle" data-name="Polygone 2" style="visibility: hidden" d="M26.5,15.7a14.148,14.148,0,1,0,12.191,6.969A14.02,14.02,0,0,0,26.5,15.7m0-1a15.148,15.148,0,1,1-13.053,7.461A15.011,15.011,0,0,1,26.5,14.7Z" transform="translate(41.671 45) rotate(180)" fill="#fff"/>
             </svg>
-        <p>Patrimoine</p>
+
+        <p class="title-next"></p>
     </div> 
 </div>
 

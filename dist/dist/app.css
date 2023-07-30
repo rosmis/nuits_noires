@@ -370,6 +370,7 @@ header.nav-fullpage ul.main-nav-links li a {
   top: 30%;
   transform: translateY(-50%);
   transition: all 0.1s ease-in;
+  min-width: 80px;
 }
 .realisations-wrapper .controllers-wrapper .controller p:first-child {
   left: -40%;

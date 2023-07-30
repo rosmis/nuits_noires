@@ -1,6 +1,9 @@
 const categoryWrappers = document.querySelectorAll(".category-wrapper")
 const triggers = document.querySelectorAll('.controller')
 
+const triggerContentPrevious = document.querySelector('.title-previous')
+const triggerContentNext = document.querySelector('.title-next')
+
 //HOVER STATE CONTROLLERS
 
 const triggerTimelines = {
@@ -30,9 +33,14 @@ const triggerTimelines = {
 triggers.forEach(trigger => {
   trigger.addEventListener('mouseenter', () => {
     if(trigger.classList.contains('next')) {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      triggerContentNext.innerHTML = triggerTitles[nextIndex]
+
       playSvgTriggerAnimation('right').play()
       return
     }
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    triggerContentPrevious.innerHTML = triggerTitles[prevIndex]
 
     playSvgTriggerAnimation('left').play()
   })
@@ -42,7 +50,7 @@ triggers.forEach(trigger => {
       playSvgTriggerAnimation('right').reverse()
       return
     }
-  
+    
     playSvgTriggerAnimation('left').reverse()
   })
 })
@@ -78,6 +86,7 @@ function playSvgTriggerAnimation(trigger) {
 //DISPLAY NEXT SLIDE STATE
 
 const slides = gsap.utils.toArray('.category-wrapper');
+const triggerTitles = ['Culturel', 'Marque', 'Art Vivant', 'Patrimoine']
 let currentIndex = 0;
 
 triggers.forEach(trigger => {
