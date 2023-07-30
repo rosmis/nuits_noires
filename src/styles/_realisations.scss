@@ -1,6 +1,43 @@
 .realisations-wrapper {
     height: 100vh;
     width: 100vw;
+
+    .controllers-wrapper {
+        @include flex(space-between);
+        position: absolute;
+        padding: 0 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 990;
+
+        .controller {
+            position: relative;
+            cursor: pointer;
+            p {
+                opacity: 0;
+                color: white;
+                font-weight: 700;
+                position: absolute;
+                top: 30%;
+                transform: translateY(-50%);
+                transition: all 0.1s ease-in;
+
+                &:first-child {
+                    left: -40%;
+                }
+                &:last-child {
+                    left: -10%;
+                }   
+            }
+            &:hover {
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .category-wrapper {
         display: flex;
         flex-direction: column;
@@ -9,6 +46,7 @@
         height: 100%;
         position: fixed;
         inset: 0;
+        opacity: 0;
         background-size: cover;
         background-repeat: no-repeat;
         padding: 10% 0;
@@ -22,6 +60,10 @@
         } 
 
         .title-wrapper {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,7 +73,7 @@
                 font-size: 1em;
             }
             h1 {
-                font-size: 2.5em;
+                font-size: 3em;
             }
             h1, h2 {
                 color: white;
@@ -42,41 +84,6 @@
             p {
                 text-align: center;
                 color: white;
-            }
-        }
-
-        .controllers-wrapper {
-            @include flex(space-between);
-            position: absolute;
-            padding: 0 3%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-
-            .controller {
-                position: relative;
-                cursor: pointer;
-                p {
-                    opacity: 0;
-                    color: white;
-                    font-weight: 700;
-                    position: absolute;
-                    top: 30%;
-                    transform: translateY(-50%);
-                    transition: all 0.1s ease-in;
-
-                    &:first-child {
-                        left: -40%;
-                    }
-                    &:last-child {
-                        left: -10%;
-                    }   
-                }
-                &:hover {
-                    p {
-                        opacity: 1;
-                    }
-                }
             }
         }
     }

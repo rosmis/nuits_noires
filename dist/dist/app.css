@@ -347,6 +347,39 @@ header.nav-fullpage ul.main-nav-links li a {
   height: 100vh;
   width: 100vw;
 }
+.realisations-wrapper .controllers-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  padding: 0 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 990;
+}
+.realisations-wrapper .controllers-wrapper .controller {
+  position: relative;
+  cursor: pointer;
+}
+.realisations-wrapper .controllers-wrapper .controller p {
+  opacity: 0;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  transition: all 0.1s ease-in;
+}
+.realisations-wrapper .controllers-wrapper .controller p:first-child {
+  left: -40%;
+}
+.realisations-wrapper .controllers-wrapper .controller p:last-child {
+  left: -10%;
+}
+.realisations-wrapper .controllers-wrapper .controller:hover p {
+  opacity: 1;
+}
 .realisations-wrapper .category-wrapper {
   display: flex;
   flex-direction: column;
@@ -355,6 +388,7 @@ header.nav-fullpage ul.main-nav-links li a {
   height: 100%;
   position: fixed;
   inset: 0;
+  opacity: 0;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10% 0;
@@ -368,6 +402,10 @@ header.nav-fullpage ul.main-nav-links li a {
   z-index: -1;
 }
 .realisations-wrapper .category-wrapper .title-wrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -378,7 +416,7 @@ header.nav-fullpage ul.main-nav-links li a {
   font-size: 1em;
 }
 .realisations-wrapper .category-wrapper .title-wrapper h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .realisations-wrapper .category-wrapper .title-wrapper h1, .realisations-wrapper .category-wrapper .title-wrapper h2 {
   color: white;
@@ -386,36 +424,4 @@ header.nav-fullpage ul.main-nav-links li a {
 .realisations-wrapper .category-wrapper .description-wrapper p {
   text-align: center;
   color: white;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  padding: 0 3%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper .controller {
-  position: relative;
-  cursor: pointer;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper .controller p {
-  opacity: 0;
-  color: white;
-  font-weight: 700;
-  position: absolute;
-  top: 30%;
-  transform: translateY(-50%);
-  transition: all 0.1s ease-in;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper .controller p:first-child {
-  left: -40%;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper .controller p:last-child {
-  left: -10%;
-}
-.realisations-wrapper .category-wrapper .controllers-wrapper .controller:hover p {
-  opacity: 1;
 }

@@ -1,55 +1,64 @@
-const categoryWrapper = document.querySelectorAll(".category-wrapper")
+const categoryWrappers = document.querySelectorAll(".category-wrapper")
 const triggers = document.querySelectorAll('.controller')
 
-//CONTROL HOVER STATE CONTROLLERS
+//HOVER STATE CONTROLLERS
 
-let triggersTimeline = []
-console.log('triggersLength', triggers.length)
-triggers.forEach((_trigger, index) => {
-  const outer_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
-    outer_triangle = document.getElementById(`outer_triangle_${index}`);
+const triggerTimelines = {
+  left: {
+    outer: {
+      timeline: gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+      triangle: document.getElementById(`left_outer_triangle`),
+    },
+    inner: {
+      timeline: gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+      triangle: document.getElementById(`left_inner_triangle`),
+    },
+  },
 
-  const inner_svg_timeline = gsap.timeline({defaults: {duration: 0.2}, paused: true}),
-      inner_triangle = document.getElementById(`inner_triangle_${index}`);
+  right: {
+    outer: {
+      timeline: gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+      triangle: document.getElementById(`right_outer_triangle`),
+    },
+    inner: {
+      timeline: gsap.timeline({defaults: {duration: 0.2}, paused: true}),
+      triangle: document.getElementById(`right_inner_triangle`),
+    },
+  }
+} 
 
-    triggersTimeline.push({
-      outer_svg: {
-        timeline: outer_svg_timeline, 
-        triangle: outer_triangle
-      },
-      inner_svg: {
-        timeline: inner_svg_timeline, 
-        triangle: inner_triangle
-      },
-    })
-})
-
-
-triggers.forEach((trigger, index) => {
+triggers.forEach(trigger => {
   trigger.addEventListener('mouseenter', () => {
-    playSvgTriggerAnimation(index).play()
-    return console.log('index', index)
-  })
-})
+    if(trigger.classList.contains('next')) {
+      playSvgTriggerAnimation('right').play()
+      return
+    }
 
-triggers.forEach((trigger, index) => {
+    playSvgTriggerAnimation('left').play()
+  })
+
   trigger.addEventListener('mouseleave', () => {
-    playSvgTriggerAnimation(index).reverse()
+    if(trigger.classList.contains('next')) {
+      playSvgTriggerAnimation('right').reverse()
+      return
+    }
+  
+    playSvgTriggerAnimation('left').reverse()
   })
 })
 
-function playSvgTriggerAnimation(index) {
-  const innerTimeline = triggersTimeline[index].inner_svg.timeline
-  const outerTimeline = triggersTimeline[index].outer_svg.timeline
+function playSvgTriggerAnimation(trigger) {
+  const outerTimeline = triggerTimelines[trigger]['outer'].timeline
+  const innerTimeline = triggerTimelines[trigger]['inner'].timeline
 
-  outerTimeline.to(triggersTimeline[index].outer_svg.triangle, {morphSVG:{
-    shape: `#outer_circle_${index}`,
+  outerTimeline.to(triggerTimelines[trigger]['outer'].triangle, {morphSVG:{
+    shape: `#${trigger}_outer_circle`,
   }}, {
     ease: Power4.easeInOut,
   })
 
-  innerTimeline.to(triggersTimeline[index].inner_svg.triangle, {morphSVG:{
-    shape: `#inner_circle_${index}`,
+  innerTimeline.to(triggerTimelines[trigger]['inner'].triangle, {morphSVG:{
+    shape: `#${trigger}_inner_circle`,
   }}, {
     ease: Power4.easeInOut,
   })
@@ -68,27 +77,33 @@ function playSvgTriggerAnimation(index) {
 
 //DISPLAY NEXT SLIDE STATE
 
-let counter = 0
-let realisationsTimeline = gsap.timeline({ paused: true });
+const slides = gsap.utils.toArray('.category-wrapper');
+let currentIndex = 0;
 
 triggers.forEach(trigger => {
-    trigger.addEventListener('click', () => triggerNextPage(counter, trigger))
+  trigger.addEventListener('click', () => {
+    if(trigger.classList.contains('next')) {
+      showNextSlide()
+      return
+    }
+
+    showPrevSlide()
+  })
 })
 
-  
-function triggerNextPage(index, trigger) {
-    const triggerState = trigger.className.split(' ')
 
-    if(triggerState.includes('next')) 
-    
-    realisationsTimeline.to(categoryWrapper[index], {
-        opacity: 0,
-        display: 'none',
-        duration: 1,
-        ease: Power3.easeInOut,
-    });
+function showSlide(index) {
+  gsap.to(slides[currentIndex], { opacity: 0, zIndex: 0 });
+  gsap.to(slides[index], { opacity: 1, zIndex: 1 });
+  currentIndex = index;
+}
 
-    realisationsTimeline.play()
+function showPrevSlide() {
+  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(prevIndex);
+}
 
-    counter ++
-} 
+function showNextSlide() {
+  const nextIndex = (currentIndex + 1) % slides.length;
+  showSlide(nextIndex);
+}
