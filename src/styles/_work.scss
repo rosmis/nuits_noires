@@ -1,36 +1,65 @@
 .work-wrapper {
     position: relative;
     .work-template {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         position: fixed;
+        padding-right: 10%;
         inset: 0;
         z-index: -1;
-        background-color: red;
+        background-color: $black;
+        .background-wrapper {
+            height: auto;
+            width: 70vw;
+            aspect-ratio: 2/1;
+            border-radius: 40px;
+            filter: blur(40px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 60%;
+        }
     }
     .work {
         @include flex(center);
         height: 100vh;
+        padding-left: 10%;
         .card-wrapper-transform {
-            perspective: 2000px;
-            transform-style: preserve-3d;
+            position: relative;
+            perspective: 800px;
+            .content-card-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                position: absolute;
+                bottom: 0;
+                left: -10%;
+                max-width: 60%;
+                h1 {
+                    font-size: 2.5em;
+                    color: white;
+                    text-transform: uppercase;
+                }
+    
+                p {
+                    color: white;
+                    line-height: 1.3em;
+                }
+            }
             .card-wrapper {
-                height: 250px;
-                width: 500px;
+                position: relative;
+                width: 45vw;
+                height: auto;
+                aspect-ratio: 2/1;
                 background-color: gray;
-                transform: rotateX(28deg) rotateY(-23deg);
-                border-radius: 50px;
+                transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);
+                // transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 35px;
+                filter: blur(2px);
+                z-index: -1;
             }
         }
-        // &:first-child {
-        //     background-color: red;
-        // }
-        // &:last-child {
-        //     background-color: green;
-        // }
-        // &:nth-child(2) {
-        //     background-color: blue;
-        // }
-        // &:nth-child(3) {
-        //     background-color: yellow;
-        // }
     }
 }

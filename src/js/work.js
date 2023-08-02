@@ -1,8 +1,12 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+// SCROLL ANIMATION
+
 let panels = gsap.utils.toArray(".work"),
     observer = ScrollTrigger.normalizeScroll(true),
     scrollTween;
+
+let cards = gsap.utils.toArray(".card-wrapper")
 
 // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
 document.addEventListener("touchstart", e => {
@@ -12,12 +16,14 @@ document.addEventListener("touchstart", e => {
   }
 }, {capture: true, passive: false})
 
-function goToSection(i) {
+function goToSection(i, direction) {
   scrollTween = gsap.to(window, {
     scrollTo: {y: i * innerHeight, autoKill: false},
     onStart: () => {
       observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
       observer.enable();
+
+      setCardAnimation(direction === 1 ? i - 1 : i, direction)
     },
     duration: 0.8,
     ease: Power1.easeInOut,
@@ -31,7 +37,7 @@ panels.forEach((panel, i) => {
     trigger: panel,
     start: "top bottom",
     end: "+=199%",
-    onToggle: self => self.isActive && !scrollTween && goToSection(i)
+    onToggle: self => self.isActive && !scrollTween && goToSection(i, self.direction)
   });
 });
 
@@ -42,3 +48,33 @@ ScrollTrigger.create({
   snap: 1 / (panels.length - 1)
 })
 
+// ANIMATION CARD ON SCROLL
+
+// const card_timeline = gsap.timeline({ paused: true });
+
+function setCardAnimation(index, direction) {
+  // prevent gsap target error 
+  if(index === -1) return
+
+  const card_timeline = gsap.timeline({ paused: true });
+  
+  if(direction === 1) {
+    card_timeline.to(cards[index], {
+      transform: "rotateX(0) rotateY(0) rotateZ(0)",
+      duration: 0.6,
+      ease: Power1.easeInOut,
+    });
+
+    card_timeline.play()
+    return
+  }
+
+  card_timeline.to(cards[index], {
+    transform: "rotateX(28deg) rotateY(-23deg) rotateZ(15deg)",
+    duration: 0.6,
+    ease: Power1.easeInOut,
+  });
+  
+  card_timeline.timeScale(0.8);
+  card_timeline.play()
+}

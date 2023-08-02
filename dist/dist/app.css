@@ -431,25 +431,64 @@ header.nav-fullpage ul.main-nav-links li a {
   position: relative;
 }
 .work-wrapper .work-template {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   position: fixed;
+  padding-right: 10%;
   inset: 0;
   z-index: -1;
-  background-color: red;
+  background-color: #090909;
+}
+.work-wrapper .work-template .background-wrapper {
+  height: auto;
+  width: 70vw;
+  aspect-ratio: 2/1;
+  border-radius: 40px;
+  filter: blur(40px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 60%;
 }
 .work-wrapper .work {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-left: 10%;
 }
 .work-wrapper .work .card-wrapper-transform {
-  perspective: 2000px;
-  transform-style: preserve-3d;
+  position: relative;
+  perspective: 800px;
+}
+.work-wrapper .work .card-wrapper-transform .content-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  max-width: 60%;
+}
+.work-wrapper .work .card-wrapper-transform .content-card-wrapper h1 {
+  font-size: 2.5em;
+  color: white;
+  text-transform: uppercase;
+}
+.work-wrapper .work .card-wrapper-transform .content-card-wrapper p {
+  color: white;
+  line-height: 1.3em;
 }
 .work-wrapper .work .card-wrapper-transform .card-wrapper {
-  height: 250px;
-  width: 500px;
+  position: relative;
+  width: 45vw;
+  height: auto;
+  aspect-ratio: 2/1;
   background-color: gray;
-  transform: rotateX(28deg) rotateY(-23deg);
-  border-radius: 50px;
+  transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 35px;
+  filter: blur(2px);
+  z-index: -1;
 }
