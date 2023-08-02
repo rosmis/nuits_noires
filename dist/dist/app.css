@@ -65,7 +65,7 @@ h1 {
 
 header.navbar {
   opacity: 0;
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   bottom: 5%;
   left: 50%;
@@ -425,4 +425,31 @@ header.nav-fullpage ul.main-nav-links li a {
 .realisations-wrapper .category-wrapper .description-wrapper p {
   text-align: center;
   color: white;
+}
+
+.work-wrapper {
+  position: relative;
+}
+.work-wrapper .work-template {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: red;
+}
+.work-wrapper .work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.work-wrapper .work .card-wrapper-transform {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+.work-wrapper .work .card-wrapper-transform .card-wrapper {
+  height: 250px;
+  width: 500px;
+  background-color: gray;
+  transform: rotateX(28deg) rotateY(-23deg);
+  border-radius: 50px;
 }

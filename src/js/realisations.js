@@ -116,3 +116,5 @@ function showNextSlide() {
   const nextIndex = (currentIndex + 1) % slides.length;
   showSlide(nextIndex);
 }
+
+document.addEventListener('wheel', () => console.log('scroll'))

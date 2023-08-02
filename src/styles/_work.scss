@@ -1,0 +1,36 @@
+.work-wrapper {
+    position: relative;
+    .work-template {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-color: red;
+    }
+    .work {
+        @include flex(center);
+        height: 100vh;
+        .card-wrapper-transform {
+            perspective: 2000px;
+            transform-style: preserve-3d;
+            .card-wrapper {
+                height: 250px;
+                width: 500px;
+                background-color: gray;
+                transform: rotateX(28deg) rotateY(-23deg);
+                border-radius: 50px;
+            }
+        }
+        // &:first-child {
+        //     background-color: red;
+        // }
+        // &:last-child {
+        //     background-color: green;
+        // }
+        // &:nth-child(2) {
+        //     background-color: blue;
+        // }
+        // &:nth-child(3) {
+        //     background-color: yellow;
+        // }
+    }
+}

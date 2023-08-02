@@ -37,6 +37,11 @@ function load_js_assets() {
         wp_enqueue_script('realisations', get_template_directory_uri() . '/src/js/realisations.js', [], 1, true);
     }
 
+    if( is_page(30) ) {
+        wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);
+        wp_enqueue_script('work', get_template_directory_uri() . '/src/js/work.js', [], 1, true);
+    }
+
     if( is_front_page() ) {
         wp_enqueue_script('home', get_template_directory_uri() . '/src/js/gsap.js', [], 1, true);
     }
