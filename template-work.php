@@ -23,7 +23,7 @@ get_header()
                 <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p>
             </div>
 
-            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
         </div>
     </div>
     <div class="work">
@@ -33,6 +33,26 @@ get_header()
                 <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p>
             </div>
 
+            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="card-wrapper-transform">
+            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="card-wrapper-transform">
+            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="card-wrapper-transform">
+            <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+        </div>
+    </div>
+    <div class="work">
+        <div class="card-wrapper-transform">
             <div class="card-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
         </div>
     </div>

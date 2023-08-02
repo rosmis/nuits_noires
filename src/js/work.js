@@ -50,31 +50,44 @@ ScrollTrigger.create({
 
 // ANIMATION CARD ON SCROLL
 
-// const card_timeline = gsap.timeline({ paused: true });
-
 function setCardAnimation(index, direction) {
   // prevent gsap target error 
   if(index === -1) return
 
-  const card_timeline = gsap.timeline({ paused: true });
+  console.log('index', index)
+
+  const card_timeline1 = gsap.timeline({ paused: true });
+  const card_timeline2 = gsap.timeline({ paused: true });
   
   if(direction === 1) {
-    card_timeline.to(cards[index], {
+    card_timeline1.to(cards[index], {
       transform: "rotateX(0) rotateY(0) rotateZ(0)",
       duration: 0.6,
       ease: Power1.easeInOut,
     });
+    card_timeline1.play()
 
-    card_timeline.play()
+    card_timeline2.to(cards[index + 1], {
+      transform: "rotateX(28deg) rotateY(-23deg) rotateZ(15deg)",
+      duration: 1,
+      ease: Power2.easeInOut,
+    });
+    card_timeline2.play()
     return
   }
 
-  card_timeline.to(cards[index], {
+  card_timeline2.to(cards[index + 1], {
+    transform: "rotateX(0) rotateY(0) rotateZ(0)",
+    duration: 0.5,
+    ease: Power1.easeInOut,
+  });
+  card_timeline2.play()
+
+  card_timeline1.to(cards[index], {
     transform: "rotateX(28deg) rotateY(-23deg) rotateZ(15deg)",
     duration: 0.6,
     ease: Power1.easeInOut,
   });
-  
-  card_timeline.timeScale(0.8);
-  card_timeline.play()
+  card_timeline1.timeScale(0.8);
+  card_timeline1.play()
 }
