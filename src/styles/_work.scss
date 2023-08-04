@@ -1,5 +1,13 @@
 .work-wrapper {
     position: relative;
+    #circle-progress {
+        position: fixed;
+        top: 50%;
+        left: -20%;
+        transform: translateY(-50%) rotate(347deg);
+        width: fit-content;
+    }
+
     .work-template {
         display: flex;
         align-items: center;

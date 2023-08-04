@@ -17,22 +17,6 @@ document.addEventListener("touchstart", e => {
   }
 }, {capture: true, passive: false})
 
-function goToSection(i, direction) {
-  scrollTween = gsap.to(window, {
-    scrollTo: {y: i * innerHeight, autoKill: false},
-    onStart: () => {
-      observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-      observer.enable();
-
-      setCardAnimation(direction === 1 ? i - 1 : i, direction)
-    },
-    duration: 0.8,
-    ease: Power1.easeInOut,
-    onComplete: () => scrollTween = null,
-    overwrite: true
-  });
-}
-
 panels.forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
@@ -41,6 +25,25 @@ panels.forEach((panel, i) => {
     onToggle: self => self.isActive && !scrollTween && goToSection(i, self.direction)
   });
 });
+
+function goToSection(i, direction, self) {
+  scrollTween = gsap.to(window, {
+    scrollTo: {y: i * innerHeight, autoKill: false},
+    onStart: () => {
+      observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
+      observer.enable();
+
+      setCardAnimation(direction === 1 ? i - 1 : i, direction)
+
+      incrementArcRotation(cardWrappers.length, direction)
+      
+    },
+    duration: 0.8,
+    ease: Power1.easeInOut,
+    onComplete: () => scrollTween = null,
+    overwrite: true
+  });
+}
 
 // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
 ScrollTrigger.create({
@@ -113,4 +116,47 @@ function setCardAnimation(index, direction) {
   }, '-=0.6');
   card_timeline1.timeScale(0.8);
   card_timeline1.play()
+}
+
+// SCROLLING ARC ANIMATION ON SCROLL
+
+const scrollArc = document.getElementById('circle-progress')
+
+const scrollingArcTimeline = gsap.timeline({paused: true})
+
+
+function incrementArcRotation(postsLength, direction) {
+  
+  const maxRadiusRotation = 280
+  const rotationRadiusPerIteration =  Math.floor(maxRadiusRotation / postsLength)
+  const arcPreviousMatrixTransform = window.getComputedStyle(scrollArc)['transform']
+  
+ // Parse the rotation from the matrix
+  let rotateValue = 0;
+  const matrixPattern = /^matrix\((.+)\)$/;
+  const match = arcPreviousMatrixTransform.match(matrixPattern);
+
+  if (match) {
+    const matrixValues = match[1].split(',').map(parseFloat);
+    if (matrixValues.length === 6) {
+      rotateValue = Math.atan2(matrixValues[1], matrixValues[0]) * (180 / Math.PI);
+      
+      // Adjust negative values to positive angles
+      if (rotateValue < 0) {
+        rotateValue += 360;
+      }
+    }
+  }
+
+  const updatedRotationRadius = direction === 1 ? rotateValue + rotationRadiusPerIteration : rotateValue - rotationRadiusPerIteration
+
+
+  scrollingArcTimeline.to(scrollArc, {
+    transform: `translateY(-50%) rotate(${updatedRotationRadius}deg)`,
+    duration: 1,
+    ease: Power1.easeInOut,
+  });
+
+  scrollingArcTimeline.play()
+
 }

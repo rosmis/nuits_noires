@@ -430,6 +430,14 @@ header.nav-fullpage ul.main-nav-links li a {
 .work-wrapper {
   position: relative;
 }
+.work-wrapper #circle-progress {
+  position: fixed;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%) rotate(347deg);
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .work-wrapper .work-template {
   display: flex;
   align-items: center;
