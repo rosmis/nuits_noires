@@ -460,6 +460,68 @@ header.nav-fullpage ul.main-nav-links li a {
 .work-wrapper .work .card-wrapper-transform {
   position: relative;
   perspective: 800px;
+  opacity: 0;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  cursor: pointer;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .inner-circle {
+  height: 100%;
+  width: 100%;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .outer-circle {
+  opacity: 0;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover p {
+  font-size: 1.2em;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .hidden-circle {
+  opacity: 1;
+  height: 60%;
+  width: 60%;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  opacity: 1;
+  transition: all 0.15s ease-in;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
+  height: 0%;
+  width: 0%;
+  border-radius: 50%;
+  opacity: 0;
+  border: 2px solid white;
+  transition: all 0.2s ease-in-out;
+}
+.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle {
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.2s ease-in-out;
 }
 .work-wrapper .work .card-wrapper-transform .content-card-wrapper {
   display: flex;

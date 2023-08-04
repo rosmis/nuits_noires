@@ -7,6 +7,7 @@ let panels = gsap.utils.toArray(".work"),
     scrollTween;
 
 let cards = gsap.utils.toArray(".card-wrapper")
+let cardWrappers = gsap.utils.toArray(".card-wrapper-transform")
 
 // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
 document.addEventListener("touchstart", e => {
@@ -54,8 +55,6 @@ function setCardAnimation(index, direction) {
   // prevent gsap target error 
   if(index === -1) return
 
-  console.log('index', index)
-
   const card_timeline1 = gsap.timeline({ paused: true });
   const card_timeline2 = gsap.timeline({ paused: true });
   
@@ -65,6 +64,12 @@ function setCardAnimation(index, direction) {
       duration: 0.6,
       ease: Power1.easeInOut,
     });
+
+    card_timeline1.to(cardWrappers[index], {
+      opacity: 0,
+      duration: 0.6,
+      ease: Power1.easeInOut,
+    }, '-=0.6');
     card_timeline1.play()
 
     card_timeline2.to(cards[index + 1], {
@@ -72,6 +77,12 @@ function setCardAnimation(index, direction) {
       duration: 1,
       ease: Power2.easeInOut,
     });
+
+    card_timeline2.to(cardWrappers[index + 1], {
+      opacity: 1,
+      duration: 1,
+      ease: Power2.easeInOut,
+    }, '-=1');
     card_timeline2.play()
     return
   }
@@ -81,6 +92,12 @@ function setCardAnimation(index, direction) {
     duration: 0.5,
     ease: Power1.easeInOut,
   });
+
+  card_timeline2.to(cardWrappers[index + 1], {
+    opacity: 0,
+    duration: 0.5,
+    ease: Power1.easeInOut,
+  }, '-=0.5');
   card_timeline2.play()
 
   card_timeline1.to(cards[index], {
@@ -88,6 +105,12 @@ function setCardAnimation(index, direction) {
     duration: 0.6,
     ease: Power1.easeInOut,
   });
+
+  card_timeline1.to(cardWrappers[index], {
+    opacity: 1,
+    duration: 0.6,
+    ease: Power1.easeInOut,
+  }, '-=0.6');
   card_timeline1.timeScale(0.8);
   card_timeline1.play()
 }

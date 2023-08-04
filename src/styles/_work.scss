@@ -27,6 +27,78 @@
         .card-wrapper-transform {
             position: relative;
             perspective: 800px;
+            opacity: 0;
+            .cta-more-wrapper {
+                position: absolute;
+                bottom: 10%;
+                right: 10%;
+                .cta-more {
+                    position: relative;
+                    height: 140px;
+                    width: 140px;
+                    cursor: pointer;
+
+                    &:hover {
+                        .inner-circle {
+                            height: 100%;
+                            width: 100%;
+                        }
+
+                        .outer-circle {
+                            opacity: 0;
+                        }
+
+                        p {
+                            font-size: 1.2em;
+                        }
+
+                        .hidden-circle {
+                            opacity: 1;
+                            height: 60%;
+                            width: 60%;
+                        }
+                    }
+
+                    p {
+                        color: white;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    .outer-circle, .inner-circle, p, .hidden-circle {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    .outer-circle {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        opacity: 1;
+                        transition: all 0.15s ease-in;
+                    }
+
+                    .hidden-circle {
+                        height: 0%;
+                        width: 0%;
+                        border-radius: 50%;
+                        opacity: 0;
+                        border: 2px solid white;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+                    .inner-circle {
+                        height: 60%;
+                        width: 60%;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
+
             .content-card-wrapper {
                 display: flex;
                 flex-direction: column;
