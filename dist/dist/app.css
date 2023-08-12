@@ -430,13 +430,43 @@ header.nav-fullpage ul.main-nav-links li a {
 .work-wrapper {
   position: relative;
 }
-.work-wrapper #circle-progress {
+.work-wrapper .circle-progress-wrapper {
   position: fixed;
   top: 50%;
   left: -20%;
-  transform: translateY(-50%) rotate(347deg);
+  transform: translateY(-50%);
+}
+.work-wrapper .circle-progress-wrapper #circle-progress {
+  transform: rotate(347deg);
   width: -moz-fit-content;
   width: fit-content;
+}
+.work-wrapper .circle-progress-wrapper .circled-image {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work-wrapper .circle-progress-wrapper .wrapper-circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8em;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translateY(-50%);
+}
+.work-wrapper .circle-progress-wrapper .wrapper-circle-content p {
+  font-size: 0.8em;
+  color: white;
+  text-transform: uppercase;
+  text-align: end;
 }
 .work-wrapper .work-template {
   display: flex;
