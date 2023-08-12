@@ -42,8 +42,9 @@ function goToSection(i, direction, self) {
 
             setCardAnimation(direction === 1 ? i - 1 : i, direction);
 
-            counter++;
+            scrollToNextAnchorLink(i, direction);
 
+            counter++;
             // this is to prevent the incrementArcRotation to trigger itself at when dom is mounted - didn't find a prettier way to do it
             if (counter === 1) return;
 
@@ -190,4 +191,53 @@ function incrementArcRotation(postsLength, direction) {
     });
 
     scrollingArcTimeline.play();
+}
+
+// ANCHOR LINKS SNAP SCROLL
+
+const anchorLinks = document.querySelectorAll(".anchor-work-link");
+let cumulatedOffsetX = 0;
+
+anchorLinks.forEach((anchorLink) => {
+    anchorLink.setAttribute(
+        "style",
+        `transform: translateX(${cumulatedOffsetX}px)`
+    );
+    cumulatedOffsetX -= 5;
+});
+
+function scrollToNextAnchorLink(index) {
+    const generateAnchorOpacityTimeline = (index, opacity) => {
+        const anchorTimeline = gsap.timeline({ paused: true });
+
+        anchorTimeline.to(anchorLinks[index], {
+            opacity,
+            duration: 0.8,
+            ease: Power1.easeInOut,
+        });
+
+        anchorTimeline.play();
+    };
+
+    const generateTranslateAnchorTimeline = (anchorIndex, iterationIndex) => {
+        const anchorTimeline = gsap.timeline({ paused: true });
+        const offetY = iterationIndex * 1.6;
+
+        console.log("offetY", offetY);
+
+        anchorTimeline.to(anchorLinks[anchorIndex], {
+            transform: `translateY(${offetY}em)`,
+            duration: 0.8,
+            ease: Power1.easeInOut,
+        });
+
+        anchorTimeline.play();
+    };
+
+    anchorLinks.forEach((anchorLink, indexAnchor) => {
+        generateAnchorOpacityTimeline(indexAnchor, 0.4);
+        generateTranslateAnchorTimeline(indexAnchor, index);
+    });
+
+    generateAnchorOpacityTimeline(index, 1);
 }

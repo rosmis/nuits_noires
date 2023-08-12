@@ -465,6 +465,7 @@ header.nav-fullpage ul.main-nav-links li a {
 .work-wrapper .circle-progress-wrapper .wrapper-circle-content p {
   font-size: 0.8em;
   color: white;
+  opacity: 40%;
   text-transform: uppercase;
   text-align: end;
 }

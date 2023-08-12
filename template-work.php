@@ -30,9 +30,9 @@ get_header()
         <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
 
         <div class="wrapper-circle-content">
-            <p class="anchor-work-link">Salomon</p>
-            <p class="anchor-work-link">Centre Pompidou</p>
-            <p class="anchor-work-link">musée d'orsay</p>
+            <p class="anchor-work-link" id="link-0">Salomon</p>
+            <p class="anchor-work-link" id="link-1">Centre Pompidou</p>
+            <p class="anchor-work-link" id="link-2">musée d'orsay</p>
         </div>
 
     </div>
