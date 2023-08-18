@@ -53,5 +53,71 @@ function load_js_assets() {
 
 add_action('wp_enqueue_scripts', 'load_js_assets');
 
+// ADD CUSTOM REALISATIONS POST TYPE
+
+function vx_soon_training_post_link( $post_link, $id = 0 ) {
+    $post = get_post( $id );
+    if ( is_object( $post ) ) {
+        $terms = wp_get_object_terms( $post->ID, 'category' );
+        if ( $terms ) {
+            return str_replace( '%category%', $terms[0]->slug, $post_link );
+        }
+    }
+
+    return $post_link;
+}
+
+add_filter( 'post_type_link', 'vx_soon_training_post_link', 1, 3 );
+
+function archive_rewrite_rules() {
+    add_rewrite_rule(
+        '^realisation/(.*)/(.*)/?$',
+        'index.php?post_type=realisations&name=$matches[2]',
+        'top'
+    );
+}
+
+add_action( 'init', 'archive_rewrite_rules' );
+
+function custom_post_type_realisations() {
+    $labels = array(
+        'name'               => 'Réalisations',
+        'singular_name'      => 'Réalisation',
+        'menu_name'          => 'Réalisations',
+        'name_admin_bar'     => 'Réalisation',
+        'add_new'            => 'Ajouter une réalisation',
+        'add_new_item'       => 'Ajouter',
+        'new_item'           => 'Ajouter',
+        'edit_item'          => 'Editer',
+        'view_item'          => 'Toutes les réalisations',
+        'all_items'          => 'Toutes les réalisations',
+        'search_items'       => 'Rechercher',
+        'parent_item_colon'  => 'Item parent',
+        'not_found'          => 'Aucun résultat.',
+        'not_found_in_trash' => 'Aucun résultat dans la corbeille',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite' => array('slug' => 'realisations/%category%'),
+        'capability_type'    => 'post',
+        'has_archive'        => 'realisations',
+        'hierarchical'       => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-book',
+        'supports'           => array( 'title', 'author', 'thumbnail' ),
+        'taxonomies' => array('category')
+    );
+
+    register_post_type( 'realisations', $args );
+}
+add_action( 'init', 'custom_post_type_realisations' );
+
+
  
 
