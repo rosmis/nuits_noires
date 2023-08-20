@@ -23,9 +23,42 @@ get_header()
         <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
 
         <div class="wrapper-circle-content">
-            <p class="anchor-work-link" id="link-0">Salomon</p>
-            <p class="anchor-work-link" id="link-1">Centre Pompidou</p>
-            <p class="anchor-work-link" id="link-2">musée d'orsay</p>
+
+            <?php
+            // Custom loop for Realizations
+            $args = array(
+                'post_type' => 'realisations',
+                'posts_per_page' => -1, 
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'category', 
+                        'field'    => 'slug',                 
+                        'terms'    => 'culturel',             
+                    ),
+                )
+            );
+
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) :
+                $i=0;
+
+                while ($query->have_posts()) : $query->the_post(); 
+
+                $i-=5; ?>
+
+                <p class="anchor-work-link" id="link-0" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>
+                    
+
+                <?php endwhile;
+
+                // Restore original post data
+                wp_reset_postdata();
+
+            else :
+                // No posts found
+            endif;
+            ?>
         </div>
 
     </div>

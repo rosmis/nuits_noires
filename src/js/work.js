@@ -194,17 +194,7 @@ function incrementArcRotation(postsLength, direction) {
 }
 
 // ANCHOR LINKS SNAP SCROLL
-
 const anchorLinks = document.querySelectorAll(".anchor-work-link");
-let cumulatedOffsetX = 0;
-
-anchorLinks.forEach((anchorLink) => {
-    anchorLink.setAttribute(
-        "style",
-        `transform: translateX(${cumulatedOffsetX}px)`
-    );
-    cumulatedOffsetX -= 5;
-});
 
 function scrollToNextAnchorLink(index) {
     const generateAnchorOpacityTimeline = (index, opacity) => {
@@ -236,7 +226,6 @@ function scrollToNextAnchorLink(index) {
 
     anchorLinks.forEach((anchorLink, indexAnchor) => {
         generateAnchorOpacityTimeline(indexAnchor, 0.4);
-        generateTranslateAnchorTimeline(indexAnchor, index);
     });
 
     generateAnchorOpacityTimeline(index, 1);

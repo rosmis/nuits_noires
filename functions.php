@@ -1,6 +1,5 @@
 <?php
 
-
 //Theme Support
 
 function skilder_theme_support() {
@@ -33,6 +32,11 @@ function NuitsNoires_register_scripts(){
 add_action( 'wp_enqueue_scripts', 'NuitsNoires_register_scripts');
 
 function load_js_assets() {
+    global $wp;
+
+    // Get the request variables
+    $query_vars = $wp->query_vars;
+
     if( is_page(8) ) {
         wp_enqueue_script('realisations', get_template_directory_uri() . '/src/js/realisations.js', [], 1, true);
     }
@@ -45,9 +49,16 @@ function load_js_assets() {
     if( is_front_page() ) {
         wp_enqueue_script('home', get_template_directory_uri() . '/src/js/gsap.js', [], 1, true);
     }
-    // if( is_page(9) ) {
-    //     wp_enqueue_script('counter', get_template_directory_uri() . '/src/js/counter_skilder.js', [], 1, true);
-    //     wp_enqueue_script('video_loader', get_template_directory_uri() . '/src/js/video_player.js', [], 1, true);
+
+
+    if (isset($query_vars['category_name']) && $query_vars['category_name'] === 'culturel') {
+        wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);
+        wp_enqueue_script('work', get_template_directory_uri() . '/src/js/work.js', [], 1, true);
+    }
+
+    // if (is_singular('realisations') || is_post_type_archive('realisations') || is_tax()) {
+    //     wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);
+    //     wp_enqueue_script('work', get_template_directory_uri() . '/src/js/work.js', [], 1, true);
     // }
 }
 
