@@ -42,13 +42,14 @@ function goToSection(i, direction, self) {
 
             setCardAnimation(direction === 1 ? i - 1 : i, direction);
 
-            scrollToNextAnchorLink(i, direction);
+            generateAnchorOpacity(i);
 
             counter++;
             // this is to prevent the incrementArcRotation to trigger itself at when dom is mounted - didn't find a prettier way to do it
             if (counter === 1) return;
 
             incrementArcRotation(cardWrappers.length, direction);
+            translateAnchorLinks(i, direction);
         },
         duration: 0.8,
         ease: Power1.easeInOut,
@@ -195,8 +196,9 @@ function incrementArcRotation(postsLength, direction) {
 
 // ANCHOR LINKS SNAP SCROLL
 const anchorLinks = document.querySelectorAll(".anchor-work-link");
+const anchorLinksWrapper = document.querySelector(".wrapper-circle-content");
 
-function scrollToNextAnchorLink(index) {
+function generateAnchorOpacity(index) {
     const generateAnchorOpacityTimeline = (index, opacity) => {
         const anchorTimeline = gsap.timeline({ paused: true });
 
@@ -209,14 +211,23 @@ function scrollToNextAnchorLink(index) {
         anchorTimeline.play();
     };
 
-    const generateTranslateAnchorTimeline = (anchorIndex, iterationIndex) => {
+    anchorLinks.forEach((_anchorLink, indexAnchor) => {
+        generateAnchorOpacityTimeline(indexAnchor, 0.4);
+    });
+
+    generateAnchorOpacityTimeline(index, 1);
+}
+
+let translateYWrapperValue = 0;
+
+function translateAnchorLinks(index, direction) {
+    const generateTranslateAnchorTimeline = () => {
         const anchorTimeline = gsap.timeline({ paused: true });
-        const offetY = iterationIndex * 1.6;
 
-        console.log("offetY", offetY);
+        translateYWrapperValue += -direction * 10;
 
-        anchorTimeline.to(anchorLinks[anchorIndex], {
-            transform: `translateY(${offetY}em)`,
+        anchorTimeline.to(anchorLinksWrapper, {
+            transform: `translateY(${translateYWrapperValue}%)`,
             duration: 0.8,
             ease: Power1.easeInOut,
         });
@@ -224,9 +235,9 @@ function scrollToNextAnchorLink(index) {
         anchorTimeline.play();
     };
 
-    anchorLinks.forEach((anchorLink, indexAnchor) => {
-        generateAnchorOpacityTimeline(indexAnchor, 0.4);
-    });
+    generateTranslateAnchorTimeline(index);
 
-    generateAnchorOpacityTimeline(index, 1);
+    // anchorLinks.forEach((_anchorLink, anchorIterationIndex) => {
+    //     generateTranslateAnchorTimeline(index, anchorIterationIndex);
+    // });
 }

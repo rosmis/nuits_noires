@@ -47,7 +47,7 @@ get_header()
 
                 $i-=5; ?>
 
-                <p class="anchor-work-link" id="link-0" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>
+                <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>
                     
 
                 <?php endwhile;
