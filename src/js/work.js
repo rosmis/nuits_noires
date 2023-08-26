@@ -221,23 +221,54 @@ function generateAnchorOpacity(index) {
 let translateYWrapperValue = 0;
 
 function translateAnchorLinks(index, direction) {
-    const generateTranslateAnchorTimeline = () => {
-        const anchorTimeline = gsap.timeline({ paused: true });
+    const anchorIndexesToTranslate = [];
+    let anchorLinksCounter = 0;
+
+    const generateTranslateAnchorWrapperTimeline = () => {
+        const anchorWrapperTimeline = gsap.timeline({ paused: true });
 
         translateYWrapperValue += -direction * 10;
 
-        anchorTimeline.to(anchorLinksWrapper, {
+        anchorWrapperTimeline.to(anchorLinksWrapper, {
             transform: `translateY(${translateYWrapperValue}%)`,
             duration: 0.8,
             ease: Power1.easeInOut,
         });
 
-        anchorTimeline.play();
+        anchorWrapperTimeline.play();
     };
 
-    generateTranslateAnchorTimeline(index);
+    const generateAnchorLinkTranslateTimeline = (index, translateXPosition) => {
+        const anchorLinkTimeline = gsap.timeline({ paused: true });
+        const initialTranslateXAnchorValue = (index + 1) * -5;
+
+        anchorLinkTimeline.to(anchorLinks[index], {
+            transform: `translateX(${
+                initialTranslateXAnchorValue + translateXPosition
+            }px)`,
+            duration: 0.8,
+            ease: Power1.easeInOut,
+        });
+
+        anchorLinkTimeline.play();
+    };
+
+    generateTranslateAnchorWrapperTimeline(index);
+
+    for (let i = index - 1; i >= 0; i--) {
+        anchorIndexesToTranslate.push(i);
+    }
+
+    console.log("anchorIndexesToTranslate", anchorIndexesToTranslate);
+
+    console.log("direction", direction);
+
+    anchorIndexesToTranslate.forEach((index) => {
+        anchorLinksCounter += -direction * 10;
+        generateAnchorLinkTranslateTimeline(index, anchorLinksCounter);
+    });
 
     // anchorLinks.forEach((_anchorLink, anchorIterationIndex) => {
-    //     generateTranslateAnchorTimeline(index, anchorIterationIndex);
+    //     generateTranslateAnchorWrapperTimeline(index, anchorIterationIndex);
     // });
 }
