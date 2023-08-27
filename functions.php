@@ -52,6 +52,11 @@ function load_js_assets() {
 
 
     if (isset($query_vars['category_name']) && $query_vars['category_name'] === 'culturel') {
+        if(is_singular('realisations')) {
+            wp_enqueue_script('realisation', get_template_directory_uri() . '/src/js/realisation.js', [], 1, true);
+            return;
+        };
+
         wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);
         wp_enqueue_script('work', get_template_directory_uri() . '/src/js/work.js', [], 1, true);
     }

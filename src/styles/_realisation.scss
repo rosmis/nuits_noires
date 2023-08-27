@@ -1,0 +1,132 @@
+section.realisation-wrapper {
+    @include flex(center);
+    flex-direction: column;
+    background-color: $black;
+    padding-bottom: 10em;
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        color: white;
+        width: 100%;
+    }
+    .realisation-bg-wrapper {
+        position: relative;
+        @include flex(center);
+        height: 70vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(9, 9, 9, 0.3294117647);
+        }
+
+        .realisation-bg-content-header {
+            @include flex(center);
+            flex-direction: column;
+            gap: 1em;
+            z-index: 5;
+
+            h1 {
+                font-size: 2.5em;
+                color: white;
+                text-align: center;
+            }
+            .horizontal-divider {
+                height: 2em;
+                width: 1px;
+                background-color: white;
+            }
+            h2 {
+                color: white;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    .realisation-main-wrapper {
+        @include flex(space-between);
+        flex-direction: column;
+        gap: 5em;
+        padding: 10% 0;
+
+        .realisation-main-wrapper-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3em;
+            row-gap: 5em;
+        }
+
+        .support-wrapper, .claim-wrapper {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1em;
+            h3 {
+                @include flex(flex-start);
+                font-size: 1.5em;
+                gap: 0.5em;
+                color: white;
+                span {
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 100%;
+                    background-color: $brown;
+                }
+            }
+        }
+
+        .cta-wrapper {
+            @include flex(space-between);
+            z-index: 5;
+            gap: 1em;
+        }
+    }
+
+    .wrapper-next-project {
+        height: 35vh;
+        width: 100%;
+        transform: scale(0.8);
+        cursor: pointer;
+        overflow: hidden;
+
+        &:hover {
+            .wrapper-next-project-bg {
+                transform: scale(1.1);
+            }
+        }
+        
+        .wrapper-next-project-bg {
+            @include flex(center);
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: 0.2s ease-in-out all;
+
+            &:hover {
+                &::before {
+                    display: block;
+                }
+            }
+
+            &::before {
+                content: "";
+                display: none;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }        
+    }
+}

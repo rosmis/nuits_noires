@@ -49,6 +49,7 @@ h1 {
     border-radius: 10px;
     color: white;
     transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
 
     &:hover {
         color: black !important;
@@ -71,8 +72,23 @@ h1 {
     }
 }
 
+.custom-container-blog {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-max("tablet") {
+        max-width: 993px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    @include media-max("phone-up") {
+        max-width: 767px;
+    }
+}
+
 
 @import "navbar";
 @import "home";
 @import "realisations";
 @import "work";
+@import "realisation";

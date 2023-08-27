@@ -1,3 +1,4 @@
+/*BREAKPOINTS*/
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +44,7 @@ h1 {
   border-radius: 10px;
   color: white;
   transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
 }
 .cta:hover {
   color: black !important;
@@ -61,6 +63,24 @@ h1 {
   background-color: white;
   transition: all 0.15s ease-in-out;
   z-index: -1;
+}
+
+.custom-container-blog {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 992px) {
+  .custom-container-blog {
+    max-width: 993px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom-container-blog {
+    max-width: 767px;
+  }
 }
 
 header.navbar {
@@ -591,4 +611,133 @@ header.nav-fullpage ul.main-nav-links li a {
   border-radius: 35px;
   filter: blur(2px);
   z-index: -1;
+}
+
+section.realisation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #090909;
+  padding-bottom: 10em;
+}
+section.realisation-wrapper p {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  color: white;
+  width: 100%;
+}
+section.realisation-wrapper .realisation-bg-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.realisation-wrapper .realisation-bg-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 9, 9, 0.3294117647);
+}
+section.realisation-wrapper .realisation-bg-wrapper .realisation-bg-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 5;
+}
+section.realisation-wrapper .realisation-bg-wrapper .realisation-bg-content-header h1 {
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+}
+section.realisation-wrapper .realisation-bg-wrapper .realisation-bg-content-header .horizontal-divider {
+  height: 2em;
+  width: 1px;
+  background-color: white;
+}
+section.realisation-wrapper .realisation-bg-wrapper .realisation-bg-content-header h2 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+section.realisation-wrapper .realisation-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5em;
+  padding: 10% 0;
+}
+section.realisation-wrapper .realisation-main-wrapper .realisation-main-wrapper-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 3em;
+       column-gap: 3em;
+  row-gap: 5em;
+}
+section.realisation-wrapper .realisation-main-wrapper .support-wrapper, section.realisation-wrapper .realisation-main-wrapper .claim-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+}
+section.realisation-wrapper .realisation-main-wrapper .support-wrapper h3, section.realisation-wrapper .realisation-main-wrapper .claim-wrapper h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5em;
+  gap: 0.5em;
+  color: white;
+}
+section.realisation-wrapper .realisation-main-wrapper .support-wrapper h3 span, section.realisation-wrapper .realisation-main-wrapper .claim-wrapper h3 span {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #C9961B;
+}
+section.realisation-wrapper .realisation-main-wrapper .cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  gap: 1em;
+}
+section.realisation-wrapper .wrapper-next-project {
+  height: 35vh;
+  width: 100%;
+  transform: scale(0.8);
+  cursor: pointer;
+  overflow: hidden;
+}
+section.realisation-wrapper .wrapper-next-project:hover .wrapper-next-project-bg {
+  transform: scale(1.1);
+}
+section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.2s ease-in-out all;
+}
+section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg:hover::before {
+  display: block;
+}
+section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

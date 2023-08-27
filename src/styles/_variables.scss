@@ -12,3 +12,22 @@
 $brown: #C9961B;
 $black: #090909;
 
+
+/*BREAKPOINTS*/
+  
+$breakpoints: (
+  "phone": 576px,
+  "phone-up": 768px,
+  "tablet": 992px,
+  "desktop": 1200px,
+  "desktop-up": 1550px,
+);
+
+@mixin media-max($_key) {
+  @media screen and (max-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}
+
