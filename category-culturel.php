@@ -75,7 +75,7 @@ get_header()
                 'field'    => 'slug',                 
                 'terms'    => 'culturel',             
             ),
-        )
+        ),
     );
 
     $query = new WP_Query($args);
@@ -83,7 +83,8 @@ get_header()
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); 
 
-        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>
+        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); 
+        $post_url = get_permalink(); ?>
 
         <div class="work">
             <div class="card-wrapper-transform" style="opacity: 1">
@@ -92,14 +93,14 @@ get_header()
                     <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p>
                 </div>
 
-                <div class="cta-more-wrapper"> 
+                <a class="cta-more-wrapper" href="<?php echo esc_url($post_url) ?>"> 
                     <div class="cta-more">
                         <div class="hidden-circle"></div>
                         <div class="outer-circle"></div>
                         <div class="inner-circle"></div>
                         <p>more</p>
                     </div>
-                </div>
+                </a>
 
                 <div class="card-wrapper" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
             </div>

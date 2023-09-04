@@ -50,19 +50,22 @@
     </div>
 
     <?php
-        $next_post = get_adjacent_post(false, '', false);
+        $next_post = get_adjacent_post(true, '', true);
         if ($next_post) {
             $next_featured_img_url = get_the_post_thumbnail_url($next_post);
+            $title = get_the_title( $next_post->ID );
+            $next_post_url = get_permalink( $next_post->ID );
         }
     ?>
         
-        <div class="wrapper-next-project" id="next-project">
+        <a class="wrapper-next-project" id="next-project" href="<?php echo esc_url($next_post_url) ?>">
             <div class="wrapper-next-project-bg" style="background-image: url(<?php echo $next_featured_img_url?>)">
                 <div class="wrapper-next-project-content">
                     <p>next project</p>
+                    <p class="next-project-title"><?php echo $title ?></p>
                 </div>
             </div>
-        </div>
+        </a>
         
 
 

@@ -714,6 +714,7 @@ section.realisation-wrapper .wrapper-next-project {
   transform: scale(0.8);
   cursor: pointer;
   overflow: hidden;
+  text-decoration: none;
 }
 section.realisation-wrapper .wrapper-next-project:hover .wrapper-next-project-bg {
   transform: scale(1.1);
@@ -740,4 +741,12 @@ section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg::befo
   position: absolute;
   top: 0;
   left: 0;
+}
+section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg .wrapper-next-project-content p {
+  text-align: center;
+  color: white;
+}
+section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg .wrapper-next-project-content p.next-project-title {
+  font-size: 3em;
+  font-weight: 700;
 }

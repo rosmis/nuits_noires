@@ -95,6 +95,7 @@ section.realisation-wrapper {
         transform: scale(0.8);
         cursor: pointer;
         overflow: hidden;
+        text-decoration: none;
 
         &:hover {
             .wrapper-next-project-bg {
@@ -125,6 +126,18 @@ section.realisation-wrapper {
                 position: absolute;
                 top: 0;
                 left: 0;
+            }
+
+            .wrapper-next-project-content {
+                p {
+                    text-align: center;
+                    color: white; 
+                }
+
+                p.next-project-title {
+                    font-size: 3em;
+                    font-weight: 700;
+                }
             }
 
         }        
