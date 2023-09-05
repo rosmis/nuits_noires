@@ -48,6 +48,27 @@
         inset: 0;
         z-index: -1;
         background-color: $black;
+
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            padding: 2em;
+
+            span {
+                height: 13px;
+                width: 13px;
+                border-radius: 100%;
+                background-color: $brown;
+            }
+        }
+
         .background-wrapper {
             height: auto;
             width: 70vw;

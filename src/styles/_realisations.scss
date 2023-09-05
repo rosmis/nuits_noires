@@ -3,13 +3,19 @@
     width: 100vw;
 
     .controllers-wrapper {
-        @include flex(space-between);
         position: absolute;
         padding: 0 3%;
         top: 50%;
         transform: translateY(-50%);
-        width: 100%;
-        z-index: 990;
+        z-index: 100;
+
+        &.controller-left {
+            left: 0;
+        }
+
+        &.controller-right {
+            right: 0;
+        }
 
         .controller {
             position: relative;
@@ -62,10 +68,12 @@
 
         .title-wrapper {
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 50%;
             transform: translateX(-50%);
+            padding: 5em;
             display: flex;
+            text-decoration: none;
             flex-direction: column;
             align-items: center;
             gap: 0.5em;

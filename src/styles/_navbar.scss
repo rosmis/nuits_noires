@@ -164,7 +164,7 @@ header.navbar {
 header.nav-fullpage {
   display: none;
   opacity: 0;
-  position: relative;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   z-index: 998;

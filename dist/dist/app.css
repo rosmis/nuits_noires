@@ -230,7 +230,7 @@ header.navbar .nav-links-wrapper .nav-icon-wrapper {
 header.nav-fullpage {
   display: none;
   opacity: 0;
-  position: relative;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   z-index: 998;
@@ -368,15 +368,17 @@ header.nav-fullpage ul.main-nav-links li a {
   width: 100vw;
 }
 .realisations-wrapper .controllers-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: absolute;
   padding: 0 3%;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
-  z-index: 990;
+  z-index: 100;
+}
+.realisations-wrapper .controllers-wrapper.controller-left {
+  left: 0;
+}
+.realisations-wrapper .controllers-wrapper.controller-right {
+  right: 0;
 }
 .realisations-wrapper .controllers-wrapper .controller {
   position: relative;
@@ -424,10 +426,12 @@ header.nav-fullpage ul.main-nav-links li a {
 }
 .realisations-wrapper .category-wrapper .title-wrapper {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  padding: 5em;
   display: flex;
+  text-decoration: none;
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
@@ -497,6 +501,24 @@ header.nav-fullpage ul.main-nav-links li a {
   inset: 0;
   z-index: -1;
   background-color: #090909;
+}
+.work-wrapper .work-template h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+  padding: 2em;
+}
+.work-wrapper .work-template h1 span {
+  height: 13px;
+  width: 13px;
+  border-radius: 100%;
+  background-color: #C9961B;
 }
 .work-wrapper .work-template .background-wrapper {
   height: auto;

@@ -5,6 +5,7 @@ get_header()
 
 <div class="work-wrapper">
     <div class="work-template">
+        <h1><span></span> Nos réalisations marque</h1>
         <div class="background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
     </div>
 

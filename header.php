@@ -47,7 +47,7 @@
 
       <ul class="main-nav-links">
         <li>
-          <a class="nav-link" href="<?php echo get_permalink(8)?>">Réalisations</a>
+          <a class="nav-link" href="http://localhost:10043/realisations">Réalisations</a>
           <span>Notre portfolio</span>
         </li>
         <li>
