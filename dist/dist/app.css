@@ -772,3 +772,53 @@ section.realisation-wrapper .wrapper-next-project .wrapper-next-project-bg .wrap
   font-size: 3em;
   font-weight: 700;
 }
+section.realisation-wrapper .realisation-audio-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  transform: translateY(-30%);
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-wrapper {
+  position: relative;
+  width: 100%;
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  right: 0;
+  background-color: #090909;
+  z-index: 10;
+  height: 50%;
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper h2 {
+  color: white;
+  font-size: 2em;
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: #C9961B;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play:hover {
+  background-color: rgba(201, 149, 27, 0.6941176471);
+}
+section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play i#playToggle {
+  color: white;
+}

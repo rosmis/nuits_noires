@@ -58,7 +58,18 @@ function load_js_assets() {
 
     if (isset($query_vars['category_name']) && $query_vars['category_name'] === 'culturel') {
         if(is_singular('realisations')) {
+            // Get the post ID of the current post
+            $post_id = get_the_ID();
+
+            wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/90b68b7d84.js', [], 1, true);
+            wp_enqueue_script('WaveSurfer', 'https://unpkg.com/wavesurfer.js@7', [], 1, true);
+            wp_enqueue_script('audio', get_template_directory_uri() . '/src/js/audio.js', [], 1, true);
             wp_enqueue_script('realisation', get_template_directory_uri() . '/src/js/realisation.js', [], 1, true);
+
+            // Pass the post ID to the realisation script
+            wp_localize_script('audio', 'post', array(
+                'id' => $post_id,
+            ));
             return;
         };
 
@@ -124,6 +135,7 @@ function custom_post_type_realisations() {
         'capability_type'    => 'post',
         'has_archive'        => 'realisations',
         'hierarchical'       => true,
+        'show_in_rest'       => true,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-book',
         'supports'           => array( 'title', 'author', 'thumbnail' ),

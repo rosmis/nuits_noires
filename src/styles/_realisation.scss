@@ -142,4 +142,59 @@ section.realisation-wrapper {
 
         }        
     }
+
+    .realisation-audio-wrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        transform: translateY(-30%);
+        .audio-wrapper {
+            position: relative;
+            width: 100%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1%;
+                left: 0;
+                right: 0;
+                background-color: $black;
+                z-index: 10;
+                height: 50%;
+            }
+        }
+
+        .audio-control-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1em;
+            width: 100%;
+
+            h2 {
+                color: white;
+                font-size: 2em
+            }
+
+            .cta-play {
+                @include flex(center);
+                height: 60px;
+                width: 60px;
+                border-radius: 100%;
+                background-color: $brown;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #c9951bb1;
+                }
+
+                i#playToggle {
+                    color: white;
+                }
+            }
+        }
+    }
 }

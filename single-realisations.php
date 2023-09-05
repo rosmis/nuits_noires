@@ -8,6 +8,8 @@
         $accompagnement = get_field( "accompagnement" );
         $credit = get_field( "credit" );
         $featured_img_url = get_the_post_thumbnail_url(); 
+        $audio = get_field( "audio" ); 
+        $audio_title = get_field( "audio_title" ); 
 
     ?>
 
@@ -21,7 +23,26 @@
 
     </div>
 
+    <div class="realisation-audio-wrapper custom-container-blog">
+        <div class="audio-control-wrapper">
+            <div class="cta-play">
+                <i class="fa-solid fa-play" id="playToggle"></i>
+            </div>
+
+            <h2><?php echo $audio_title ?></h2>
+
+        </div>
+
+        <div class="audio-wrapper">
+
+        </div>
+
+    </div>
+
     <div class="realisation-main-wrapper custom-container-blog">
+        <?php
+        if (isset($left_description) && isset($right_description) && isset($accompagnement) && isset($credit)) { ?>
+
         <div class="realisation-main-wrapper-content">
             <?php echo $left_description ?>
 
@@ -37,6 +58,13 @@
                 <p><?php echo $credit ?></p>
             </div>
         </div>
+
+        <?php
+        } else {
+            // At least one PHP variable doesn't exist, return an empty div
+            echo '<div class="realisation-main-wrapper-content"></div>';
+        }
+        ?>
 
         <div class="cta-wrapper">
             <div class="cta">
@@ -55,7 +83,7 @@
             $next_featured_img_url = get_the_post_thumbnail_url($next_post);
             $title = get_the_title( $next_post->ID );
             $next_post_url = get_permalink( $next_post->ID );
-        }
+        
     ?>
         
         <a class="wrapper-next-project" id="next-project" href="<?php echo esc_url($next_post_url) ?>">
@@ -68,8 +96,17 @@
         </a>
         
 
+    <?php
+       } else {
+        echo '<div></div>';
+    }
+    ?>
 
-    <?php endwhile; else: endif;?>
+    <?php endwhile; ?> 
+    
+    
+    
+    <?php endif;?>
 
 </section>
 
