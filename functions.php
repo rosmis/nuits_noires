@@ -37,9 +37,9 @@ function load_js_assets() {
     // Get the request variables
     $query_vars = $wp->query_vars;
 
-    // if( is_page(8) ) {
-    //     wp_enqueue_script('realisations', get_template_directory_uri() . '/src/js/realisations.js', [], 1, true);
-    // }
+    if( is_page(95) ) {
+        wp_enqueue_script('about', get_template_directory_uri() . '/src/js/about.js', [], 1, true);
+    }
 
     if( is_page(30) ) {
         wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);

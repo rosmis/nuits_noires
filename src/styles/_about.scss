@@ -1,0 +1,65 @@
+// .custom-container-about {
+//     max-width: 1170px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     @include media-max("tablet") {
+//         max-width: 993px;
+//         padding-right: 24px;
+//         padding-left: 24px;
+//     }
+//     @include media-max("phone-up") {
+//         max-width: 767px;
+//     }
+// }
+
+section.about-wrapper {
+    padding: 10%;    
+    background-color: $black;
+    overflow-y: hidden;
+    height: 200vh;
+
+    .history-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3em;
+
+        h1 {
+            @include flex(flex-start);
+            font-size: 2em;
+            gap: 0.5em;
+            color: white;
+            span {
+                height: 10px;
+                width: 10px;
+                border-radius: 100%;
+                background-color: $brown;
+            }
+        }
+
+        .timeline-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 600%;
+            gap: 2em;
+            overflow: hidden;
+
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1em;
+                min-width: 40vw;
+
+                p {
+                    color: white;
+                }
+
+                p.timeline-item-title {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

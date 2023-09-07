@@ -822,3 +822,51 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
 section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play i#playToggle {
   color: white;
 }
+
+section.about-wrapper {
+  padding: 10%;
+  background-color: #090909;
+  overflow-y: hidden;
+  height: 200vh;
+}
+section.about-wrapper .history-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3em;
+}
+section.about-wrapper .history-wrapper h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2em;
+  gap: 0.5em;
+  color: white;
+}
+section.about-wrapper .history-wrapper h1 span {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #C9961B;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 600%;
+  gap: 2em;
+  overflow: hidden;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  min-width: 40vw;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item p {
+  color: white;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item p.timeline-item-title {
+  font-size: 1.5em;
+}
