@@ -22,7 +22,7 @@
       <div class="nav-links-wrapper">
           <ul class="nav-links">
             <li>
-            <a class="nav-link" href="<?php echo get_permalink(25)?>">Nuit Noires</a>
+            <a class="nav-link" href="http://localhost:10003">Nuit Noires</a>
             </li>
             <li>
               <a class="nav-link" href="<?php echo get_permalink(25)?>">Immersion</a>
@@ -47,7 +47,7 @@
 
       <ul class="main-nav-links">
         <li>
-          <a class="nav-link" href="http://localhost:10043/realisations">Réalisations</a>
+          <a class="nav-link" href="http://localhost:10003/realisations">Réalisations</a>
           <span>Notre portfolio</span>
         </li>
         <li>

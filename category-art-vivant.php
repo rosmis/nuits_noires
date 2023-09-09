@@ -5,7 +5,7 @@ get_header()
 
 <div class="work-wrapper">
     <div class="work-template">
-        <h1><span></span> Nos réalisations culturelles</h1>
+        <h1><span></span> Nos réalisations art vivant</h1>
         <div class="background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
     </div>
 
@@ -34,7 +34,7 @@ get_header()
                     array(
                         'taxonomy' => 'category', 
                         'field'    => 'slug',                 
-                        'terms'    => 'culturel',             
+                        'terms'    => 'art-vivant',             
                     ),
                 )
             );
@@ -75,7 +75,7 @@ get_header()
             array(
                 'taxonomy' => 'category', 
                 'field'    => 'slug',                 
-                'terms'    => 'culturel',             
+                'terms'    => 'art-vivant',             
             ),
         ),
     );
@@ -86,15 +86,13 @@ get_header()
         while ($query->have_posts()) : $query->the_post(); 
 
         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); 
-        $post_url = get_permalink();
-        $post_excerpt = get_field('intro') ?>
+        $post_url = get_permalink(); ?>
 
         <div class="work">
             <div class="card-wrapper-transform" style="opacity: 1">
                 <div class="content-card-wrapper">
                     <h1><?php the_title(); ?></h1>
-                    <p><?php echo $post_excerpt ?></p>
-                    <!-- <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p> -->
+                    <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p>
                 </div>
 
                 <a class="cta-more-wrapper" href="<?php echo esc_url($post_url) ?>"> 

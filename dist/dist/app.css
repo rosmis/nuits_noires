@@ -827,7 +827,7 @@ section.about-wrapper {
   padding: 10%;
   background-color: #090909;
   overflow-y: hidden;
-  height: 200vh;
+  height: 400vh;
 }
 section.about-wrapper .history-wrapper {
   display: flex;
@@ -851,18 +851,19 @@ section.about-wrapper .history-wrapper h1 span {
 }
 section.about-wrapper .history-wrapper .timeline-wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 600%;
+  flex-wrap: nowrap;
+  width: 100%;
   gap: 2em;
-  overflow: hidden;
 }
 section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item {
+  flex: 0 0 auto;
+  max-width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: red;
   gap: 1em;
-  min-width: 40vw;
+  padding: 2em;
 }
 section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item p {
   color: white;

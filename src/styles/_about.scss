@@ -16,7 +16,7 @@ section.about-wrapper {
     padding: 10%;    
     background-color: $black;
     overflow-y: hidden;
-    height: 200vh;
+    height: 400vh;
 
     .history-wrapper {
         display: flex;
@@ -39,18 +39,20 @@ section.about-wrapper {
 
         .timeline-wrapper {
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            width: 600%;
+            flex-wrap: nowrap;
+            width: 100%;
             gap: 2em;
-            overflow: hidden;
+            // overflow: hidden;
 
             .timeline-item {
+                flex: 0 0 auto;
+                max-width: 40vw;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                background-color: red;
                 gap: 1em;
-                min-width: 40vw;
+                padding: 2em;
 
                 p {
                     color: white;

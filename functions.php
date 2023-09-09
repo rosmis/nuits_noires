@@ -37,7 +37,7 @@ function load_js_assets() {
     // Get the request variables
     $query_vars = $wp->query_vars;
 
-    if( is_page(95) ) {
+    if( is_page(13) ) {
         wp_enqueue_script('about', get_template_directory_uri() . '/src/js/about.js', [], 1, true);
     }
 
