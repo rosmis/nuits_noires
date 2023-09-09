@@ -10,6 +10,7 @@
         $featured_img_url = get_the_post_thumbnail_url(); 
         $audio = get_field( "audio" ); 
         $audio_title = get_field( "audio_title" ); 
+        $post_excerpt = get_field( "intro" ); 
 
     ?>
 
@@ -18,7 +19,7 @@
         <div class="realisation-bg-content-header">
             <h1><?php the_title();?></h1>
             <div class="horizontal-divider"></div>
-            <h2>Faire ressentir la sensation <br> de confort par le son</h2>
+            <h2><?php echo $post_excerpt ?></h2>
         </div>
 
     </div>
@@ -61,8 +62,8 @@
 
         <?php
         } else {
-            // At least one PHP variable doesn't exist, return an empty div
-            echo '<div class="realisation-main-wrapper-content"></div>';
+            // At least one PHP variable doesn't exist, return elementor content
+            echo the_content();
         }
         ?>
 
