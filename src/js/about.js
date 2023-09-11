@@ -14,7 +14,7 @@ function GSAPHorizontalScroll() {
                     window.innerWidth),
             scrub: 0.1,
             ease: "none",
-            // markers: true,
+            markers: false,
         },
     });
 
