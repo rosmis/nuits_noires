@@ -1,24 +1,48 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const sections = gsap.utils.toArray(".panel");
-const timelineWrapper = document.querySelector(".history-wrapper");
+// const timelineWrapper = document.querySelector(".history-wrapper");
 
-console.log("timelineWrapper.offsetWidth", timelineWrapper.offsetWidth);
+// let scrollTween = gsap.to(sections, {
+//     x: (i) => -i * timelineWrapper.offsetWidth,
+//     // xPercent: -40 * (sections.length - 1),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: timelineWrapper,
+//         pin: true,
+//         scrub: 0.1,
+//         markers: true,
+//         //snap: directionalSnap(1 / (sections.length - 1)),
+//         end: "+=3000",
+//         end: `+=${timelineWrapper.offsetWidth}`,
+//     },
+// });
 
-let scrollTween = gsap.to(sections, {
-    x: (i) => -i * timelineWrapper.offsetWidth,
-    // xPercent: -40 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: timelineWrapper,
-        pin: true,
-        scrub: 0.1,
-        markers: true,
-        //snap: directionalSnap(1 / (sections.length - 1)),
-        end: "+=3000",
-        end: `+=${timelineWrapper.offsetWidth}`,
-    },
-});
+function GSAPHorizontalScroll() {
+    let GSAPHorizontalScrollTL = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#timeline-wrapper",
+            pin: true,
+            start: "0% 0%",
+            end:
+                "+=" +
+                (document.querySelector("#timeline-wrapper").scrollWidth -
+                    window.innerWidth),
+            scrub: 0.1,
+            ease: "none",
+            markers: true,
+        },
+    });
+
+    GSAPHorizontalScrollTL.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+    });
+}
+
+window.onload = () => {
+    GSAPHorizontalScroll();
+};
 
 // gsap.set(".box-1, .box-2", { y: 100 });
 // ScrollTrigger.defaults({ markers: { startColor: "white", endColor: "white" } });

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="263" height="120" viewBox="0 0 263 120">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#090909"/>
+      <stop offset="0.5" stop-color="#c9961b"/>
+      <stop offset="1" stop-color="#090909"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_1997" data-name="Groupe 1997" transform="translate(-116 -946.293)">
+    <g id="Groupe_1996" data-name="Groupe 1996">
+      <g id="Groupe_1987" data-name="Groupe 1987" transform="translate(-594.96 203.177)">
+        <g id="Groupe_1986" data-name="Groupe 1986" transform="translate(817.46 801.087)">
+          <circle id="Ellipse_1715" data-name="Ellipse 1715" cx="20.021" cy="20.021" r="20.021" transform="translate(0 11.707) rotate(-17)" fill="#c1983a" opacity="0.099"/>
+          <circle id="Ellipse_1714" data-name="Ellipse 1714" cx="14.307" cy="14.307" r="14.307" transform="translate(7.135 15.501) rotate(-17)" fill="#c1983a" opacity="0.098"/>
+          <circle id="Ellipse_1713" data-name="Ellipse 1713" cx="7.619" cy="7.619" r="7.619" transform="translate(15.487 19.942) rotate(-17)" fill="#c9961b"/>
+        </g>
+      </g>
+      <rect id="Rectangle_1722" data-name="Rectangle 1722" width="3" height="33" transform="translate(246 1031.293)" fill="#c9961b"/>
+    </g>
+    <rect id="Rectangle_1723" data-name="Rectangle 1723" width="3" height="263" transform="translate(116 1066.293) rotate(-90)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_1724" data-name="Rectangle 1724" width="3" height="263" transform="translate(116 949.293) rotate(-90)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

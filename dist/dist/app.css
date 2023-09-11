@@ -851,11 +851,18 @@ section.about-wrapper .history-wrapper h1 span {
 }
 section.about-wrapper .history-wrapper .timeline-wrapper {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   width: 100%;
-  gap: 2em;
+  gap: 1em;
 }
-section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item {
+section.about-wrapper .history-wrapper .timeline-wrapper .panels-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+  width: 100%;
+  overflow: hidden;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .panels-wrapper .timeline-item {
   flex: 0 0 auto;
   max-width: 40vw;
   display: flex;
@@ -865,9 +872,29 @@ section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item {
   gap: 1em;
   padding: 2em;
 }
-section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item p {
+section.about-wrapper .history-wrapper .timeline-wrapper .panels-wrapper .timeline-item p {
   color: white;
 }
-section.about-wrapper .history-wrapper .timeline-wrapper .timeline-item p.timeline-item-title {
+section.about-wrapper .history-wrapper .timeline-wrapper .panels-wrapper .timeline-item p.timeline-item-title {
   font-size: 1.5em;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .date-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  background-color: green;
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .date-wrapper #date-selector {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.about-wrapper .history-wrapper .timeline-wrapper .date-wrapper p.date-panel {
+  color: white;
+  flex: 0 0 auto;
+  width: 40vw;
+  padding: 2em;
 }
