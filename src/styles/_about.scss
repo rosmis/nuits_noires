@@ -22,7 +22,8 @@ section.about-wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 3em;
+        gap: 1em;
+        padding: 2em 0;
 
         h1 {
             @include flex(flex-start);
@@ -44,53 +45,59 @@ section.about-wrapper {
             gap: 1em;
 
             .panels-wrapper {
+                position: relative;
                 display: flex;
                 flex-wrap: nowrap;
-                gap: 2em;
-                width: 100%;
+                gap: 1em;
+                padding: 1em 0;
                 overflow: hidden;
 
                 .timeline-item {
                     flex: 0 0 auto;
-                    max-width: 40vw;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
-                    background-color: red;
-                    gap: 1em;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 5em;
+                    max-width: 30vw;
                     padding: 2em;
-    
-                    p {
+                    opacity: 0.5;
+                    transition: opacity 0.3s ease-in-out;
+
+                    &.active {
+                        opacity: 1;
+                        transition: opacity 0.3s ease-in-out;
+
+                    }
+
+                    .timeline-item-content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1em;
+                        align-items: flex-start;
+
+                        p {
+                            color: white;
+                            line-height: 1.3em;
+                        }
+        
+                        p.timeline-item-title {
+                            font-size: 1.5em;
+                        }    
+                    }
+
+                    p.timeline-date {
+                        font-weight: 700;
+                        font-size: 1.2em;
                         color: white;
                     }
     
-                    p.timeline-item-title {
-                        font-size: 1.5em;
-                    }
                 }
-            }
-
-            .date-wrapper {
-                position: relative;
-                display: flex;
-                flex-wrap: nowrap;
-                overflow: hidden;
-                width: 100%;
-                background-color: green;
 
                 #date-selector {
                     position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-
-                }
-
-                p.date-panel {
-                    color: white;
-                    flex: 0 0 auto;
-                    width: 40vw;
-                    padding: 2em;
+                    bottom: 3%;
+                    left: 5%;
                 }
             }
         }
