@@ -5,7 +5,7 @@ const sections = gsap.utils.toArray(".panel");
 function GSAPHorizontalScroll() {
     let GSAPHorizontalScrollTL = gsap.timeline({
         scrollTrigger: {
-            trigger: ".history-wrapper",
+            trigger: ".about-wrapper",
             pin: true,
             start: "0% 0%",
             end:
@@ -14,7 +14,7 @@ function GSAPHorizontalScroll() {
                     window.innerWidth),
             scrub: 0.1,
             ease: "none",
-            markers: true,
+            // markers: true,
         },
     });
 

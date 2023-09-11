@@ -99,33 +99,33 @@ Template name: A PROPOS
                     </g>
                 </svg>
             </div>
+        </div>
+    </div>
 
+    <div class="immersive-wrapper">
+        <h1><span></span> Le son immersif</h1>
 
-            <!-- <div class="timeline-wrapper"> -->
+        <div class="immersive-content-wrapper">
 
-                <!-- <p class="date-panel">
-                    2016
+            <div class="immersive-column">
+                <div>
+                    <p>Le son immersif c’est quoi ? </p>
+                    <p>
+                        Nos créations sonores sont réalisées à partir de captation ambisonique et/ou binaurale pour reproduire à la perfection un environnement sonore. Une technique de traitement du son qui restitue l’écoute naturelle en trois dimensions pour se sentir au cœur de l’action et de l’espace sonore.
+                    </p>
+                </div>
+
+                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+            </div>
+
+            <div class="immersive-column">
+                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+                <p>Associé à un sound design sensible l’auditeur se sentira en totale immersion dans un environnement virtuel grâce à une écoute au casque ou un système de diffusion spatialisée.</p>
+                <p>
+                    Nous captons avec une tête Neumann KU100 que vous voyez ci joint. Cet outil technologique est au service de votre message. Nous réfléchissons avec vous comment créer de l’expérientiel sur mesure avec un conseil en diffusion à la pointe.  Grâce à ce micro spécifique, nous créons la majorité de nos créations sonores pour vous proposer toujours des immersions les plus réalistes qu’ils soient et offrir à vos auditeurs une qualité sonore imparable. 
                 </p>
-                <p class="date-panel">
-                    2016
-                </p>
-                <p class="date-panel">
-                    2016
-                </p>
-                <p class="date-panel">
-                    2016
-                </p>
-                <p class="date-panel">
-                    2016
-                </p>
-                <p class="date-panel">
-                    2016
-                </p> -->
+            </div>
 
-                
-
-
-            <!-- </div> -->
         </div>
     </div>
 

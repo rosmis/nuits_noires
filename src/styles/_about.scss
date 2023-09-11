@@ -13,10 +13,27 @@
 // }
 
 section.about-wrapper {
-    padding: 10%;    
-    background-color: $black;
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 5% 10%;
     height: 400vh;
+    background-color: $black;
+    overflow-x: hidden;
+
+    h1 {
+        @include flex(flex-start);
+        font-size: 2em;
+        gap: 0.5em;
+        color: white;
+        span {
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            background-color: $brown;
+        }
+    }
 
     .history-wrapper {
         display: flex;
@@ -24,19 +41,6 @@ section.about-wrapper {
         align-items: flex-start;
         gap: 1em;
         padding: 2em 0;
-
-        h1 {
-            @include flex(flex-start);
-            font-size: 2em;
-            gap: 0.5em;
-            color: white;
-            span {
-                height: 10px;
-                width: 10px;
-                border-radius: 100%;
-                background-color: $brown;
-            }
-        }
 
         .timeline-wrapper {
             display: flex;
@@ -98,6 +102,40 @@ section.about-wrapper {
                     position: absolute;
                     bottom: 3%;
                     left: 5%;
+                }
+            }
+        }
+    }
+
+    .immersive-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4em;
+        width: 100%;
+
+        .immersive-content-wrapper {
+            @include flex(space-between);
+            gap: 5em;
+            width: 100%;
+
+            .immersive-column {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                align-items: flex-start;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                p {
+                    color: white;
+                    line-height: 1.5em;
+                    margin-bottom: 1em;
+
                 }
             }
         }

@@ -824,19 +824,16 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
 }
 
 section.about-wrapper {
-  padding: 10%;
-  background-color: #090909;
-  overflow-y: hidden;
-  height: 400vh;
-}
-section.about-wrapper .history-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1em;
-  padding: 2em 0;
+  gap: 2em;
+  padding: 5% 10%;
+  height: 400vh;
+  background-color: #090909;
+  overflow-x: hidden;
 }
-section.about-wrapper .history-wrapper h1 {
+section.about-wrapper h1 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -844,11 +841,18 @@ section.about-wrapper .history-wrapper h1 {
   gap: 0.5em;
   color: white;
 }
-section.about-wrapper .history-wrapper h1 span {
+section.about-wrapper h1 span {
   height: 10px;
   width: 10px;
   border-radius: 100%;
   background-color: #C9961B;
+}
+section.about-wrapper .history-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 2em 0;
 }
 section.about-wrapper .history-wrapper .timeline-wrapper {
   display: flex;
@@ -902,4 +906,34 @@ section.about-wrapper .history-wrapper .timeline-wrapper .panels-wrapper #date-s
   position: absolute;
   bottom: 3%;
   left: 5%;
+}
+section.about-wrapper .immersive-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4em;
+  width: 100%;
+}
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5em;
+  width: 100%;
+}
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+}
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column img {
+  max-width: 100%;
+  height: auto;
+}
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column p {
+  color: white;
+  line-height: 1.5em;
+  margin-bottom: 1em;
 }
