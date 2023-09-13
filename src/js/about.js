@@ -33,6 +33,4 @@ function GSAPHorizontalScroll() {
     });
 }
 
-window.onload = () => {
-    GSAPHorizontalScroll();
-};
+window.onload = () => GSAPHorizontalScroll();

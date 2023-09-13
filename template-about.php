@@ -163,7 +163,55 @@ Template name: A PROPOS
             </g>
         </svg>
 
-        <div class="brand-wrapper">
+        <div class="brand-wrapper outer-top-left">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper outer-top-right">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper outer-bottom-left">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper outer-bottom-right">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper middle-bottom-left">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper middle-bottom-right">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper inner-top-left">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper inner-top-right">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper inner-bottom-middle">
             <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
 
             <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">

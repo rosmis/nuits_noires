@@ -947,36 +947,80 @@ section.about-wrapper .brand-showcase {
 }
 section.about-wrapper .brand-showcase .brand-wrapper {
   position: absolute;
-  gap: 1em;
-  top: 10%;
-  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
   padding: 1em;
   border-radius: 100%;
-  background-color: #090909;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 section.about-wrapper .brand-showcase .brand-wrapper img {
   max-width: 80%;
   height: auto;
 }
+section.about-wrapper .brand-showcase .brand-wrapper.outer-top-left {
+  top: 0%;
+  left: 7%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.outer-top-right {
+  top: 0%;
+  right: 7%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.outer-bottom-left {
+  bottom: 21%;
+  left: -3%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.outer-bottom-right {
+  bottom: 35%;
+  right: -15%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.middle-bottom-left {
+  bottom: 12%;
+  left: 28%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.middle-bottom-right {
+  bottom: 22%;
+  right: 9%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.inner-top-left {
+  bottom: 62%;
+  right: 55%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.inner-top-right {
+  bottom: 66%;
+  right: 16%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper.inner-bottom-middle {
+  bottom: 30%;
+  right: 35%;
+}
 section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview {
-  width: 0;
+  position: relative;
   background-size: cover;
   border-radius: 10px;
   border: 2px solid white;
   translate: -30%;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-section.about-wrapper .brand-showcase .brand-wrapper:hover {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  translate: 10% 10%;
-}
-section.about-wrapper .brand-showcase .brand-wrapper:hover .brand-hover-preview {
+  scale: 0.7;
   width: 20vh;
   aspect-ratio: 16/9;
+  transition: all 0.4s ease-in-out;
+}
+section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+section.about-wrapper .brand-showcase .brand-wrapper:hover {
+  scale: 1.2;
+  transform-origin: bottom right;
+  translate: 20% 20%;
+}
+section.about-wrapper .brand-showcase .brand-wrapper:hover .brand-hover-preview {
   opacity: 1;
+  scale: 1;
 }
