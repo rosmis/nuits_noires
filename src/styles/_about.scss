@@ -1,28 +1,13 @@
-// .custom-container-about {
-//     max-width: 1170px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     @include media-max("tablet") {
-//         max-width: 993px;
-//         padding-right: 24px;
-//         padding-left: 24px;
-//     }
-//     @include media-max("phone-up") {
-//         max-width: 767px;
-//     }
-// }
-
-section.about-wrapper {
+ section.about-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2em;
     padding: 5% 10%;
-    height: 400vh;
     background-color: $black;
     overflow-x: hidden;
 
-    h1 {
+    h1, h2, h3 {
         @include flex(flex-start);
         font-size: 2em;
         gap: 0.5em;
@@ -113,6 +98,43 @@ section.about-wrapper {
         align-items: flex-start;
         gap: 4em;
         width: 100%;
+
+        .immersive-title-wrapper {
+            @include flex(space-between);
+            width: 100%;
+
+            h2 {
+                min-width: 10em           
+            }
+
+            .immersive-audio-wrapper {
+                @include flex(flex-end);
+                gap: 1em;
+                width: 100%;
+
+                .audio-wrapper {
+                    min-width: 300px;
+                }
+
+                .cta-play {
+                    @include flex(center);
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 100%;
+                    background-color: $brown;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+    
+                    &:hover {
+                        background-color: #c9951bb1;
+                    }
+    
+                    i#playToggle {
+                        color: white;
+                    }
+                }
+            }
+        }
 
         .immersive-content-wrapper {
             @include flex(space-between);
@@ -242,6 +264,89 @@ section.about-wrapper {
                 .brand-hover-preview {
                     opacity: 1;
                     scale: 1;
+                }
+            }
+        }
+    }
+
+    .team-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3em;
+        .team-grid-wrapper {
+            display: flex;
+            width: 100%;
+            gap: 2em;
+
+            .team-column {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2em;
+
+                .team-member-card {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    aspect-ratio: 2/3;
+                    background-size: cover;
+                    justify-content: flex-end;
+                    border-radius: 10px;
+                    padding: 2em;
+                    overflow: hidden;
+    
+                    .team-member-content {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        gap: 1em;
+                        width: 100%;
+                        z-index: 10;
+    
+                        h3 {
+                            font-size: 1.5em;
+                        }
+        
+                        p {
+                            height: 0;
+                            overflow: hidden;
+                            color: white;
+                            transition: all 0.2s ease-in-out;
+    
+                        }
+                    }
+    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        opacity: 0;
+                        background: linear-gradient(0deg, rgb(0 0 0 / 80%) 0%, rgb(255 255 255 / 10%) 100%);
+                        transition: all 0.2s ease-in-out;
+                    }
+                    
+    
+                    &:hover {
+    
+                        &::after {
+                            opacity: 1;
+                        }
+    
+                        .team-member-content {
+                            p {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .cta-team {
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
                 }
             }
         }

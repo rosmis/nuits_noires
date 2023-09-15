@@ -38,6 +38,8 @@ function load_js_assets() {
     $query_vars = $wp->query_vars;
 
     if( is_page(13) ) {
+        wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/90b68b7d84.js', [], 1, true);
+        wp_enqueue_script('WaveSurfer', 'https://unpkg.com/wavesurfer.js@7', [], 1, true);
         wp_enqueue_script('about', get_template_directory_uri() . '/src/js/about.js', [], 1, true);
     }
 

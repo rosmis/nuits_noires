@@ -103,7 +103,21 @@ Template name: A PROPOS
     </div>
 
     <div class="immersive-wrapper">
-        <h1><span></span> Le son immersif</h1>
+        <div class="immersive-title-wrapper">
+            <h2><span></span> Le son immersif</h2>
+
+            <div class="immersive-audio-wrapper">
+                <div class="cta-play">
+                    <i class="fa-solid fa-play" id="playToggle"></i>
+                </div>
+
+                <div class="audio-wrapper">
+
+                </div>
+
+            </div>
+
+        </div>
 
         <div class="immersive-content-wrapper">
 
@@ -217,6 +231,59 @@ Template name: A PROPOS
             <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
         </div>
 
+    </div>
+
+    <div class="team-wrapper">
+        <h2><span></span> Accompagnement</h1>
+
+        <div class="team-grid-wrapper">
+            <div class="team-column">
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-column">
+                <a href="#" class="cta cta-team">Nous contacter</a>
+
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-column">
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                    <div class="team-member-content">
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>
