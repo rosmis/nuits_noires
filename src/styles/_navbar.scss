@@ -234,6 +234,11 @@ header.nav-fullpage {
   }
 }
 
+#audio-equalizer {
+  @include flex(center);
+  cursor: pointer;
+}
+
 .toggle-navbar {
   display: block !important;
   opacity: 1 !important;

@@ -89,3 +89,23 @@ wavesurfer.once("decode", () => {
         }
     });
 });
+
+// SCROLL ARC PROGRESS
+
+const scrollingArcTimeline = gsap.timeline({ paused: true });
+const scrollArc = document.getElementById("circle-progress");
+
+gsap.to("#rotate-circle", {
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".about-wrapper",
+        scrub: 0.3,
+        onUpdate: (self) => {
+            const incrementProgress = self.progress * 100;
+
+            const newRotation = 320 + incrementProgress;
+
+            scrollArc.style.rotate = `${newRotation}deg`;
+        },
+    },
+});

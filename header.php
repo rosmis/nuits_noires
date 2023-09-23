@@ -30,7 +30,7 @@
           </ul>
 
           <div class="nav-icon-wrapper">
-            <img src="<?php echo get_template_directory_uri() . '/src/assets/Equalizer.svg'?>" class="equalizer" />
+            <div id="audio-equalizer"></div>
             <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin.svg'?>" class="equalizer" />
             <img src="<?php echo get_template_directory_uri() . '/src/assets/instagram.svg'?>" class="equalizer" />
           </div>

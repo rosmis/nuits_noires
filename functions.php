@@ -21,12 +21,20 @@ add_action( 'wp_enqueue_scripts', 'NuitsNoires_register_styles');
 
 function NuitsNoires_register_scripts(){
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', [], 1, true);
+    wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js', [], 1, true);
     // wp_enqueue_script('easyMorph', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js', [], 1, true);
     wp_enqueue_script('easyMorph', 'https://assets.codepen.io/16327/MorphSVGPlugin3.min.js', [], 1, true);
     wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', [], 1, true);
     wp_enqueue_script('navbar', get_template_directory_uri() . '/src/js/navbar.js', [], 1, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', [], 1, true);
-    
+
+
+    // inject animationDataUrl in navbar file
+    $animationDataUrl = get_template_directory_uri() .'/src/assets/lottie/audio_toggle.json';
+
+    wp_localize_script('navbar', 'data', array(
+        'animationDataUrl' => $animationDataUrl,
+    ));
 }
 
 add_action( 'wp_enqueue_scripts', 'NuitsNoires_register_scripts');

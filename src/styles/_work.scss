@@ -1,43 +1,5 @@
 .work-wrapper {
     position: relative;
-    .circle-progress-wrapper {
-        position: fixed;
-        top: 50%;
-        left: -20%;
-        transform: translateY(-50%);
-        #circle-progress {    
-            transform: rotate(347deg);
-            width: fit-content;
-        }
-
-            .circled-image {
-                position: absolute;
-                top: 50%;
-                left: 30%;
-                transform: translateY(-50%);
-                border-radius: 100%;
-                height: 200px;
-                width: 200px;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            .wrapper-circle-content {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 1em;
-                position: absolute;
-                top: 45%;
-                left: 68%;
-                p {
-                    font-size: 0.8em;
-                    color: white;
-                    opacity: 40%;
-                    text-transform: uppercase;
-                    text-align: end;
-                }
-            }
-    }
 
     .work-template {
         display: flex;

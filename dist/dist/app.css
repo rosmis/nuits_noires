@@ -83,6 +83,45 @@ h1 {
   }
 }
 
+.circle-progress-wrapper {
+  position: fixed;
+  top: 50%;
+  left: -20%;
+  transform: translateY(-50%);
+}
+.circle-progress-wrapper #circle-progress {
+  rotate: 347deg;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.circle-progress-wrapper .circled-image {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.circle-progress-wrapper .wrapper-circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+  position: absolute;
+  top: 45%;
+  left: 68%;
+}
+.circle-progress-wrapper .wrapper-circle-content p {
+  font-size: 0.8em;
+  color: white;
+  opacity: 40%;
+  text-transform: uppercase;
+  text-align: end;
+}
+
 header.navbar {
   opacity: 0;
   position: fixed;
@@ -290,6 +329,13 @@ header.nav-fullpage ul.main-nav-links li a {
   transition: all 0.2s ease-in-out;
 }
 
+#audio-equalizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .toggle-navbar {
   display: block !important;
   opacity: 1 !important;
@@ -453,44 +499,6 @@ header.nav-fullpage ul.main-nav-links li a {
 
 .work-wrapper {
   position: relative;
-}
-.work-wrapper .circle-progress-wrapper {
-  position: fixed;
-  top: 50%;
-  left: -20%;
-  transform: translateY(-50%);
-}
-.work-wrapper .circle-progress-wrapper #circle-progress {
-  transform: rotate(347deg);
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.work-wrapper .circle-progress-wrapper .circled-image {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translateY(-50%);
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.work-wrapper .circle-progress-wrapper .wrapper-circle-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1em;
-  position: absolute;
-  top: 45%;
-  left: 68%;
-}
-.work-wrapper .circle-progress-wrapper .wrapper-circle-content p {
-  font-size: 0.8em;
-  color: white;
-  opacity: 40%;
-  text-transform: uppercase;
-  text-align: end;
 }
 .work-wrapper .work-template {
   display: flex;
@@ -823,12 +831,17 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
   color: white;
 }
 
+#circle-progress-about {
+  z-index: 50;
+}
+
 section.about-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2em;
-  padding: 5% 10%;
+  padding: 5% 15%;
   background-color: #090909;
   overflow-x: hidden;
 }
