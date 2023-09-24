@@ -21,14 +21,16 @@ Template name: A PROPOS
     <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
 
     <div class="wrapper-circle-content">
-        <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>    
+        <p class="anchor-work-link" style="transform: translateX(-5px)">NOTRE HISTOIRE</p>
+        <p class="anchor-work-link" style="transform: translateX(-10px)">LE SON IMMERSIF</p>
+        <p class="anchor-work-link" style="transform: translateX(-15px)">ACCOMPAGNEMENT</p>  
     </div>
 
 </div>
 
-<section class="about-wrapper">
+<section class="about-wrapper" >
 
-    <div class="history-wrapper">
+    <div class="history-wrapper" id="history-wrapper">
         <h1><span></span> Notre histoire</h1>
 
         <div class="timeline-wrapper">
@@ -121,7 +123,7 @@ Template name: A PROPOS
         </div>
     </div>
 
-    <div class="immersive-wrapper">
+    <div class="immersive-wrapper" id="immersive-wrapper">
         <div class="immersive-title-wrapper">
             <h2><span></span> Le son immersif</h2>
 
@@ -252,7 +254,7 @@ Template name: A PROPOS
 
     </div>
 
-    <div class="team-wrapper">
+    <div class="team-wrapper" id="team-wrapper">
         <h2><span></span> Accompagnement</h1>
 
         <div class="team-grid-wrapper">

@@ -51,7 +51,7 @@
           <span>Notre portfolio</span>
         </li>
         <li>
-          <a class="nav-link" href="<?php echo get_permalink(25)?>">À propos</a>
+          <a class="nav-link" href="http://localhost:10003/about">À propos</a>
           <span>Mieux nous connaître</span>
         </li>
         <li>

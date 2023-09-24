@@ -109,3 +109,28 @@ gsap.to("#rotate-circle", {
         },
     },
 });
+
+// INTERSECTION OBSERVERS
+const target = document.getElementById("team-wrapper");
+
+function handleIntersection(entries, observer) {
+    console.log("entries", entries);
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            console.log("Target element is in the viewport!");
+        }
+    });
+}
+
+const intersectionOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(
+    handleIntersection,
+    intersectionOptions
+);
+
+observer.observe(target);
