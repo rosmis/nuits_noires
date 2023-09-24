@@ -110,6 +110,7 @@ function playSvgTriggerAnimation(trigger) {
 //DISPLAY NEXT SLIDE STATE
 
 const slides = gsap.utils.toArray(".category-wrapper");
+const anchorCategoryTags = gsap.utils.toArray(".title-wrapper");
 const triggerTitles = ["Culturel", "Marque", "Art Vivant", "Patrimoine"];
 let currentIndex = 0;
 
@@ -125,8 +126,16 @@ triggers.forEach((trigger) => {
 });
 
 function showSlide(index) {
-    gsap.to(slides[currentIndex], { opacity: 0, zIndex: 0 });
-    gsap.to(slides[index], { opacity: 1, zIndex: 1 });
+    gsap.to(slides[currentIndex], { opacity: 0, pointerEvents: "none" });
+    gsap.to(slides[index], { opacity: 1, pointerEvents: "all" });
+
+    gsap.to(anchorCategoryTags[currentIndex], {
+        opacity: 0,
+        pointerEvents: "none",
+    });
+    gsap.to(anchorCategoryTags[index], { opacity: 1, pointerEvents: "all" });
+
+    triggerNextMorphingShape(index);
     currentIndex = index;
 }
 
@@ -138,4 +147,45 @@ function showPrevSlide() {
 function showNextSlide() {
     const nextIndex = (currentIndex + 1) % slides.length;
     showSlide(nextIndex);
+}
+
+// MORPH SHAPE STATE
+
+const morphingDataUrlPath = data.morphingShapes;
+const morphingWrapper = document.getElementById("morphing-wrapper");
+
+let morphingShapesLottieInstance;
+
+fetch(morphingDataUrlPath)
+    .then((response) => response.json())
+    .then((animationData) => {
+        const config = {
+            container: morphingWrapper,
+            renderer: "svg",
+            loop: false,
+            autoplay: false,
+            animationData: animationData,
+            rendererSettings: {
+                preserveAspectRatio: "none",
+                // viewBoxSize: true,
+            },
+        };
+
+        // Create a Lottie instance
+        const animation = lottie.loadAnimation(config);
+        morphingShapesLottieInstance = animation;
+    })
+    .catch((error) => {
+        console.error("Error loading animation data:", error);
+    });
+
+function triggerNextMorphingShape(index) {
+    const morphingShapesDict = {
+        0: () => morphingShapesLottieInstance.playSegments([0, 40], true),
+        1: () => morphingShapesLottieInstance.playSegments([154, 220], true),
+        2: () => morphingShapesLottieInstance.playSegments([292, 330], true),
+        3: () => morphingShapesLottieInstance.playSegments([484, 520], true),
+    };
+
+    return morphingShapesDict[+index]();
 }

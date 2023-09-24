@@ -1,6 +1,8 @@
-.realisations-wrapper {
+section.realisations-wrapper {
+    position: relative;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
     .controllers-wrapper {
         position: absolute;
@@ -45,6 +47,14 @@
         }
     }
 
+    #morphing-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 110%;
+    }
+
     .category-wrapper {
         display: flex;
         flex-direction: column;
@@ -56,7 +66,15 @@
         opacity: 0;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 10% 0;
+        padding: 8% 0;
+    
+        .description-wrapper {
+            p {
+                text-align: center;
+                color: white;
+            }
+        }
+
 
         .gray-filter {
             position: absolute;
@@ -65,36 +83,46 @@
             backdrop-filter: blur(7px);
             z-index: -1;
         } 
+    }
 
-        .title-wrapper {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 5em;
-            display: flex;
-            text-decoration: none;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5em;
-            h2 {
-                font-weight: 400;
-                font-size: 1em;
-            }
+    .title-wrapper {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5em;
+        display: flex;
+        text-decoration: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8em;
+        z-index: 101;
+        will-change: transform;
+
+        &:hover {
             h1 {
-                font-size: 3em;
+                transform: translate3d(0,-0.5rem,0);
             }
-            h1, h2 {
-                color: white;
+
+            h2 {
+                transform: translate3d(0,0.5rem,0);
             }
         }
 
-        .description-wrapper {
-            p {
-                text-align: center;
-                color: white;
-            }
+        h2 {
+            font-weight: 400;
+            font-size: 1em;
+            transition: transform 1.2s cubic-bezier(.19,1,.22,1);
+        }
+        h1 {
+            font-size: 3em;
+            transition: transform 1.2s cubic-bezier(.19,1,.22,1);
+        }
+        h1, h2 {
+            color: white;
         }
     }
 }
+
+
 

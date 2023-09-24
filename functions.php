@@ -62,6 +62,13 @@ function load_js_assets() {
 
     if (is_post_type_archive('realisations')) {
         wp_enqueue_script('realisations', get_template_directory_uri() . '/src/js/realisations.js', [], 1, true);
+
+
+        $morphingShapes = get_template_directory_uri() .'/src/assets/lottie/realisations_morphing.json';
+
+        wp_localize_script('realisations', 'data', array(
+            'morphingShapes' => $morphingShapes,
+        ));
         return;
     }
 

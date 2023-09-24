@@ -409,28 +409,30 @@ header.nav-fullpage ul.main-nav-links li a {
   gap: 1.5em;
 }
 
-.realisations-wrapper {
+section.realisations-wrapper {
+  position: relative;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
-.realisations-wrapper .controllers-wrapper {
+section.realisations-wrapper .controllers-wrapper {
   position: absolute;
   padding: 0 3%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
 }
-.realisations-wrapper .controllers-wrapper.controller-left {
+section.realisations-wrapper .controllers-wrapper.controller-left {
   left: 0;
 }
-.realisations-wrapper .controllers-wrapper.controller-right {
+section.realisations-wrapper .controllers-wrapper.controller-right {
   right: 0;
 }
-.realisations-wrapper .controllers-wrapper .controller {
+section.realisations-wrapper .controllers-wrapper .controller {
   position: relative;
   cursor: pointer;
 }
-.realisations-wrapper .controllers-wrapper .controller p {
+section.realisations-wrapper .controllers-wrapper .controller p {
   opacity: 0;
   color: white;
   font-weight: 700;
@@ -440,16 +442,23 @@ header.nav-fullpage ul.main-nav-links li a {
   transition: all 0.1s ease-in;
   min-width: 80px;
 }
-.realisations-wrapper .controllers-wrapper .controller p:first-child {
+section.realisations-wrapper .controllers-wrapper .controller p:first-child {
   left: -40%;
 }
-.realisations-wrapper .controllers-wrapper .controller p:last-child {
+section.realisations-wrapper .controllers-wrapper .controller p:last-child {
   left: -10%;
 }
-.realisations-wrapper .controllers-wrapper .controller:hover p {
+section.realisations-wrapper .controllers-wrapper .controller:hover p {
   opacity: 1;
 }
-.realisations-wrapper .category-wrapper {
+section.realisations-wrapper #morphing-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+}
+section.realisations-wrapper .category-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -460,9 +469,13 @@ header.nav-fullpage ul.main-nav-links li a {
   opacity: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10% 0;
+  padding: 8% 0;
 }
-.realisations-wrapper .category-wrapper .gray-filter {
+section.realisations-wrapper .category-wrapper .description-wrapper p {
+  text-align: center;
+  color: white;
+}
+section.realisations-wrapper .category-wrapper .gray-filter {
   position: absolute;
   inset: 0;
   background-color: rgba(9, 9, 9, 0.5);
@@ -470,7 +483,7 @@ header.nav-fullpage ul.main-nav-links li a {
           backdrop-filter: blur(7px);
   z-index: -1;
 }
-.realisations-wrapper .category-wrapper .title-wrapper {
+section.realisations-wrapper .title-wrapper {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -480,20 +493,26 @@ header.nav-fullpage ul.main-nav-links li a {
   text-decoration: none;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.8em;
+  z-index: 101;
+  will-change: transform;
 }
-.realisations-wrapper .category-wrapper .title-wrapper h2 {
+section.realisations-wrapper .title-wrapper:hover h1 {
+  transform: translate3d(0, -0.5rem, 0);
+}
+section.realisations-wrapper .title-wrapper:hover h2 {
+  transform: translate3d(0, 0.5rem, 0);
+}
+section.realisations-wrapper .title-wrapper h2 {
   font-weight: 400;
   font-size: 1em;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.realisations-wrapper .category-wrapper .title-wrapper h1 {
+section.realisations-wrapper .title-wrapper h1 {
   font-size: 3em;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.realisations-wrapper .category-wrapper .title-wrapper h1, .realisations-wrapper .category-wrapper .title-wrapper h2 {
-  color: white;
-}
-.realisations-wrapper .category-wrapper .description-wrapper p {
-  text-align: center;
+section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .title-wrapper h2 {
   color: white;
 }
 
