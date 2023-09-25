@@ -1157,3 +1157,119 @@ section.about-wrapper .team-wrapper .team-grid-wrapper .team-column .cta-team {
   text-align: center;
   text-decoration: none;
 }
+
+section.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #090909;
+  padding: 8%;
+  height: 100%;
+}
+section.contact-wrapper h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2em;
+  gap: 0.5em;
+  color: white;
+}
+section.contact-wrapper h1 span {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #C9961B;
+}
+section.contact-wrapper .contact-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3em;
+  width: 100%;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  margin: 5em 0;
+  padding: 1em 0;
+}
+section.contact-wrapper .contact-form-container p {
+  flex: 1;
+  font-size: 2em;
+  color: white;
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper {
+  flex: 3;
+  width: 100%;
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper .contact-email, section.contact-wrapper .contact-form-container .contact-form-wrapper .contact-name, section.contact-wrapper .contact-form-container .contact-form-wrapper .contact-message {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.659);
+  padding: 1em;
+  caret-color: white;
+  margin: 0.5em 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper textarea:focus, section.contact-wrapper .contact-form-container .contact-form-wrapper input:focus {
+  color: white;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper .contact-message {
+  resize: vertical;
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper .cta {
+  margin-top: 1em;
+}
+section.contact-wrapper .contact-form-container .contact-form-wrapper input, section.contact-wrapper .contact-form-container .contact-form-wrapper select, section.contact-wrapper .contact-form-container .contact-form-wrapper textarea {
+  color: white;
+}
+section.contact-wrapper .contact-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3em;
+  width: 100%;
+}
+section.contact-wrapper .contact-infos .contact-infos-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+section.contact-wrapper .contact-infos .contact-infos-row a {
+  color: white;
+}
+section.contact-wrapper .contact-infos .contact-infos-row .contact-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1em;
+}
+section.contact-wrapper .contact-infos .contact-infos-row .contact-item h3 {
+  font-weight: 700;
+  color: white;
+}
+section.contact-wrapper .contact-infos .contact-infos-row .contact-item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+section.contact-wrapper .contact-infos .contact-infos-row .contact-item div a {
+  text-decoration: none;
+  color: white;
+}
+section.contact-wrapper .contact-infos .contact-img-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+section.contact-wrapper .contact-infos .contact-img-grid .contact-img {
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid #C9961B;
+}

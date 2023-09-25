@@ -63,7 +63,7 @@
           <span>En apprendre plus</span>
         </li>
         <li>
-          <a class="nav-link" href="<?php echo get_permalink(25)?>">Contact</a>
+          <a class="nav-link" href="http://localhost:10003/contact">Contact</a>
           <span>Échanger avec nous</span>
         </li>
       </ul> 
