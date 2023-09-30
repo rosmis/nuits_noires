@@ -6,8 +6,11 @@ let panels = gsap.utils.toArray(".work"),
     observer = ScrollTrigger.normalizeScroll(true),
     scrollTween;
 
-let cards = gsap.utils.toArray(".card-wrapper");
-let cardWrappers = gsap.utils.toArray(".card-wrapper-transform");
+const cards = gsap.utils.toArray(".card-wrapper");
+const cardWrappers = gsap.utils.toArray(".card-wrapper-transform");
+
+const circleBackgroundImageContainer = document.querySelector(".circled-image");
+const backgroundImageContainer = document.querySelector(".background-wrapper");
 
 // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
 document.addEventListener(
@@ -41,6 +44,8 @@ function goToSection(i, direction, self) {
             observer.enable();
 
             setCardAnimation(direction === 1 ? i - 1 : i, direction);
+
+            setCircleBackgroundImage(i);
 
             generateAnchorOpacity(i);
 
@@ -218,34 +223,51 @@ function generateAnchorOpacity(index) {
     generateAnchorOpacityTimeline(index, 1);
 }
 
-let translateYWrapperValue = 0;
+let translateYWrapperValue = 100;
 
 function translateAnchorLinks(index, direction) {
     const anchorIndexesToTranslate = [];
     let anchorLinksCounter = 0;
 
-    const generateTranslateAnchorWrapperTimeline = () => {
-        const anchorWrapperTimeline = gsap.timeline({ paused: true });
+    const generateTranslateYAnchorTimeline = (index) => {
+        const anchorTranslateYTimeline = gsap.timeline({ paused: true });
 
-        translateYWrapperValue += -direction * 10;
+        const computedStyle = window.getComputedStyle(anchorLinks[index]);
 
-        anchorWrapperTimeline.to(anchorLinksWrapper, {
-            transform: `translateY(${translateYWrapperValue}%)`,
+        const transformValue = computedStyle.getPropertyValue("transform");
+
+        const matrix = new DOMMatrix(transformValue);
+        const translateXValue = matrix.m41;
+
+        anchorTranslateYTimeline.to(anchorLinks[index], {
+            transform: `translateX(${translateXValue}px) translateY(${translateYWrapperValue}px)`,
             duration: 0.8,
             ease: Power1.easeInOut,
         });
 
-        anchorWrapperTimeline.play();
+        anchorTranslateYTimeline.play();
     };
 
-    const generateAnchorLinkTranslateTimeline = (index, translateXPosition) => {
+    translateYWrapperValue += -direction * 30;
+
+    anchorLinks.forEach((_anchorLink, index) =>
+        generateTranslateYAnchorTimeline(index)
+    );
+
+    const generateTranslateXAnchorTimeline = (index, translateXPosition) => {
         const anchorLinkTimeline = gsap.timeline({ paused: true });
-        const initialTranslateXAnchorValue = (index + 1) * -5;
+
+        const computedStyle = window.getComputedStyle(anchorLinks[index]);
+
+        const transformValue = computedStyle.getPropertyValue("transform");
+
+        const matrix = new DOMMatrix(transformValue);
+        const translateXValue = matrix.m41;
 
         anchorLinkTimeline.to(anchorLinks[index], {
             transform: `translateX(${
-                initialTranslateXAnchorValue + translateXPosition
-            }px)`,
+                translateXValue + translateXPosition
+            }px) translateY(${translateYWrapperValue}px)`,
             duration: 0.8,
             ease: Power1.easeInOut,
         });
@@ -253,22 +275,21 @@ function translateAnchorLinks(index, direction) {
         anchorLinkTimeline.play();
     };
 
-    generateTranslateAnchorWrapperTimeline(index);
+    if (index === 0) anchorIndexesToTranslate.push(0);
 
     for (let i = index - 1; i >= 0; i--) {
         anchorIndexesToTranslate.push(i);
     }
 
-    console.log("anchorIndexesToTranslate", anchorIndexesToTranslate);
-
-    console.log("direction", direction);
-
     anchorIndexesToTranslate.forEach((index) => {
         anchorLinksCounter += -direction * 10;
-        generateAnchorLinkTranslateTimeline(index, anchorLinksCounter);
+        generateTranslateXAnchorTimeline(index, anchorLinksCounter);
     });
+}
 
-    // anchorLinks.forEach((_anchorLink, anchorIterationIndex) => {
-    //     generateTranslateAnchorWrapperTimeline(index, anchorIterationIndex);
-    // });
+function setCircleBackgroundImage(index) {
+    const thumbnailPostUrl = cards[index].getAttribute("data-thumbnail-url");
+
+    circleBackgroundImageContainer.style.backgroundImage = `url(${thumbnailPostUrl})`;
+    backgroundImageContainer.style.backgroundImage = `url(${thumbnailPostUrl})`;
 }

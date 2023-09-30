@@ -3,10 +3,51 @@ get_header()
 ?>
 
 
-<div class="work-wrapper">
+<section class="work-wrapper">
     <div class="work-template">
         <h1><span></span> Nos réalisations culturelles</h1>
         <div class="background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+    </div>
+
+    <div class="wrapper-circle-content">
+
+        <?php
+        // Custom loop for Realizations
+        $args = array(
+            'post_type' => 'realisations',
+            'posts_per_page' => -1, 
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category', 
+                    'field'    => 'slug',                 
+                    'terms'    => 'culturel',             
+                ),
+            )
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            $i=0;
+
+            while ($query->have_posts()) : $query->the_post(); 
+
+            $i-=5; ?>
+
+            <!-- <p class="anchor-work-link" style="transform: translateY(100px)"><?php the_title() ?></p> -->
+            <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px) translateY(100px)"><?php the_title() ?></p>
+                
+
+            <?php endwhile;
+
+            // Restore original post data
+            wp_reset_postdata();
+
+            else : ?>
+
+            <p>Aucuns articles</p>
+        <?php endif;
+        ?>
     </div>
 
     <div class="circle-progress-wrapper">
@@ -21,47 +62,7 @@ get_header()
             </svg>
         </div>
 
-        <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
-
-        <div class="wrapper-circle-content">
-
-            <?php
-            // Custom loop for Realizations
-            $args = array(
-                'post_type' => 'realisations',
-                'posts_per_page' => -1, 
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'category', 
-                        'field'    => 'slug',                 
-                        'terms'    => 'culturel',             
-                    ),
-                )
-            );
-
-            $query = new WP_Query($args);
-
-            if ($query->have_posts()) :
-                $i=0;
-
-                while ($query->have_posts()) : $query->the_post(); 
-
-                $i-=5; ?>
-
-                <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>
-                    
-
-                <?php endwhile;
-
-                // Restore original post data
-                wp_reset_postdata();
-
-                else : ?>
-
-                <p>Aucuns articles</p>
-            <?php endif;
-            ?>
-        </div>
+        <div class="circled-image"></div>
 
     </div>
 
@@ -83,18 +84,23 @@ get_header()
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
+        $i=0;
+
         while ($query->have_posts()) : $query->the_post(); 
 
         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); 
         $post_url = get_permalink();
-        $post_excerpt = get_field('intro') ?>
+        $post_excerpt = get_field('intro');
+
+        $i++;
+
+        ?>
 
         <div class="work">
             <div class="card-wrapper-transform" style="opacity: 1">
                 <div class="content-card-wrapper">
                     <h1><?php the_title(); ?></h1>
                     <p><?php echo $post_excerpt ?></p>
-                    <!-- <p>Dans le cadre d’un lancement de la gamme de chaussures « confort » de la marque Salomon, Nuits Noires a été commandité pour créer une …</p> -->
                 </div>
 
                 <a class="cta-more-wrapper" href="<?php echo esc_url($post_url) ?>"> 
@@ -106,7 +112,11 @@ get_header()
                     </div>
                 </a>
 
-                <div class="card-wrapper" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
+                <?php if($i === 1) :?>
+                    <div class="card-wrapper" data-thumbnail-url="<?php echo esc_url($thumbnail_url) ?>" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
+                <?php else : ?>
+                    <div class="card-wrapper" data-thumbnail-url="<?php echo esc_url($thumbnail_url) ?>" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(0) rotateY(0) rotateZ(0);"></div>
+                <?php endif?>
             </div>
         </div>
             
@@ -126,7 +136,7 @@ get_header()
 
 
 
-</div>
+</section>
 
 
 <?php get_footer();?>

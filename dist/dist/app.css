@@ -105,21 +105,30 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.circle-progress-wrapper .wrapper-circle-content {
+
+.wrapper-circle-content {
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  height: 300px;
+  overflow: hidden;
+  top: 35%;
+  width: 130px;
+  left: 0;
   gap: 1em;
-  position: absolute;
-  top: 45%;
-  left: 68%;
+  z-index: 80;
 }
-.circle-progress-wrapper .wrapper-circle-content p {
+.wrapper-circle-content p {
   font-size: 0.8em;
   color: white;
   opacity: 40%;
   text-transform: uppercase;
   text-align: end;
+  max-width: 80px;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
 header.navbar {
@@ -591,10 +600,10 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   color: white;
 }
 
-.work-wrapper {
+section.work-wrapper {
   position: relative;
 }
-.work-wrapper .work-template {
+section.work-wrapper .work-template {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -604,7 +613,7 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   z-index: -1;
   background-color: #090909;
 }
-.work-wrapper .work-template h1 {
+section.work-wrapper .work-template h1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -616,13 +625,13 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   color: white;
   padding: 2em;
 }
-.work-wrapper .work-template h1 span {
+section.work-wrapper .work-template h1 span {
   height: 13px;
   width: 13px;
   border-radius: 100%;
   background-color: #C9961B;
 }
-.work-wrapper .work-template .background-wrapper {
+section.work-wrapper .work-template .background-wrapper {
   height: auto;
   width: 70vw;
   aspect-ratio: 2/1;
@@ -632,57 +641,57 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   background-repeat: no-repeat;
   opacity: 60%;
 }
-.work-wrapper .work {
+section.work-wrapper .work {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding-left: 10%;
 }
-.work-wrapper .work .card-wrapper-transform {
+section.work-wrapper .work .card-wrapper-transform {
   position: relative;
   perspective: 800px;
   opacity: 0;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper {
   position: absolute;
   bottom: 10%;
   right: 10%;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more {
   position: relative;
   height: 140px;
   width: 140px;
   cursor: pointer;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .inner-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .inner-circle {
   height: 100%;
   width: 100%;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .outer-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .outer-circle {
   opacity: 0;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover p {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover p {
   font-size: 1.2em;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .hidden-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .hidden-circle {
   opacity: 1;
   height: 60%;
   width: 60%;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p {
   color: white;
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p, .work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle, section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle, section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more p, section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .outer-circle {
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -690,7 +699,7 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   opacity: 1;
   transition: all 0.15s ease-in;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .hidden-circle {
   height: 0%;
   width: 0%;
   border-radius: 50%;
@@ -698,14 +707,14 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   border: 2px solid white;
   transition: all 0.2s ease-in-out;
 }
-.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle {
+section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more .inner-circle {
   height: 60%;
   width: 60%;
   border-radius: 50%;
   border: 2px solid white;
   transition: all 0.2s ease-in-out;
 }
-.work-wrapper .work .card-wrapper-transform .content-card-wrapper {
+section.work-wrapper .work .card-wrapper-transform .content-card-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -714,16 +723,16 @@ section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .ti
   left: -10%;
   max-width: 60%;
 }
-.work-wrapper .work .card-wrapper-transform .content-card-wrapper h1 {
+section.work-wrapper .work .card-wrapper-transform .content-card-wrapper h1 {
   font-size: 2.5em;
   color: white;
   text-transform: uppercase;
 }
-.work-wrapper .work .card-wrapper-transform .content-card-wrapper p {
+section.work-wrapper .work .card-wrapper-transform .content-card-wrapper p {
   color: white;
   line-height: 1.3em;
 }
-.work-wrapper .work .card-wrapper-transform .card-wrapper {
+section.work-wrapper .work .card-wrapper-transform .card-wrapper {
   position: relative;
   width: 45vw;
   height: auto;

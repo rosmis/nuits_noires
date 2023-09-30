@@ -46,13 +46,13 @@ triggers.forEach((trigger) => {
     trigger.addEventListener("mouseenter", () => {
         if (trigger.classList.contains("next")) {
             const nextIndex = (currentIndex + 1) % slides.length;
-            triggerContentNext.innerHTML = triggerTitles[nextIndex];
+            triggerContentNext.innerText = triggerTitles[nextIndex];
 
             playSvgTriggerAnimation("right").play();
             return;
         }
         const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-        triggerContentPrevious.innerHTML = triggerTitles[prevIndex];
+        triggerContentPrevious.innerText = triggerTitles[prevIndex];
 
         playSvgTriggerAnimation("left").play();
     });
