@@ -177,16 +177,6 @@ header.nav-fullpage {
     z-index: -1;
   }
 
-  .logo_navbar_wrapper {
-    position: absolute;
-    left: 50%;
-    top: 4%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
   ul.main-nav-links {
     display: flex;
     align-items: flex-start;
@@ -242,4 +232,36 @@ header.nav-fullpage {
 .toggle-navbar {
   display: block !important;
   opacity: 1 !important;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 80;
+}
+
+.logo-wrapper {
+  @include flex(center);
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  top: 0;
+  z-index: 80;
+
+  .logo-top-navbar {
+    padding: 2% 1em 1em 1em;
+  }
+}
+
+.logo_navbar_wrapper {
+  position: fixed;
+  left: 50%;
+  top: 4%;
+  transform: translateX(-50%);
+  padding: 0 1em 1em 1em;
+  z-index: 80;
 }

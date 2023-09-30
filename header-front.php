@@ -8,11 +8,7 @@
 
     <?php wp_head();?>
 
-    <div class="logo-wrapper">
-      <a href="http://localhost:10003" class="logo-top-navbar">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
-      </a>
-    </div>
+    <div class="logo-container" ></div>
 
     <header class="navbar">
         <div class="hamburger">

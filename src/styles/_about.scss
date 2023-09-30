@@ -237,6 +237,17 @@ section.about-wrapper {
                 right: 35%;
             }
 
+            &.middle-middle-left {
+                bottom: 47%;
+                right: 75%;
+            }
+
+            &.middle {
+                bottom: 36%;
+                right: 22%;
+                transform: translate(-50%, -50%);
+            }
+
 
             .brand-hover-preview {
                 position: relative;

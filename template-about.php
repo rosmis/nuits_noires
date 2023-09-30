@@ -123,47 +123,6 @@ Template name: A PROPOS
         </div>
     </div>
 
-    <div class="immersive-wrapper" id="immersive-wrapper">
-        <div class="immersive-title-wrapper">
-            <h2><span></span> Le son immersif</h2>
-
-            <div class="immersive-audio-wrapper">
-                <div class="cta-play">
-                    <i class="fa-solid fa-play" id="playToggle"></i>
-                </div>
-
-                <div class="audio-wrapper">
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="immersive-content-wrapper">
-
-            <div class="immersive-column">
-                <div>
-                    <p>Le son immersif c’est quoi ? </p>
-                    <p>
-                        Nos créations sonores sont réalisées à partir de captation ambisonique et/ou binaurale pour reproduire à la perfection un environnement sonore. Une technique de traitement du son qui restitue l’écoute naturelle en trois dimensions pour se sentir au cœur de l’action et de l’espace sonore.
-                    </p>
-                </div>
-
-                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
-            </div>
-
-            <div class="immersive-column">
-                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
-                <p>Associé à un sound design sensible l’auditeur se sentira en totale immersion dans un environnement virtuel grâce à une écoute au casque ou un système de diffusion spatialisée.</p>
-                <p>
-                    Nous captons avec une tête Neumann KU100 que vous voyez ci joint. Cet outil technologique est au service de votre message. Nous réfléchissons avec vous comment créer de l’expérientiel sur mesure avec un conseil en diffusion à la pointe.  Grâce à ce micro spécifique, nous créons la majorité de nos créations sonores pour vous proposer toujours des immersions les plus réalistes qu’ils soient et offrir à vos auditeurs une qualité sonore imparable. 
-                </p>
-            </div>
-
-        </div>
-    </div>
-
     <div class="brand-showcase">
 
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="828.32" height="827.296" viewBox="0 0 828.32 827.296" id="circle-group">
@@ -252,6 +211,59 @@ Template name: A PROPOS
             <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
         </div>
 
+        <div class="brand-wrapper middle-middle-left">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+        <div class="brand-wrapper middle">
+            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+
+            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+        </div>
+
+    </div>
+
+    <div class="immersive-wrapper" id="immersive-wrapper">
+        <div class="immersive-title-wrapper">
+            <h2><span></span> Le son immersif</h2>
+
+            <div class="immersive-audio-wrapper">
+                <div class="cta-play">
+                    <i class="fa-solid fa-play" id="playToggle"></i>
+                </div>
+
+                <div class="audio-wrapper">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="immersive-content-wrapper">
+
+            <div class="immersive-column">
+                <div>
+                    <p>Le son immersif c’est quoi ? </p>
+                    <p>
+                        Nos créations sonores sont réalisées à partir de captation ambisonique et/ou binaurale pour reproduire à la perfection un environnement sonore. Une technique de traitement du son qui restitue l’écoute naturelle en trois dimensions pour se sentir au cœur de l’action et de l’espace sonore.
+                    </p>
+                </div>
+
+                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+            </div>
+
+            <div class="immersive-column">
+                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+                <p>Associé à un sound design sensible l’auditeur se sentira en totale immersion dans un environnement virtuel grâce à une écoute au casque ou un système de diffusion spatialisée.</p>
+                <p>
+                    Nous captons avec une tête Neumann KU100 que vous voyez ci joint. Cet outil technologique est au service de votre message. Nous réfléchissons avec vous comment créer de l’expérientiel sur mesure avec un conseil en diffusion à la pointe.  Grâce à ce micro spécifique, nous créons la majorité de nos créations sonores pour vous proposer toujours des immersions les plus réalistes qu’ils soient et offrir à vos auditeurs une qualité sonore imparable. 
+                </p>
+            </div>
+
+        </div>
     </div>
 
     <div class="team-wrapper" id="team-wrapper">

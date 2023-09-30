@@ -31,9 +31,11 @@ function NuitsNoires_register_scripts(){
 
     // inject animationDataUrl in navbar file
     $animationDataUrl = get_template_directory_uri() .'/src/assets/lottie/audio_toggle.json';
+    $animationLogoDataUrl = get_template_directory_uri() .'/src/assets/lottie/logo_3.json';
 
     wp_localize_script('navbar', 'data', array(
         'animationDataUrl' => $animationDataUrl,
+        'animationLogoDataUrl' => $animationLogoDataUrl,
     ));
 }
 
