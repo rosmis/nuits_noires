@@ -3,6 +3,7 @@ const navbarHome = document.querySelector(".navbar");
 
 const svgTrigger = document.querySelector(".cta-svg");
 const svg = document.querySelectorAll(".svg-trigger");
+const subtitlesWrapper = document.querySelectorAll(".subtitles-content");
 
 let t2 = gsap.timeline({ paused: true });
 let t3 = gsap.timeline({ paused: true });
@@ -36,6 +37,10 @@ function triggerNextScreen(index) {
 menuToggleSound.forEach((toggle) => {
     toggle.addEventListener("click", () => {
         navbarHome.classList.add("display-navbar");
+
+        svg[0].classList.add("display-content");
+        subtitlesWrapper[0].classList.add("display-content");
+
         t2.play();
     });
 });

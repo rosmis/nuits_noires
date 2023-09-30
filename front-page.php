@@ -1,33 +1,33 @@
 <?php get_header();?>
 
 
-<div class="home_wrapper">
+<section class="home_wrapper">
+
+    <div class="activate-sound-wrapper">
+        <div>
+            <h1>Nuits Noires vous invite à plonger en immersion<span>.</span></h1>
+            <p>Souhaitez vous activer le son pour une expérience plus immersive ?</p>
+        </div>
+
+        <div class="cta-wrapper">
+            <div class="cta cta-home">
+                Oui
+            </div>
+
+            <div class="cta cta-home">
+                Non
+            </div>
+        </div>
+    </div>
 
     <div class="sea-wrapper video-container sea-wrapper-0" style="z-index: 4">
         <video muted autoplay loop controlslist="nodownload" class="top-sea-home">
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/sur_la_surface.webm'?>" type="video/mp4">
         </video>
 
-        <div class="activate-sound-wrapper">
-            <div>
-                <h1>Nuits Noires vous invite à plonger en immersion<span>.</span></h1>
-                <p>Souhaitez vous activer le son pour une expérience plus immersive ?</p>
-            </div>
-
-            <div class="cta-wrapper">
-                <div class="cta cta-home">
-                    Oui
-                </div>
-
-                <div class="cta cta-home">
-                    Non
-                </div>
-            </div>
-        </div>
-
         
         <div class="svg-trigger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="83" height="71" viewBox="0 0 83 71">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 83 71">
                 <path id="outer_triangle_0" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
                 <path id="outer_circle_0" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
 
@@ -44,7 +44,7 @@
             </svg> -->
 
             <div class="svg-arrow-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="79.686" viewBox="0 0 16.373 79.686">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="50" viewBox="0 0 16.373 79.686">
                     <g id="Groupe_1880" data-name="Groupe 1880" transform="translate(-952.314 -707.5)">
                         <path id="Ligne_458" data-name="Ligne 458" d="M.5,78.5h-1V0h1Z" transform="translate(960.5 707.5)" fill="#fff"/>
                         <g id="Groupe_1879" data-name="Groupe 1879" transform="translate(960.5 771.521) rotate(45)">
@@ -67,8 +67,8 @@
         </video>
 
 
-        <div class="svg-trigger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="83" height="71" viewBox="0 0 83 71">
+        <div class="svg-trigger display-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 83 71">
                 <path id="outer_triangle_1" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
                 <path id="outer_circle_1" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
 
@@ -85,7 +85,7 @@
             </svg> -->
 
             <div class="svg-arrow-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="79.686" viewBox="0 0 16.373 79.686">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="50" viewBox="0 0 16.373 79.686">
                     <g id="Groupe_1880" data-name="Groupe 1880" transform="translate(-952.314 -707.5)">
                         <path id="Ligne_458" data-name="Ligne 458" d="M.5,78.5h-1V0h1Z" transform="translate(960.5 707.5)" fill="#fff"/>
                         <g id="Groupe_1879" data-name="Groupe 1879" transform="translate(960.5 771.521) rotate(45)">
@@ -107,8 +107,8 @@
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/middle.webm'?>" type="video/mp4">
         </video>
 
-        <div class="svg-trigger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="83" height="71" viewBox="0 0 83 71">
+        <div class="svg-trigger display-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 83 71">
                 <path id="outer_triangle_2" data-name="Polygone 3" d="M41.5,1.982,1.743,70H81.257L41.5,1.982M41.5,0,83,71H0Z" transform="translate(83 71) rotate(180)" fill="#fff"/>
                 <path id="outer_circle_2" data-name="Polygone 3" style="visibility: hidden" d="M41.5,24.376A22.976,22.976,0,0,0,30.435,27.2a22.3,22.3,0,0,0-4.767,3.528,23.529,23.529,0,0,0-6.293,10.793,22.286,22.286,0,0,0-.721,5.932A23.094,23.094,0,0,0,29.742,66.778a22.287,22.287,0,0,0,5.485,2.371,23.539,23.539,0,0,0,12.546,0,22.287,22.287,0,0,0,5.485-2.371A23.094,23.094,0,0,0,64.346,47.453a22.287,22.287,0,0,0-.721-5.932,23.529,23.529,0,0,0-6.293-10.793A22.3,22.3,0,0,0,52.565,27.2,22.976,22.976,0,0,0,41.5,24.376m0-1a23.594,23.594,0,0,1,20.558,11.8h0A23.812,23.812,0,0,1,41.5,71h0A23.812,23.812,0,0,1,20.942,35.171h0A23.594,23.594,0,0,1,41.5,23.376Z" transform="translate(65.348 71) rotate(180)" fill="#fff"/>
 
@@ -125,7 +125,7 @@
             </svg> -->
 
             <div class="svg-arrow-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="79.686" viewBox="0 0 16.373 79.686">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.373" height="50" viewBox="0 0 16.373 79.686">
                     <g id="Groupe_1880" data-name="Groupe 1880" transform="translate(-952.314 -707.5)">
                         <path id="Ligne_458" data-name="Ligne 458" d="M.5,78.5h-1V0h1Z" transform="translate(960.5 707.5)" fill="#fff"/>
                         <g id="Groupe_1879" data-name="Groupe 1879" transform="translate(960.5 771.521) rotate(45)">
@@ -149,6 +149,32 @@
         </video>
         
     </div>
-</div>
+
+    <div class="subtitles-content">
+
+        <div class="subtitles-wrapper">
+            <p>Nuits Noires vous invite à plonger en immersion.</p>
+            <p>Fermez les yeux et laissez-nous vous emmener à la découverte de notre savoir-faire. </p>
+            <p>Pour une meilleure immersion, mettez votre casque ou vos écouteurs. </p>
+            <p>Vous êtes prêts ? Allez, on plonge !</p>
+            <p>Naviguez vers le bas de la page.</p>
+        </div>
+
+        <div class="subtitles-wrapper">
+            <p>Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de vos publics.</p>
+            <p>Nous co-créons avec nos clients leur création sonore sur-mesure en son immersif, avec subtilité et intemporalité. </p>
+        </div>
+
+        <div class="subtitles-wrapper">
+            <p>Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, dans votre univers.</p>
+            <p>Pour que votre contenu sonore éveille leurs imaginaires, les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
+            <p>Pour rendre visible, l’invisible… </p>
+        </div>
+
+        <div class="subtitles-wrapper">
+            <p>Nous vous accompagnons dans votre création sonore de l’idée à la diffusion dans une démarche personnalisée et adaptée à vos besoins.</p>
+        </div>
+    </div>
+</section>
 
 <?php get_footer();?>
