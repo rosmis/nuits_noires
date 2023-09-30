@@ -265,6 +265,13 @@ header.navbar .nav-links-wrapper .nav-icon-wrapper {
   justify-content: flex-end;
   gap: 1.5em;
 }
+header.navbar .nav-links-wrapper .nav-icon-wrapper a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+header.navbar .nav-links-wrapper .nav-icon-wrapper a:hover {
+  scale: 1.1;
+}
 
 header.nav-fullpage {
   display: none;
@@ -351,6 +358,9 @@ header.nav-fullpage ul.main-nav-links li a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   top: 0;
   z-index: 80;
+}
+.logo-wrapper.wrapper-clear {
+  background: none !important;
 }
 .logo-wrapper .logo-top-navbar {
   padding: 2% 1em 1em 1em;

@@ -1,5 +1,5 @@
 <?php
-get_header()
+get_header('clear')
 ?>
 
 <section class="realisations-wrapper">
