@@ -161,8 +161,8 @@
         </div>
 
         <div class="subtitles-wrapper">
-            <p>Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de vos publics.</p>
-            <p>Nous co-créons avec nos clients leur création sonore sur-mesure en son immersif, avec subtilité et intemporalité. </p>
+            <p>Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de votre public.</p>
+            <p>Nous co-créons avec vous, votre création sonore sur-mesure, avec subtilité et intemporalité. </p>
         </div>
 
         <div class="subtitles-wrapper">
@@ -173,6 +173,16 @@
 
         <div class="subtitles-wrapper">
             <p>Nous vous accompagnons dans votre création sonore de l’idée à la diffusion dans une démarche personnalisée et adaptée à vos besoins.</p>
+
+            <div class="cta-wrapper cta-subtitles">
+                <a href="http://localhost:10003/realisations" class="cta cta-home">
+                    Plongez notre univers sonore
+                </a>
+
+                <a href="http://localhost:10003/contact" class="cta cta-home">
+                    Nous contacter
+                </a>
+            </div>
         </div>
     </div>
 </section>

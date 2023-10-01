@@ -3,7 +3,7 @@ const navbarHome = document.querySelector(".navbar");
 
 const svgTrigger = document.querySelector(".cta-svg");
 const svg = document.querySelectorAll(".svg-trigger");
-const subtitlesWrapper = document.querySelectorAll(".subtitles-content");
+const subtitlesWrapper = document.querySelector(".subtitles-content");
 
 let t2 = gsap.timeline({ paused: true });
 let t3 = gsap.timeline({ paused: true });
@@ -25,7 +25,7 @@ function triggerNextScreen(index) {
     t3.to(`.sea-wrapper-${index}`, {
         opacity: 0,
         display: "none",
-        duration: 1,
+        duration: 3,
         ease: Power3.easeInOut,
     });
 
@@ -39,7 +39,16 @@ menuToggleSound.forEach((toggle) => {
         navbarHome.classList.add("display-navbar");
 
         svg[0].classList.add("display-content");
-        subtitlesWrapper[0].classList.add("display-content");
+
+        const displaySubtitlesTimeline = gsap.timeline({ paused: true });
+
+        displaySubtitlesTimeline.to(subtitlesWrapper, {
+            opacity: 1,
+            duration: 1,
+            ease: Power3.easeInOut,
+        });
+
+        displaySubtitlesTimeline.play();
 
         t2.play();
     });
@@ -147,62 +156,11 @@ videoContainers.forEach((video, index) => {
         trigger: video,
         start: "top bottom",
         end: "+=199%",
-        onEnter: () => {
-            //     if(index === 0) {
-            //         gsap.to(videoContainers[0], { opacity: 1, duration: 1 });
-            //         console.log('enters')
-            //         return
-            //     }
-            //     console.log('enters')
-            //   gsap.to(videoContainers[index], { opacity: 1, duration: 1 });
-            //   gsap.to(videoContainers[index - 1], { opacity: 0, duration: 1 }); // Fade out the current video
-        },
         onLeaveBack: () => {
             gsap.to(video, { opacity: 0, duration: 1 }); // Fade out the current video
-            console.log("leaves");
         },
     });
 });
 
-// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-// let panels = gsap.utils.toArray(".video-container"),
-//     observer = ScrollTrigger.normalizeScroll(true),
-//     scrollTween;
-
-// // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-// document.addEventListener("touchstart", e => {
-//   if (scrollTween) {
-//     e.preventDefault();
-//     e.stopImmediatePropagation();
-//   }
-// }, {capture: true, passive: false})
-
-// function goToSection(i) {
-//   scrollTween = gsap.to(window, {
-//     scrollTo: {y: i * innerHeight, autoKill: false},
-//     onStart: () => {
-//       observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
-//       observer.enable();
-//     },
-//     duration: 1,
-//     onComplete: () => scrollTween = null,
-//     overwrite: true
-//   });
-// }
-
-// panels.forEach((panel, i) => {
-//   ScrollTrigger.create({
-//     trigger: panel,
-//     start: "top bottom",
-//     end: "+=199%",
-//     onToggle: self => self.isActive && !scrollTween && goToSection(i)
-//   });
-// });
-
-// // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
-// ScrollTrigger.create({
-//   start: 0,
-//   end: "max",
-//   snap: 1 / (panels.length - 1)
-// })
+// listen for potential scroll end from user and redirect to next seaWrapper section
+ScrollTrigger.addEventListener("scrollStart", () => triggerNextScreen(counter));

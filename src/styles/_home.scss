@@ -77,11 +77,6 @@ section.home_wrapper {
             color: white;
             margin-top: 0.5em;
         }
-
-        .cta-wrapper {
-            @include flex(space-between);
-            gap: 1.5em;
-        }
     }
 
     .subtitles-content {
@@ -95,22 +90,10 @@ section.home_wrapper {
         transform: translate(-50%, -50%);
         opacity: 0;
         height: 50vh;
-        // background-color: red;
-        width: 130vh;
+        width: 70vw;
         overflow: hidden;
         z-index: 70;
         padding: 5em;
-
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     height: 3em;
-        //     // background: red; 
-        //     backdrop-filter: blur(1px);
-        // }
 
         .subtitles-wrapper {
             display: flex;
@@ -126,10 +109,23 @@ section.home_wrapper {
                 opacity: 0.5;
             }
         }
+    }
+}
 
+.cta-wrapper {
+    @include flex(space-between);
+    gap: 1.5em;
 
-        &.display-content {
-            opacity: 1;
+    &.cta-subtitles {
+        opacity: 0;
+        transform: translateY(10%);
+        pointer-events: none;
+        width: 100%;
+        justify-content: center;
+        margin-top: 2em;
+
+        a {
+            text-decoration: none;
         }
     }
 }

@@ -454,12 +454,6 @@ section.home_wrapper .activate-sound-wrapper p {
   color: white;
   margin-top: 0.5em;
 }
-section.home_wrapper .activate-sound-wrapper .cta-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5em;
-}
 section.home_wrapper .subtitles-content {
   display: flex;
   flex-direction: column;
@@ -471,7 +465,7 @@ section.home_wrapper .subtitles-content {
   transform: translate(-50%, -50%);
   opacity: 0;
   height: 50vh;
-  width: 130vh;
+  width: 70vw;
   overflow: hidden;
   z-index: 70;
   padding: 5em;
@@ -489,8 +483,23 @@ section.home_wrapper .subtitles-content .subtitles-wrapper p {
   font-size: 1.5em;
   opacity: 0.5;
 }
-section.home_wrapper .subtitles-content.display-content {
-  opacity: 1;
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.cta-wrapper.cta-subtitles {
+  opacity: 0;
+  transform: translateY(10%);
+  pointer-events: none;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2em;
+}
+.cta-wrapper.cta-subtitles a {
+  text-decoration: none;
 }
 
 section.realisations-wrapper {
