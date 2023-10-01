@@ -54,7 +54,7 @@ menuToggleSound.forEach((toggle) => {
     });
 });
 
-gsap.registerPlugin(MorphSVGPlugin);
+// gsap.registerPlugin(MorphSVGPlugin);
 
 let timeline_arrow = gsap.timeline({ paused: true });
 

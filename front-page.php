@@ -160,23 +160,23 @@
             <p>Naviguez vers le bas de la page.</p>
         </div>
 
-        <div class="subtitles-wrapper">
-            <p>Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de votre public.</p>
-            <p>Nous co-créons avec vous, votre création sonore sur-mesure, avec subtilité et intemporalité. </p>
+        <div class="subtitles-wrapper" style="opacity: 0">
+            <p style="opacity: 0.3">Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de votre public.</p>
+            <p style="opacity: 0.2">Nous co-créons avec vous, votre création sonore sur-mesure, avec subtilité et intemporalité. </p>
         </div>
 
-        <div class="subtitles-wrapper">
-            <p>Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, dans votre univers.</p>
-            <p>Pour que votre contenu sonore éveille leurs imaginaires, les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
-            <p>Pour rendre visible, l’invisible… </p>
+        <div class="subtitles-wrapper" style="opacity: 0">
+            <p style="opacity: 0.3">Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, dans votre univers.</p>
+            <p style="opacity: 0.2">Pour que votre contenu sonore éveille leurs imaginaires, les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
+            <p style="opacity: 0.1">Pour rendre visible, l’invisible… </p>
         </div>
 
-        <div class="subtitles-wrapper">
-            <p>Nous vous accompagnons dans votre création sonore de l’idée à la diffusion dans une démarche personnalisée et adaptée à vos besoins.</p>
+        <div class="subtitles-wrapper" style="opacity: 0">
+            <p style="opacity: 0.2">Nous vous accompagnons dans votre création sonore de l’idée à la diffusion dans une démarche personnalisée et adaptée à vos besoins.</p>
 
             <div class="cta-wrapper cta-subtitles">
                 <a href="http://localhost:10003/realisations" class="cta cta-home">
-                    Plongez notre univers sonore
+                    Plongez dans notre univers sonore
                 </a>
 
                 <a href="http://localhost:10003/contact" class="cta cta-home">
