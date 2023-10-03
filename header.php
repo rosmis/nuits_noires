@@ -26,21 +26,21 @@
       <div class="nav-links-wrapper">
           <ul class="nav-links">
             <li>
-            <a class="nav-link" href="http://localhost:10003">Nuits Noires</a>
+              <a class="nav-link" href="http://localhost:10003/realisations/">Nuits Noires</a>
             </li>
             <li>
-              <a class="nav-link" href="<?php echo get_permalink(25)?>">Immersion</a>
+              <a class="nav-link" href="http://localhost:10003/">Immersion</a>
             </li>
           </ul>
 
           <div class="nav-icon-wrapper">
             <div id="audio-equalizer"></div>
 
-            <a href="https://www.instagram.com/nuitsnoiresexperiences/" target="_blank">
+            <a href="https://www.linkedin.com/company/nuits-noires/" target="_blank">
               <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin.svg'?>" />
             </a>
 
-            <a href="https://www.linkedin.com/company/nuits-noires/" target="_blank">
+            <a href="https://www.instagram.com/nuitsnoiresexperiences/" target="_blank">
               <img src="<?php echo get_template_directory_uri() . '/src/assets/instagram.svg'?>" />
             </a>
           </div>
@@ -65,13 +65,13 @@
           <span>Mieux nous connaître</span>
         </li>
         <li>
-          <a class="nav-link" href="<?php echo get_permalink(25)?>">Services</a>
+          <a class="nav-link" href="http://localhost:10003/services">Services</a>
           <span>Découvrir nos prestations</span>
         </li>
-        <li>
+        <!-- <li>
           <a class="nav-link" href="<?php echo get_permalink(25)?>">Blog</a>
           <span>En apprendre plus</span>
-        </li>
+        </li> -->
         <li>
           <a class="nav-link" href="http://localhost:10003/contact">Contact</a>
           <span>Échanger avec nous</span>
