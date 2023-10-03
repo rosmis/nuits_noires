@@ -107,9 +107,11 @@ section.about-wrapper {
         .immersive-title-wrapper {
             @include flex(space-between);
             width: 100%;
-
+        
             h2 {
-                min-width: 10em           
+                min-width: 10em;         
+                font-family: 'Butler', sans-serif;
+                font-weight: bold;
             }
 
             .immersive-audio-wrapper {
@@ -291,6 +293,12 @@ section.about-wrapper {
         flex-direction: column;
         align-items: flex-start;
         gap: 3em;
+
+        h2 {
+            font-family: 'Butler', sans-serif;
+            font-weight: bold;
+        }
+
         .team-grid-wrapper {
             display: flex;
             width: 100%;

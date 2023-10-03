@@ -3,12 +3,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Now", sans-serif;
+  font-weight: normal;
 }
 
 @font-face {
   font-family: "Butler";
-  src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Arvo-Regular.ttf);
+  src: url("/wp-content/themes/nuits_noires/src/fonts/Butler_Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Butler";
+  src: url("/wp-content/themes/nuits_noires/src/fonts/Butler_Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/wp-content/themes/nuits_noires/src/fonts/HelveticaNowDisplay-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/wp-content/themes/nuits_noires/src/fonts/HelveticaNowDisplay-Regular.ttf");
   font-weight: normal;
 }
 h1 {
@@ -309,7 +325,8 @@ header.nav-fullpage ul.main-nav-links li span {
 }
 header.nav-fullpage ul.main-nav-links li a {
   font-family: "Butler", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
+  line-height: 0.8em;
   text-decoration: none;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
@@ -425,6 +442,8 @@ section.home_wrapper .activate-sound-wrapper h1 {
   font-size: 2.5em;
   text-align: center;
   color: white;
+  font-family: "Helvetica Now", sans-serif;
+  font-weight: bold;
 }
 section.home_wrapper .activate-sound-wrapper h1 span {
   color: #C9961B;
@@ -1029,6 +1048,8 @@ section.about-wrapper .immersive-wrapper .immersive-title-wrapper {
 }
 section.about-wrapper .immersive-wrapper .immersive-title-wrapper h2 {
   min-width: 10em;
+  font-family: "Butler", sans-serif;
+  font-weight: bold;
 }
 section.about-wrapper .immersive-wrapper .immersive-title-wrapper .immersive-audio-wrapper {
   display: flex;
@@ -1182,6 +1203,10 @@ section.about-wrapper .team-wrapper {
   flex-direction: column;
   align-items: flex-start;
   gap: 3em;
+}
+section.about-wrapper .team-wrapper h2 {
+  font-family: "Butler", sans-serif;
+  font-weight: bold;
 }
 section.about-wrapper .team-wrapper .team-grid-wrapper {
   display: flex;
