@@ -111,13 +111,13 @@ gsap.to("#rotate-circle", {
 });
 
 // INTERSECTION OBSERVERS
-const target = document.getElementById("team-wrapper");
+const sectionsToIntercept = document.querySelectorAll(".section-to-intercept");
 
 function handleIntersection(entries, observer) {
-    console.log("entries", entries);
-    entries.forEach((entry) => {
+    // console.log("entries", entries);
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            console.log("Target element is in the viewport!");
+            console.log(`Target element ${index} is in the viewport!`);
         }
     });
 }
@@ -128,9 +128,11 @@ const intersectionOptions = {
     threshold: 0.5,
 };
 
-const observer = new IntersectionObserver(
-    handleIntersection,
-    intersectionOptions
-);
+sectionsToIntercept.forEach((section) => {
+    const observer = new IntersectionObserver(
+        handleIntersection,
+        intersectionOptions
+    );
 
-observer.observe(target);
+    observer.observe(section);
+});

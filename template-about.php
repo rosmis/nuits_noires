@@ -6,7 +6,13 @@ Template name: A PROPOS
 
 <?php get_header();?>
 
-<div class="circle-progress-wrapper" id="circle-progress-about">
+<div class="wrapper-circle-content">    
+    <p class="anchor-work-link" style="transform: translateX(-5px) translateY(100px)">NOTRE HISTOIRE</p>
+    <p class="anchor-work-link" style="transform: translateX(-10px) translateY(100px)">LE SON IMMERSIF</p>
+    <p class="anchor-work-link" style="transform: translateX(-15px) translateY(100px)">ACCOMPAGNEMENT</p>  
+</div>
+
+<div class="circle-progress-wrapper" style="z-index: 50">
     <div id="circle-progress">
         <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 785.693 823.191" id="rotate-circle">
             <g id="Groupe_1932" data-name="Groupe 1932" transform="translate(-13.759 10.013)">
@@ -18,19 +24,13 @@ Template name: A PROPOS
         </svg>
     </div>
 
-    <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
-
-    <div class="wrapper-circle-content">
-        <p class="anchor-work-link" style="transform: translateX(-5px)">NOTRE HISTOIRE</p>
-        <p class="anchor-work-link" style="transform: translateX(-10px)">LE SON IMMERSIF</p>
-        <p class="anchor-work-link" style="transform: translateX(-15px)">ACCOMPAGNEMENT</p>  
-    </div>
+    <div class="circled-image" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/10/Screenshot-2023-06-27-at-21.21.35-1.png)"></div>
 
 </div>
 
 <section class="about-wrapper" >
 
-    <div class="history-wrapper" id="history-wrapper">
+    <div class="history-wrapper section-to-intercept" id="history-wrapper">
         <h1><span></span> Notre histoire</h1>
 
         <div class="timeline-wrapper">
@@ -244,7 +244,7 @@ Template name: A PROPOS
 
         <div class="immersive-content-wrapper">
 
-            <div class="immersive-column">
+            <div class="immersive-column section-to-intercept">
                 <div>
                     <p>Le son immersif c’est quoi ? </p>
                     <p>
@@ -266,7 +266,7 @@ Template name: A PROPOS
         </div>
     </div>
 
-    <div class="team-wrapper" id="team-wrapper">
+    <div class="team-wrapper section-to-intercept">
         <h2><span></span> Accompagnement</h1>
 
         <div class="team-grid-wrapper">

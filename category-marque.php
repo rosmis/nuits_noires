@@ -3,10 +3,51 @@ get_header()
 ?>
 
 
-<div class="work-wrapper">
+<section class="work-wrapper">
     <div class="work-template">
         <h1><span></span> Nos réalisations marque</h1>
         <div class="background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+    </div>
+
+    <div class="wrapper-circle-content">
+
+        <?php
+        // Custom loop for Realizations
+        $args = array(
+            'post_type' => 'realisations',
+            'posts_per_page' => -1, 
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category', 
+                    'field'    => 'slug',                 
+                    'terms'    => 'marque',             
+                ),
+            )
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            $i=0;
+
+            while ($query->have_posts()) : $query->the_post(); 
+
+            $i-=5; ?>
+
+            <!-- <p class="anchor-work-link" style="transform: translateY(100px)"><?php the_title() ?></p> -->
+            <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px) translateY(100px)"><?php the_title() ?></p>
+                
+
+            <?php endwhile;
+
+            // Restore original post data
+            wp_reset_postdata();
+
+            else : ?>
+
+            <p>Aucuns articles</p>
+        <?php endif;
+        ?>
     </div>
 
     <div class="circle-progress-wrapper">
@@ -21,47 +62,7 @@ get_header()
             </svg>
         </div>
 
-        <div class="circled-image" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
-
-        <div class="wrapper-circle-content">
-
-            <?php
-            // Custom loop for Realizations
-            $args = array(
-                'post_type' => 'realisations',
-                'posts_per_page' => -1, 
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'category', 
-                        'field'    => 'slug',                 
-                        'terms'    => 'marque',             
-                    ),
-                )
-            );
-
-            $query = new WP_Query($args);
-
-            if ($query->have_posts()) :
-                $i=0;
-
-                while ($query->have_posts()) : $query->the_post(); 
-
-                $i-=5; ?>
-
-                <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px)"><?php the_title() ?></p>
-                    
-
-                <?php endwhile;
-
-                // Restore original post data
-                wp_reset_postdata();
-
-                else : ?>
-
-                <p>Aucuns articles</p>
-            <?php endif;
-            ?>
-        </div>
+        <div class="circled-image"></div>
 
     </div>
 
@@ -135,7 +136,7 @@ get_header()
 
 
 
-</div>
+</section>
 
 
 <?php get_footer();?>
