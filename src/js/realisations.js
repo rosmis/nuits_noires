@@ -151,12 +151,13 @@ function showNextSlide() {
 
 // MORPH SHAPE STATE
 
-const morphingDataUrlPath = data.morphingShapes;
+const morphingDataUrlPath = data?.morphingShapes;
+const morphingDataUrlServicesPath = data?.morphingServicesShapes;
 const morphingWrapper = document.getElementById("morphing-wrapper");
 
 let morphingShapesLottieInstance;
 
-fetch(morphingDataUrlPath)
+fetch(morphingDataUrlPath ?? morphingDataUrlServicesPath)
     .then((response) => response.json())
     .then((animationData) => {
         const config = {

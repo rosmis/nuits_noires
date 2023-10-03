@@ -65,15 +65,25 @@ function load_js_assets() {
         wp_enqueue_script('home', get_template_directory_uri() . '/src/js/gsap.js', [], 1, true);
     }
 
-    if (is_post_type_archive('realisations')) {
+    if (is_post_type_archive('realisations') || is_post_type_archive('services')) {
         wp_enqueue_script('realisations', get_template_directory_uri() . '/src/js/realisations.js', [], 1, true);
 
 
         $morphingShapes = get_template_directory_uri() .'/src/assets/lottie/realisations_morphing.json';
+        $morphingServicesShapes = get_template_directory_uri() .'/src/assets/lottie/morphing_services.json';
 
-        wp_localize_script('realisations', 'data', array(
-            'morphingShapes' => $morphingShapes,
-        ));
+        if(is_post_type_archive('realisations')) {
+
+            wp_localize_script('realisations', 'data', array(
+                'morphingShapes' => $morphingShapes,
+            ));
+        } else {
+            wp_localize_script('realisations', 'data', array(
+                'morphingServicesShapes' => $morphingServicesShapes,
+            ));
+        }
+
+        
         return;
     }
 
@@ -168,6 +178,60 @@ function custom_post_type_realisations() {
     register_post_type( 'realisations', $args );
 }
 add_action( 'init', 'custom_post_type_realisations' );
+
+
+
+// ADD SERVICES CUSTOM POST TYPE
+
+function archive_rewrite_rules_services() {
+    add_rewrite_rule(
+        '^service/(.*)/(.*)/?$',
+        'index.php?post_type=services&name=$matches[2]',
+        'top'
+    );
+}
+
+add_action( 'init', 'archive_rewrite_rules_services' );
+
+function custom_post_type_services() {
+    $labels = array(
+        'name'               => 'Services',
+        'singular_name'      => 'Service',
+        'menu_name'          => 'Services',
+        'name_admin_bar'     => 'Service',
+        'add_new'            => 'Ajouter un service',
+        'add_new_item'       => 'Ajouter',
+        'new_item'           => 'Ajouter',
+        'edit_item'          => 'Editer',
+        'view_item'          => 'Tous les services',
+        'all_items'          => 'Tous les services',
+        'search_items'       => 'Rechercher',
+        'parent_item_colon'  => 'Item parent',
+        'not_found'          => 'Aucun résultat.',
+        'not_found_in_trash' => 'Aucun résultat dans la corbeille',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite' => array('slug' => 'services/%category%'),
+        'capability_type'    => 'post',
+        'has_archive'        => 'services',
+        'hierarchical'       => true,
+        'show_in_rest'       => true,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-book',
+        'supports'           => array( 'title', 'author', 'thumbnail' ),
+        'taxonomies' => array('category')
+    );
+
+    register_post_type( 'services', $args );
+}
+add_action( 'init', 'custom_post_type_services' );
 
 function add_elementor_support_for_custom_post_type()
 {

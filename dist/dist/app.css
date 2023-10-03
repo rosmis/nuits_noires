@@ -584,9 +584,11 @@ section.realisations-wrapper .title-wrapper h2 {
 }
 section.realisations-wrapper .title-wrapper h1 {
   font-size: 3em;
+  width: 50vw;
   transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 section.realisations-wrapper .title-wrapper h1, section.realisations-wrapper .title-wrapper h2 {
+  text-align: center;
   color: white;
 }
 
