@@ -60,10 +60,12 @@
             </div>
         </div>
 
+        <?php echo the_content(); ?> 
+            
+
         <?php
         } else {
             // At least one PHP variable doesn't exist, return elementor content
-            echo the_content();
         }
         ?>
 

@@ -6,7 +6,7 @@ get_header()
 <section class="work-wrapper">
     <div class="work-template">
         <h1><span></span> Nos réalisations patrimoine</h1>
-        <div class="background-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/salomon.png'?>)"></div>
+        <div class="background-wrapper"></div>
     </div>
 
     <div class="wrapper-circle-content">

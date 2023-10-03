@@ -216,7 +216,7 @@ function custom_post_type_services() {
         'public'             => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
-        'show_in_menu'       => true,
+        'show_in_menu'       => false,
         'query_var'          => true,
         'rewrite' => array('slug' => 'services/%category%'),
         'capability_type'    => 'post',
