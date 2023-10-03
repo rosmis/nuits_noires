@@ -23,8 +23,8 @@ function NuitsNoires_register_scripts(){
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', [], 1, true);
     wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js', [], 1, true);
     // wp_enqueue_script('easyMorph', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js', [], 1, true);
-    // wp_enqueue_script('easyMorph', 'https://assets.codepen.io/16327/MorphSVGPlugin3.min.js', [], 1, true);
-    wp_enqueue_script('easyMorph', get_template_directory_uri() . '/src/js/MorphSVGPlugin.min.js', [], 1, true);
+    wp_enqueue_script('easyMorph', 'https://assets.codepen.io/16327/MorphSVGPlugin3.min.js', [], 1, true);
+    // wp_enqueue_script('easyMorph', get_template_directory_uri() . '/src/js/MorphSVGPlugin.min.js', [], 1, true);
     wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', [], 1, true);
     wp_enqueue_script('navbar', get_template_directory_uri() . '/src/js/navbar.js', [], 1, true);
     wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', [], 1, true);
@@ -174,6 +174,19 @@ function add_elementor_support_for_custom_post_type()
     add_post_type_support('realisations', 'elementor');
 }
 add_action('init', 'add_elementor_support_for_custom_post_type');
+
+// CUSTOM FONTS
+
+// function enqueue_custom_fonts() {
+//     // Enqueue your custom font styles
+//     wp_enqueue_style('butler-bold', get_template_directory_uri() . '/src/fonts/Butler_Bold.otf');
+//     wp_enqueue_style('butler-regular', get_template_directory_uri() . '/src/fonts/Butler_Regular.otf');
+//     wp_enqueue_style('helvetica-neue-bold', get_template_directory_uri() . '/src/fonts/Helvetica_Neue_Condensed Bold.ttf');
+//     wp_enqueue_style('helvetica-neue-regular', get_template_directory_uri() . '/src/fonts/Helvetica_Neue_Regular.otf');
+// }
+
+// // Hook the enqueue function into the 'wp_enqueue_scripts' action
+// add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
 
 
  

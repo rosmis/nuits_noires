@@ -4,40 +4,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica', sans-serif
+    font-family: 'Helvetica Neue', sans-serif
 }
 
-@font-face {
-    font-family: "Butler";
-    src: local("Butler"), url(../fonts/Butler_Bold.otf) format("truetype");
-    font-weight: 700;
-}
+// @font-face {
+//     font-family: 'Butler';
+//     src: url('fonts/Butler_Bold.otf') format('otf');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Helvetica Neue';
+//     src: url('fonts/Helvetica_Neue_Regular.otf') format('otf');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
 
 @font-face {
-    font-family: "Helvetica";
-    src: local("HelveticaNowDisplay"), url(../fonts/HelveticaNowDisplay-Regular.ttf) format("truetype");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Helvetica";
-    src: local("HelveticaNowDisplay"), url(../fonts/HelveticaNowDisplay-Medium.ttf) format("truetype");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Helvetica";
-    src: local("HelveticaNowDisplay"), url(../fonts/HelveticaNowDisplay-Bold.ttf) format("truetype");
-    font-weight: 700;
-}
-@font-face {
-    font-family: "Helvetica";
-    src: local("HelveticaNowDisplay"), url(../fonts/HelveticaNowDisplay-ExtraBold.ttf) format("truetype");
-    font-weight: 800;
+    font-family: 'Butler';
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Arvo-Regular.ttf);
+    font-weight: normal;
 }
 
 h1 {
-    font-family: 'Butler', sans-serif
+    font-family: 'Butler', sans-serif;
+    font-weight: bold;
 }
 
 .cta {
