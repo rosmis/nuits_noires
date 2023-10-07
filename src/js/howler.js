@@ -14,11 +14,20 @@ ScrollTrigger.create({
 });
 
 // listen for potential scroll from user and redirect to next seaWrapper section
-ScrollTrigger.addEventListener("scrollStart", () => {
-    if (seaWrapperIndex > 3) return;
 
-    playNextSound();
-});
+// TODO FIX THIS FUCKING SCROLL LISTENER WITHOUT BREAKING OTHER STUFF FFS
+
+// ScrollTrigger.addEventListener("scrollStart", () => {
+//     if (seaWrapperIndex > 3) return;
+//     if (
+//         !seaWrapperTriggers[seaWrapperIndex].classList.contains(
+//             "display-content"
+//         )
+//     )
+//         return;
+
+//     playNextSound();
+// });
 
 const timeCodeSubtitlesDict = {
     0: [0, 5, 11, 16, 21],
@@ -195,8 +204,12 @@ function triggerSubtitleOpacity(wrapper) {
     translateCounter += subtitleIndex * -1.2;
 
     // trigger opacity next seaWrapper
-    if (lastParagraph === paragraphsInWrapperArray[subtitleIndex])
+    if (lastParagraph === paragraphsInWrapperArray[subtitleIndex]) {
+        seaWrapperTriggers[seaWrapperIndex].classList.add("display-content");
+
         displayOpacityNextParagraphContainer(seaWrapperIndex + 1);
+        displaySvgTrigger(seaWrapperIndex);
+    }
 
     subtitlesTranslateTimeline.to(subtitleWrappers, {
         duration: 0.7,
@@ -341,6 +354,18 @@ function forceRemainingParagraphOpacity() {
     filteredParagraphs.forEach((_filteredParagraph) =>
         triggerSubtitleOpacity(subtitleWrappers[seaWrapperIndex])
     );
+}
+
+function displaySvgTrigger(index) {
+    const displaySvgCta = gsap.timeline({ paused: true });
+
+    displaySvgCta.to(seaWrapperTriggers[index], {
+        duration: 1,
+        opacity: 1,
+        ease: Power3.easeInOut,
+    });
+
+    displaySvgCta.play();
 }
 
 window.addEventListener("beforeunload", () => {

@@ -9,22 +9,22 @@
 
 @font-face {
   font-family: "Butler";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/Butler_Bold.otf");
+  src: url("/wp-content/themes/nuits_noires/src/fonts/butler_bold.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Butler";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/Butler_Regular.otf");
+  src: url("/wp-content/themes/nuits_noires/src/fonts/butler_regular.otf");
   font-weight: normal;
 }
 @font-face {
   font-family: "Helvetica Now";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/HelveticaNowDisplay-Bold.ttf");
+  src: url("/wp-content/themes/nuits_noires/src/fonts/helveticanowdisplay-bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Helvetica Now";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/HelveticaNowDisplay-Regular.ttf");
+  src: url("/wp-content/themes/nuits_noires/src/fonts/helveticanowdisplay-regular.ttf");
   font-weight: normal;
 }
 h1 {
@@ -401,6 +401,7 @@ section.home_wrapper .sea-wrapper .svg-trigger {
   pointer-events: none;
   opacity: 0;
   transition: 0.2s ease-in-out opacity;
+  width: 5%;
 }
 section.home_wrapper .sea-wrapper .svg-trigger .svg-arrow-wrapper {
   position: absolute;
@@ -417,7 +418,6 @@ section.home_wrapper .sea-wrapper .svg-trigger:hover p {
   opacity: 0;
 }
 section.home_wrapper .sea-wrapper .svg-trigger.display-content {
-  opacity: 1;
   pointer-events: all;
 }
 section.home_wrapper .sea-wrapper .top-sea-home {

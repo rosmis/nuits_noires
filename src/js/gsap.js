@@ -5,10 +5,15 @@ const svgTrigger = document.querySelector(".cta-svg");
 const svg = document.querySelectorAll(".svg-trigger");
 const subtitlesWrapper = document.querySelector(".subtitles-content");
 
+const triangleWrappers = document.querySelectorAll(".arrow-lottie");
+const morphingTriangle = triangleData.morphingTriangle;
+let morphingTriangleInstances = [];
+
 let t2 = gsap.timeline({ paused: true });
 let t3 = gsap.timeline({ paused: true });
 
 let counter = 0;
+let isMenuSoundToggled = false;
 
 t2.to(".activate-sound-wrapper", {
     duration: 1,
@@ -38,8 +43,6 @@ menuToggleSound.forEach((toggle) => {
     toggle.addEventListener("click", () => {
         navbarHome.classList.add("display-navbar");
 
-        svg[0].classList.add("display-content");
-
         const displaySubtitlesTimeline = gsap.timeline({ paused: true });
 
         displaySubtitlesTimeline.to(subtitlesWrapper, {
@@ -49,101 +52,52 @@ menuToggleSound.forEach((toggle) => {
         });
 
         displaySubtitlesTimeline.play();
+        isMenuSoundToggled = true;
 
         t2.play();
     });
 });
 
-// gsap.registerPlugin(MorphSVGPlugin);
-
-let timeline_arrow = gsap.timeline({ paused: true });
-
-timeline_arrow.to(".svg-arrow-wrapper", {
-    top: "-20%",
-    duration: 0.15,
-    ease: Power3.easeInOut,
+window.addEventListener("DOMContentLoaded", async () => {
+    triangleWrappers.forEach((_triangleWraper, index) =>
+        toggleTriangleMorph(index)
+    );
 });
 
-let svgTimelines = [];
+async function toggleTriangleMorph(index) {
+    try {
+        const response = await fetch(morphingTriangle);
 
-svg.forEach((_trigger, index) => {
-    const outer_svg_timeline = gsap.timeline({
-            defaults: { duration: 0.2 },
-            paused: true,
-        }),
-        outer_triangle = document.getElementById(`outer_triangle_${index}`);
+        const animationData = await response.json();
 
-    const inner_svg_timeline = gsap.timeline({
-            defaults: { duration: 0.2 },
-            paused: true,
-        }),
-        inner_triangle = document.getElementById(`inner_triangle_${index}`);
+        const config = {
+            container: triangleWrappers[index],
+            renderer: "svg", // Choose the appropriate renderer (svg, canvas, html)
+            loop: false, // Set whether the animation should loop
+            autoplay: false, // Set whether the animation should autoplay
+            animationData: animationData,
+        };
 
-    svgTimelines.push({
-        outer_svg: {
-            timeline: outer_svg_timeline,
-            triangle: outer_triangle,
-        },
-        inner_svg: {
-            timeline: inner_svg_timeline,
-            triangle: inner_triangle,
-        },
-    });
-});
+        // Create a Lottie instance
+        const animation = lottie.loadAnimation(config);
+
+        morphingTriangleInstances.push(animation);
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 svg.forEach((trigger, index) => {
     trigger.addEventListener("mouseenter", () => {
-        playSvgTriggerAnimation(index).play();
-        timeline_arrow.play();
+        morphingTriangleInstances[index].playSegments([18, 45], true);
     });
 });
 
 svg.forEach((trigger, index) => {
     trigger.addEventListener("mouseleave", () => {
-        playSvgTriggerAnimation(index).reverse();
-        timeline_arrow.reverse();
+        morphingTriangleInstances[index].playSegments([45, 18], true);
     });
 });
-
-function playSvgTriggerAnimation(index) {
-    const innerTimeline = svgTimelines[index].inner_svg.timeline;
-    const outerTimeline = svgTimelines[index].outer_svg.timeline;
-
-    outerTimeline.to(
-        svgTimelines[index].outer_svg.triangle,
-        {
-            morphSVG: {
-                shape: `#outer_circle_${index}`,
-            },
-        },
-        {
-            ease: Power4.easeInOut,
-        }
-    );
-
-    innerTimeline.to(
-        svgTimelines[index].inner_svg.triangle,
-        {
-            morphSVG: {
-                shape: `#inner_circle_${index}`,
-            },
-        },
-        {
-            ease: Power4.easeInOut,
-        }
-    );
-
-    return {
-        play: () => {
-            outerTimeline.play();
-            innerTimeline.play();
-        },
-        reverse: () => {
-            outerTimeline.reverse();
-            innerTimeline.reverse();
-        },
-    };
-}
 
 // SCROLL Trigger to fade next sea animation - still WIP
 
@@ -163,4 +117,8 @@ videoContainers.forEach((video, index) => {
 });
 
 // listen for potential scroll end from user and redirect to next seaWrapper section
-ScrollTrigger.addEventListener("scrollStart", () => triggerNextScreen(counter));
+// ScrollTrigger.addEventListener("scrollStart", () => {
+//     if (!isMenuSoundToggled) return;
+//     if (svg[counter].classList.contains("display-content"))
+//         triggerNextScreen(counter);
+// });

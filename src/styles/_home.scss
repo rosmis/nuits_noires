@@ -16,6 +16,7 @@ section.home_wrapper {
             pointer-events: none;
             opacity: 0;
             transition: 0.2s ease-in-out opacity;
+            width: 5%;
 
             .svg-arrow-wrapper {
                 position: absolute;
@@ -37,7 +38,6 @@ section.home_wrapper {
             }
 
             &.display-content {
-                opacity: 1;
                 pointer-events: all;
             }
         }

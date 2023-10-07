@@ -23,7 +23,7 @@ function NuitsNoires_register_scripts(){
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', [], 1, true);
     wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js', [], 1, true);
     // wp_enqueue_script('easyMorph', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js', [], 1, true);
-    wp_enqueue_script('easyMorph', 'https://assets.codepen.io/16327/MorphSVGPlugin3.min.js', [], 1, true);
+    // wp_enqueue_script('easyMorph', 'https://assets.codepen.io/16327/MorphSVGPlugin3.min.js', [], 1, true);
     // wp_enqueue_script('easyMorph', get_template_directory_uri() . '/src/js/MorphSVGPlugin.min.js', [], 1, true);
     wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', [], 1, true);
     wp_enqueue_script('navbar', get_template_directory_uri() . '/src/js/navbar.js', [], 1, true);
@@ -63,6 +63,13 @@ function load_js_assets() {
         wp_enqueue_script('howler', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js', [], 1, true);
         wp_enqueue_script('howler-file', get_template_directory_uri() . '/src/js/howler.js', [], 1, true);
         wp_enqueue_script('home', get_template_directory_uri() . '/src/js/gsap.js', [], 1, true);
+
+        $morphingTriangle = get_template_directory_uri() .'/src/assets/lottie/scroll_menu.json';
+
+        wp_localize_script('home', 'triangleData', array(
+            'morphingTriangle' => $morphingTriangle,
+        ));
+        
     }
 
     if (is_post_type_archive('realisations') || is_post_type_archive('services')) {
