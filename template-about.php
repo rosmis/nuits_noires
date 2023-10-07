@@ -24,7 +24,7 @@ Template name: A PROPOS
         </svg>
     </div>
 
-    <div class="circled-image" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/10/Screenshot-2023-06-27-at-21.21.35-1.png)"></div>
+    <div class="circled-image" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Screenshot-2023-06-27-at-21.21.35-1.png)"></div>
 
 </div>
 
@@ -158,15 +158,15 @@ Template name: A PROPOS
         </svg>
 
         <div class="brand-wrapper outer-top-left">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Ville-de-villerubanne-mediation.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Ville-de-villerubanne-mediation.webp" alt="logo centre pompidou">
         </div>
 
         <div class="brand-wrapper outer-top-right">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/swatch-group-evenement-e1696339785160.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/swatch-group-evenement-e1696339785160.webp" alt="logo centre pompidou">
         </div>
 
         <div class="brand-wrapper outer-bottom-left">
@@ -252,11 +252,11 @@ Template name: A PROPOS
                     </p>
                 </div>
 
-                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Micro_Neumann_KU100.jpeg" alt="image son immersif" id="Micro_Neumann_KU100">
             </div>
 
             <div class="immersive-column">
-                <img src="http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS.png" alt="image son immersif">
+                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/LIVEROOM1PS.png" alt="image son immersif">
                 <p>Associé à un sound design sensible l’auditeur se sentira en totale immersion dans un environnement virtuel grâce à une écoute au casque ou un système de diffusion spatialisée.</p>
                 <p>
                     Nous captons avec une tête Neumann KU100 que vous voyez ci joint. Cet outil technologique est au service de votre message. Nous réfléchissons avec vous comment créer de l’expérientiel sur mesure avec un conseil en diffusion à la pointe.  Grâce à ce micro spécifique, nous créons la majorité de nos créations sonores pour vous proposer toujours des immersions les plus réalistes qu’ils soient et offrir à vos auditeurs une qualité sonore imparable. 
@@ -271,15 +271,15 @@ Template name: A PROPOS
 
         <div class="team-grid-wrapper">
             <div class="team-column">
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Elodie_Parmentier_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <h3>Élodie Parmentier <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jade_Dumont_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <h3>Jade Dumont <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
@@ -288,30 +288,30 @@ Template name: A PROPOS
             <div class="team-column">
                 <a href="#" class="cta cta-team">Nous contacter</a>
 
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Lucie_Baverel_NuitsNoires.jpg);">
                     <div class="team-member-content">
                         <h3>Lucie Baverel <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Metiers_du_son_equipe_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <h3>Notre équipe <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
             </div>
 
             <div class="team-column">
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jeremie_Nicolas_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <h3>Jeremie Nicolas <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
-                <div class="team-member-card" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Remi_Seve_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <h3>Remi Seive <span></span></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>

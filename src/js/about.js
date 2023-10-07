@@ -43,7 +43,7 @@ window.onload = () => GSAPHorizontalScroll();
 
 window.addEventListener("DOMContentLoaded", () =>
     wavesurfer.load(
-        "http://localhost:10003/wp-content/uploads/2023/09/Exp_Binaural_Rdv_Nuits_Noires-1.wav"
+        "https://nuitsnoires.com/wp-content/uploads/2023/10/Exp_Binaural_Rdv_Nuits_Noires-_1_-1.mp3"
     )
 );
 

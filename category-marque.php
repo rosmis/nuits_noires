@@ -113,9 +113,9 @@ get_header()
                 </a>
 
                 <?php if($i === 1) :?>
-                    <div class="card-wrapper" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
+                    <div class="card-wrapper" data-thumbnail-url="<?php echo esc_url($thumbnail_url) ?>" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg);"></div>
                 <?php else : ?>
-                    <div class="card-wrapper" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(0) rotateY(0) rotateZ(0);"></div>
+                    <div class="card-wrapper" data-thumbnail-url="<?php echo esc_url($thumbnail_url) ?>" style="background-image: url(<?php echo esc_url($thumbnail_url)?>); transform: rotateX(0) rotateY(0) rotateZ(0);"></div>
                 <?php endif?>
             </div>
         </div>

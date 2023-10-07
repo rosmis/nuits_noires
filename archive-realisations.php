@@ -35,27 +35,27 @@ get_header('clear')
         </div> 
     </div>
 
-    <a href="http://localhost:10003/realisations/culturel" class="title-wrapper" style="opacity: 1">
+    <a href="https://nuitsnoires.com/realisations/culturel" class="title-wrapper" style="opacity: 1">
         <h2>Réalisation</h1>
         <h1>Culturel</h1>
     </a>
 
-    <a href="http://localhost:10003/realisations/marque" class="title-wrapper" style="opacity: 0; pointer-events: none">
+    <a href="https://nuitsnoires.com/realisations/marque" class="title-wrapper" style="opacity: 0; pointer-events: none">
         <h2>Réalisation</h1>
         <h1>Marque</h1>
     </a>
 
-    <a href="http://localhost:10003/realisations/art-vivant" class="title-wrapper" style="opacity: 0; pointer-events: none">
+    <a href="https://nuitsnoires.com/realisations/art-vivant" class="title-wrapper" style="opacity: 0; pointer-events: none">
         <h2>Réalisation</h1>
         <h1>Art Vivant</h1>
     </a>
 
-    <a href="http://localhost:10003/realisations/patrimoine" class="title-wrapper" style="opacity: 0; pointer-events: none">
+    <a href="https://nuitsnoires.com/realisations/patrimoine" class="title-wrapper" style="opacity: 0; pointer-events: none">
         <h2>Réalisation</h1>
         <h1>Patrimoine</h1>
     </a>
 
-    <div class="category-wrapper" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/culturel_bg.png); opacity: 1">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/realisations.png); opacity: 1">                 
 
     
         <div class="gray-filter"></div>
@@ -70,7 +70,7 @@ get_header('clear')
         </div>
 
     </div>
-    <div class="category-wrapper" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/marque_bg.png); opacity: 0">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/marque.png); opacity: 0">                 
 
     
         <div class="gray-filter"></div>
@@ -83,7 +83,7 @@ get_header('clear')
             </p>
         </div>
     </div>
-    <div class="category-wrapper" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/art_vivant_bg.png); opacity: 0">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/art_vivant.png); opacity: 0">                 
 
     
         <div class="gray-filter"></div>
@@ -96,7 +96,7 @@ get_header('clear')
             </p>
         </div>
     </div>
-    <div class="category-wrapper" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/patrimoine_bg.png); opacity: 0">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/patrimoine.png); opacity: 0">                 
 
     
         <div class="gray-filter"></div>

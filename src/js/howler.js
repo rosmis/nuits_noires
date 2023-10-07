@@ -49,7 +49,7 @@ menuToggleAudio.forEach((toggle) => {
             0: {
                 content: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/09/Part_1_cut.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_1_cut.ogg",
                     ],
                     html5: true,
                     // mute: true,
@@ -64,20 +64,20 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/09/Loop_Strate_1.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.ogg",
                     ],
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/09/Transition_1.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.ogg",
                     ],
                 }),
             },
             1: {
                 content: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Part_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.ogg",
                     ],
                     html5: true,
                     // mute: true,
@@ -92,20 +92,20 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.ogg",
                     ],
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.ogg",
                     ],
                 }),
             },
             2: {
                 content: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Part_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.ogg",
                     ],
                     html5: true,
                     // mute: true,
@@ -120,20 +120,20 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.ogg",
                     ],
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
                     ],
                 }),
             },
             3: {
                 content: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Part_4.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.ogg",
                     ],
                     html5: true,
                     // mute: true,
@@ -148,13 +148,13 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_4.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.ogg",
                     ],
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
                     ],
                 }),
             },

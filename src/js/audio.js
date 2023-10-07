@@ -5,7 +5,7 @@ const playToggle = document.getElementById("playToggle");
 window.addEventListener("DOMContentLoaded", () => {
     const postId = post.id;
 
-    fetch(`http://localhost:10003/wp-json/acf/v3/realisations/${postId}`)
+    fetch(`https://nuitsnoires.com/wp-json/acf/v3/realisations/${postId}`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
