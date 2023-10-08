@@ -261,6 +261,7 @@ header.nav-fullpage {
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   top: 0;
   z-index: 80;
+  transition: top 0.3s ease-in-out;
 
   &.wrapper-clear {
     background: none !important;

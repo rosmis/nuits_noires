@@ -153,7 +153,7 @@ section.about-wrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 2em;
-                align-items: flex-start;
+                align-items: center;
 
                 img {
                     max-width: 100%;
@@ -190,7 +190,7 @@ section.about-wrapper {
             transition: all 0.4s ease-in-out;
 
             img {
-                max-width: 80%;
+                max-width: 120px;
                 height: auto;
             }
 
@@ -309,11 +309,13 @@ section.about-wrapper {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 2em;
+                flex: 1;
 
                 .team-member-card {
                     display: flex;
                     flex-direction: column;
                     position: relative;
+                    width: 100%;
                     aspect-ratio: 2/3;
                     background-size: cover;
                     justify-content: flex-end;
@@ -376,3 +378,12 @@ section.about-wrapper {
         }
     }
 }
+
+#photo-remi {
+    background-position: center center;
+}
+
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column #Micro_Neumann_KU100 {
+    max-width: 70%;
+    height: auto;
+}  

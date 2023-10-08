@@ -3,6 +3,7 @@ section.realisation-wrapper {
     flex-direction: column;
     background-color: $black;
     padding-bottom: 10em;
+    overflow: hidden;
 
     p {
         font-size: 1.2em;
@@ -54,7 +55,7 @@ section.realisation-wrapper {
         @include flex(space-between);
         flex-direction: column;
         gap: 5em;
-        padding: 10% 0;
+        padding: 3% 0;
 
         .realisation-main-wrapper-content {
             display: grid;

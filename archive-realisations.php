@@ -37,7 +37,7 @@ get_header('clear')
 
     <a href="https://nuitsnoires.com/realisations/culturel" class="title-wrapper" style="opacity: 1">
         <h2>Réalisation</h1>
-        <h1>Culturel</h1>
+        <h1>Culture</h1>
     </a>
 
     <a href="https://nuitsnoires.com/realisations/marque" class="title-wrapper" style="opacity: 0; pointer-events: none">

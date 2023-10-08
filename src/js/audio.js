@@ -2,6 +2,8 @@ const audioWrapper = document.querySelector(".audio-wrapper");
 const playButton = document.querySelector(".cta-play");
 const playToggle = document.getElementById("playToggle");
 
+let wavesurfer;
+
 window.addEventListener("DOMContentLoaded", () => {
     const postId = post.id;
 
@@ -13,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then((data) => {
-            wavesurfer.load(data.acf.audio);
+            audioWrapper ? wavesurfer.load(data.acf.audio) : undefined;
         })
         .catch((error) => {
             console.error("Error fetching ACF field:", error);
@@ -47,18 +49,20 @@ const options = {
     sampleRate: 8000,
 };
 
-const wavesurfer = WaveSurfer.create(options);
+if (audioWrapper) {
+    wavesurfer = WaveSurfer.create(options);
 
-wavesurfer.once("decode", () => {
-    playButton.addEventListener("click", () => {
-        wavesurfer.playPause();
+    wavesurfer.once("decode", () => {
+        playButton.addEventListener("click", () => {
+            wavesurfer.playPause();
 
-        if (playToggle.classList.contains("fa-play")) {
-            playToggle.classList.remove("fa-play");
-            playToggle.classList.add("fa-pause");
-        } else {
-            playToggle.classList.remove("fa-pause");
-            playToggle.classList.add("fa-play");
-        }
+            if (playToggle.classList.contains("fa-play")) {
+                playToggle.classList.remove("fa-play");
+                playToggle.classList.add("fa-pause");
+            } else {
+                playToggle.classList.remove("fa-pause");
+                playToggle.classList.add("fa-play");
+            }
+        });
     });
-});
+}

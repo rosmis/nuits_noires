@@ -42,16 +42,16 @@ get_header()
                     <a href="tel:06.22.93.45.83">06.22.93.45.83</a>
                 </div>
             </div>
-            <a href="#">JOIN US</a>
+            <a href="mailto:prod.nuitsnoires@gmail.com">JOIN US</a>
         </div>
 
         <div class="contact-img-grid">
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/REGIE1PS.png)" class="contact-img"></div>
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/NuitsNoires_Salon.png)" class="contact-img"></div>
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/LIVEROOM1PS-1.png)" class="contact-img"></div>
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Dehors1_NuitsNoires.png)" class="contact-img"></div>
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Cuisine_NuitsNoires.png)" class="contact-img"></div>
-            <div style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/Bureau1base_NuitsNoires.png)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/nuits-noires-salon.webp)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/cuisine-nuitsnoires.webp)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/liveroom-1-ps.webp)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/dehors-1-nuitsnoires.webp)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/regie-1-ps.webp)" class="contact-img"></div>
+            <div style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/bureau-1-base-nuitsnoires.webp)" class="contact-img"></div>
         </div>
     </div>
 </section>

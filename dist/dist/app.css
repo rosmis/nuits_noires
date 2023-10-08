@@ -113,11 +113,12 @@ h1 {
   top: 35%;
   width: 130px;
   left: 0;
-  gap: 1em;
+  gap: 0.8em;
   z-index: 80;
 }
 .wrapper-circle-content p {
   font-size: 0.8em;
+  line-height: 0.8em;
   color: white;
   opacity: 40%;
   text-transform: uppercase;
@@ -365,6 +366,7 @@ header.nav-fullpage ul.main-nav-links li a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   top: 0;
   z-index: 80;
+  transition: top 0.3s ease-in-out;
 }
 .logo-wrapper.wrapper-clear {
   background: none !important;
@@ -418,6 +420,7 @@ section.home_wrapper .sea-wrapper .svg-trigger:hover p {
   opacity: 0;
 }
 section.home_wrapper .sea-wrapper .svg-trigger.display-content {
+  animation: bounce 2s ease infinite;
   pointer-events: all;
 }
 section.home_wrapper .sea-wrapper .top-sea-home {
@@ -442,7 +445,6 @@ section.home_wrapper .activate-sound-wrapper h1 {
   font-size: 2.5em;
   text-align: center;
   color: white;
-  font-family: "Helvetica Now", sans-serif;
   font-weight: bold;
 }
 section.home_wrapper .activate-sound-wrapper h1 span {
@@ -480,7 +482,7 @@ section.home_wrapper .subtitles-content .subtitles-wrapper p {
   color: white;
   text-align: center;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.4em;
   opacity: 0.5;
 }
 
@@ -502,6 +504,17 @@ section.home_wrapper .subtitles-content .subtitles-wrapper p {
   text-decoration: none;
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
 section.realisations-wrapper {
   position: relative;
   height: 100vh;
@@ -764,6 +777,7 @@ section.realisation-wrapper {
   flex-direction: column;
   background-color: #090909;
   padding-bottom: 10em;
+  overflow: hidden;
 }
 section.realisation-wrapper p {
   font-size: 1.2em;
@@ -816,7 +830,7 @@ section.realisation-wrapper .realisation-main-wrapper {
   justify-content: space-between;
   flex-direction: column;
   gap: 5em;
-  padding: 10% 0;
+  padding: 3% 0;
 }
 section.realisation-wrapper .realisation-main-wrapper .realisation-main-wrapper-content {
   display: grid;
@@ -1090,7 +1104,7 @@ section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-c
   display: flex;
   flex-direction: column;
   gap: 2em;
-  align-items: flex-start;
+  align-items: center;
 }
 section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column img {
   max-width: 100%;
@@ -1121,7 +1135,7 @@ section.about-wrapper .brand-showcase .brand-wrapper {
   transition: all 0.4s ease-in-out;
 }
 section.about-wrapper .brand-showcase .brand-wrapper img {
-  max-width: 80%;
+  max-width: 120px;
   height: auto;
 }
 section.about-wrapper .brand-showcase .brand-wrapper.outer-top-left {
@@ -1218,11 +1232,13 @@ section.about-wrapper .team-wrapper .team-grid-wrapper .team-column {
   flex-direction: column;
   align-items: flex-start;
   gap: 2em;
+  flex: 1;
 }
 section.about-wrapper .team-wrapper .team-grid-wrapper .team-column .team-member-card {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   aspect-ratio: 2/3;
   background-size: cover;
   justify-content: flex-end;
@@ -1266,6 +1282,15 @@ section.about-wrapper .team-wrapper .team-grid-wrapper .team-column .cta-team {
   width: 100%;
   text-align: center;
   text-decoration: none;
+}
+
+#photo-remi {
+  background-position: center center;
+}
+
+section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column #Micro_Neumann_KU100 {
+  max-width: 70%;
+  height: auto;
 }
 
 section.contact-wrapper {

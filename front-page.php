@@ -10,11 +10,11 @@
         </div>
 
         <div class="cta-wrapper">
-            <div class="cta cta-home">
+            <div class="cta cta-home unmute">
                 Oui
             </div>
 
-            <div class="cta cta-home">
+            <div class="cta cta-home mute">
                 Non
             </div>
         </div>
@@ -79,29 +79,29 @@
 
         <div class="subtitles-wrapper">
             <p>Nuits Noires vous invite à plonger en immersion.</p>
-            <p>Fermez les yeux et laissez-nous vous emmener à la découverte de notre savoir-faire. </p>
+            <p>Fermez les yeux et laissez-nous vous emmener <br> à la découverte de notre savoir-faire. </p>
             <p>Pour une meilleure immersion, mettez votre casque ou vos écouteurs. </p>
             <p>Vous êtes prêts ? Allez, on plonge !</p>
             <p>Naviguez vers le bas de la page.</p>
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.3">Chez Nuits Noires, nous sommes des créateurs de contenu immersif à destination de votre public.</p>
-            <p style="opacity: 0.2">Nous co-créons avec vous, votre création sonore sur-mesure, avec subtilité et intemporalité. </p>
+            <p style="opacity: 0.3">Chez Nuits Noires, nous sommes des créateurs de contenu immersif <br> à destination de votre public.</p>
+            <p style="opacity: 0.2">Nous co-créons avec vous, votre création sonore sur-mesure, <br> avec subtilité et intemporalité. </p>
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.3">Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, dans votre univers.</p>
-            <p style="opacity: 0.2">Pour que votre contenu sonore éveille leurs imaginaires, les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
-            <p style="opacity: 0.1">Pour rendre visible, l’invisible… </p>
+            <p style="opacity: 0.3">Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, <br> dans votre univers.</p>
+            <p style="opacity: 0.2">Pour que votre contenu sonore éveille leurs imaginaires, <br> les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
+            <p style="opacity: 0.1"> <em style="font-weight: 700">Pour rendre visible, l’invisible…</em>  </p>
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.2">Nous vous accompagnons dans votre création sonore de l’idée à la diffusion dans une démarche personnalisée et adaptée à vos besoins.</p>
+            <p style="opacity: 0.2">Nous vous accompagnons dans votre création sonore de l’idée à la diffusion <br> dans une démarche personnalisée et adaptée à vos besoins.</p>
 
             <div class="cta-wrapper cta-subtitles">
                 <a href="https://nuitsnoires.com/realisations" class="cta cta-home">
-                    Plongez dans notre univers sonore
+                    Découvrez nos créations
                 </a>
 
                 <a href="https://nuitsnoires.com/contact" class="cta cta-home">

@@ -7,9 +7,9 @@ Template name: A PROPOS
 <?php get_header();?>
 
 <div class="wrapper-circle-content">    
-    <p class="anchor-work-link" style="transform: translateX(-5px) translateY(100px)">NOTRE HISTOIRE</p>
-    <p class="anchor-work-link" style="transform: translateX(-10px) translateY(100px)">LE SON IMMERSIF</p>
-    <p class="anchor-work-link" style="transform: translateX(-15px) translateY(100px)">ACCOMPAGNEMENT</p>  
+    <p class="anchor-work-link" style="transform: translateX(-5px) translateY(100px)">HISTOIRE</p>
+    <p class="anchor-work-link" style="transform: translateX(-10px) translateY(100px)">IMMERSIF</p>
+    <p class="anchor-work-link" style="transform: translateX(-15px) translateY(100px)">ÉQUIPE</p>  
 </div>
 
 <div class="circle-progress-wrapper" style="z-index: 50">
@@ -160,67 +160,67 @@ Template name: A PROPOS
         <div class="brand-wrapper outer-top-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Ville-de-villerubanne-mediation.webp);"></div>
 
-            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Ville-de-villerubanne-mediation.webp" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Ville-de-villerubanne-mediation.webp" alt="logo ville villeurbanne">
         </div>
 
         <div class="brand-wrapper outer-top-right">
-            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/swatch-group-evenement-e1696339785160.webp);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-03-at-5.11.10-PM.jpeg);"></div>
 
-            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/swatch-group-evenement-e1696339785160.webp" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-03-at-5.11.10-PM.jpeg" alt="logo swatch">
         </div>
 
         <div class="brand-wrapper outer-bottom-left">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/seine-musicale-composition.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/seine-musicale-composition.webp" alt="logo seine musicale">
         </div>
 
         <div class="brand-wrapper outer-bottom-right">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Salomon-gamme-confort.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Salomon-gamme-confort.webp" alt="logo salomon">
         </div>
 
         <div class="brand-wrapper middle-bottom-left">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/red-bull-lancement-de-produit.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/red-bull-lancement-de-produit.webp" alt="logo red bull">
         </div>
 
         <div class="brand-wrapper middle-bottom-right">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/paris-musee-mediation-podcast.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/paris-musee-mediation-podcast.webp" alt="logo paris musee mediation podcast">
         </div>
 
         <div class="brand-wrapper inner-top-left">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/palais-de-tokyo-mediation.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/palais-de-tokyo-mediation.webp" alt="logo palais de tokyo">
         </div>
 
         <div class="brand-wrapper inner-top-right">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/opera-de-lyon-composition.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/opera-de-lyon-composition.webp" alt="logo opera de lyon">
         </div>
 
         <div class="brand-wrapper inner-bottom-middle">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/ondation-louis-vuitton-exposition-scaled.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/ondation-louis-vuitton-exposition-scaled.webp" alt="logo fondation louis vuitton experience">
         </div>
 
         <div class="brand-wrapper middle-middle-left">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Musee-national-histoire-naturelle-mediation.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Musee-national-histoire-naturelle-mediation.webp" alt="logo musee nationnal histoire naturel">
         </div>
 
         <div class="brand-wrapper middle">
-            <div class="brand-hover-preview" style="background-image: url(http://localhost:10003/wp-content/uploads/2023/09/preview-pompidou.png);"></div>
+            <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/musee-du-quai-branly-jacques-chirac-mediation.webp);"></div>
 
-            <img src="http://localhost:10003/wp-content/uploads/2023/09/centre_pompidou_logo.png" alt="logo centre pompidou">
+            <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/musee-du-quai-branly-jacques-chirac-mediation.webp" alt="logo musee quai branly jacques chirac">
         </div>
 
     </div>
@@ -274,45 +274,44 @@ Template name: A PROPOS
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Elodie_Parmentier_NuitsNoires.jpg);">
                     <div class="team-member-content">
                         <h3>Élodie Parmentier <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                        <p>Directrice associée. En charge du développement et de la direction artistique sonore, elle vous accompagne pour dessiner votre projet de création sonore immersive et sur-mesure.</p>
                     </div>
                 </div>
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jade_Dumont_NuitsNoires.jpg);">
                     <div class="team-member-content">
                         <h3>Jade Dumont <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                        <p>Chargée de communication et de développement. C’est moi qui écris les lignes que vous lisez depuis que vous êtes arrivé sur notre site ! Je fais en sorte que le travail de l’équipe de Nuits Noires arrive jusqu'à vos oreilles…</p>
                     </div>
                 </div>
             </div>
 
             <div class="team-column">
-                <a href="#" class="cta cta-team">Nous contacter</a>
+                <a href="https://nuitsnoires.com/contact" class="cta cta-team">Nous contacter</a>
 
-                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Lucie_Baverel_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jeremie_Nicolas_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                        <h3>Jeremie Nicolas <span></span></h3>
+                        <p>Directeur associé. En charge de la direction artistique et de la coordination des productions sonores, il pilote vos projets et vous guide dès le début de la production jusqu'à la diffusion. Pendant plus de 10 ans, il a été ingénieur du son en studio d’enregistrement et régisseur général dans le spectacle vivant.</p>
                     </div>
                 </div>
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Metiers_du_son_equipe_NuitsNoires.jpg);">
                     <div class="team-member-content">
                         <h3>Notre équipe <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
                     </div>
                 </div>
             </div>
 
             <div class="team-column">
-                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jeremie_Nicolas_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Lucie_Baverel_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Jeremie Nicolas <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                        <h3>Lucie Baverel <span></span></h3>
+                        <p>Autrice et journaliste qui écrit vos immersions sonores avec sensibilité et créativité.</p>
                     </div>
                 </div>
-                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Remi_Seve_NuitsNoires.jpg);">
+                <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Remi_Seve_NuitsNoires.jpg);" id="photo-remi">
                     <div class="team-member-content">
-                        <h3>Remi Seive <span></span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ipsam officiis magni numquam obcaecati optio animi quia vitae, architecto doloremque error ratione veniam ducimus quas? Nisi omnis perferendis accusantium vitae?</p>
+                        <h3>Remi Sève <span></span></h3>
+                        <p>Compositeur et réalisateur en son binaural, il imagine, compose et crée vos immersions sonores avec subtilité et créativité.</p>
                     </div>
                 </div>
             </div>

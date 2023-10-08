@@ -133,10 +133,11 @@ h1 {
     top: 35%;
     width: 130px;
     left: 0;
-    gap: 1em;
+    gap: 0.8em;
     z-index: 80;
     p {
         font-size: 0.8em;
+        line-height: 0.8em;
         color: white;
         opacity: 40%;
         text-transform: uppercase;

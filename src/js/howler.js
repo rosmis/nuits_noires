@@ -4,6 +4,8 @@ const seaWrapperTriggers = document.querySelectorAll(".svg-trigger");
 const subtitleWrappers = document.querySelectorAll(".subtitles-wrapper");
 const ctaBottom = document.querySelector(".cta-subtitles");
 
+const audioEqualizer = document.getElementById("audio-equalizer");
+
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
@@ -44,15 +46,26 @@ let soundsTimelineDict = {};
 let timeCodeInterval;
 
 menuToggleAudio.forEach((toggle) => {
+    let isSoundDisabled = false;
+
     toggle.addEventListener("click", () => {
+        if (toggle.classList.contains("mute")) {
+            localStorage.setItem("equalizerStatus", false);
+            console.log("muted");
+
+            isSoundDisabled = true;
+        } else {
+            localStorage.setItem("equalizerStatus", true);
+        }
+
         soundsTimelineDict = {
             0: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_1_cut.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/09/Part_1_cut.ogg",
                     ],
                     html5: true,
-                    // mute: true,
+                    mute: isSoundDisabled,
                     onend: () => {
                         soundsTimelineDict[seaWrapperIndex].loop.play();
                         soundsTimelineDict[seaWrapperIndex].loop.fade(
@@ -64,23 +77,25 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/09/Loop_Strate_1.ogg",
                     ],
+                    mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/09/Transition_1.ogg",
                     ],
+                    mute: isSoundDisabled,
                 }),
             },
             1: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Part_2.ogg",
                     ],
                     html5: true,
-                    // mute: true,
+                    mute: isSoundDisabled,
                     onend: () => {
                         soundsTimelineDict[seaWrapperIndex].loop.play();
                         soundsTimelineDict[seaWrapperIndex].loop.fade(
@@ -92,23 +107,25 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_2.ogg",
                     ],
+                    mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_2.ogg",
                     ],
+                    mute: isSoundDisabled,
                 }),
             },
             2: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Part_3.ogg",
                     ],
                     html5: true,
-                    // mute: true,
+                    mute: isSoundDisabled,
                     onend: () => {
                         soundsTimelineDict[seaWrapperIndex].loop.play();
                         soundsTimelineDict[seaWrapperIndex].loop.fade(
@@ -120,23 +137,25 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_3.ogg",
                     ],
+                    mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_3.ogg",
                     ],
+                    mute: isSoundDisabled,
                 }),
             },
             3: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Part_4.ogg",
                     ],
                     html5: true,
-                    // mute: true,
+                    mute: isSoundDisabled,
                     onend: () => {
                         soundsTimelineDict[seaWrapperIndex].loop.play();
                         soundsTimelineDict[seaWrapperIndex].loop.fade(
@@ -148,14 +167,16 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Loop_Strate_4.ogg",
                     ],
+                    mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "http://localhost:10003/wp-content/uploads/2023/10/Transition_3.ogg",
                     ],
+                    mute: isSoundDisabled,
                 }),
             },
         };
@@ -201,13 +222,15 @@ function triggerSubtitleOpacity(wrapper) {
         ease: Power3.easeInOut,
     });
 
-    translateCounter += subtitleIndex * -1.2;
+    translateCounter += subtitleIndex * -1.3;
 
     // trigger opacity next seaWrapper
     if (lastParagraph === paragraphsInWrapperArray[subtitleIndex]) {
-        seaWrapperTriggers[seaWrapperIndex].classList.add("display-content");
+        if (seaWrapperIndex !== 3)
+            seaWrapperTriggers[seaWrapperIndex].classList.add(
+                "display-content"
+            );
 
-        displayOpacityNextParagraphContainer(seaWrapperIndex + 1);
         displaySvgTrigger(seaWrapperIndex);
     }
 
@@ -258,12 +281,7 @@ function playNextSound() {
         paused: true,
     });
 
-    // console.log(
-    //     "remainingParagraphsBeforeNextContainer",
-    //     remainingParagraphsBeforeNextContainer
-    // );
-
-    // console.log("subtitleIndex", subtitleIndex);
+    displayOpacityNextParagraphContainer(seaWrapperIndex + 1);
 
     // if there are remaining paragraphs that have not been translated on trigger action, sum these translations and move container accordingly
     if (remainingParagraphsBeforeNextContainer.length > 0) {
@@ -276,7 +294,7 @@ function playNextSound() {
     // setTimeout(() => {
     subtitlesTranslateInterludeTimeline.to(subtitleWrappers, {
         duration: 1,
-        transform: `translateY(${translateCounter - 4}em)`,
+        transform: `translateY(${translateCounter - 4.4}em)`,
         ease: Power3.easeInOut,
     });
 
@@ -293,7 +311,7 @@ function playNextSound() {
     soundsTimelineDict[seaWrapperIndex].transition.play();
     soundsTimelineDict[seaWrapperIndex].transition.fade(0, 1, 2000);
 
-    translateCounter -= 4;
+    translateCounter -= 4.4;
 
     // TODO bring back this
     // forceRemainingParagraphOpacity();
@@ -366,6 +384,26 @@ function displaySvgTrigger(index) {
     });
 
     displaySvgCta.play();
+}
+
+audioEqualizer.addEventListener("click", () => {
+    const localStorageEqualizerStatus = JSON.parse(
+        localStorage.getItem("equalizerStatus")
+    );
+
+    console.log("localStorageEqualizerStatus", localStorageEqualizerStatus);
+
+    triggerAllSoundsSystem(!localStorageEqualizerStatus);
+});
+
+function triggerAllSoundsSystem(status) {
+    const soundTypes = ["content", "loop", "transition"];
+
+    for (const key in soundsTimelineDict) {
+        soundTypes.forEach((soundType) => {
+            soundsTimelineDict[key][soundType].mute(status);
+        });
+    }
 }
 
 window.addEventListener("beforeunload", () => {

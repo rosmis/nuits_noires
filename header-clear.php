@@ -10,7 +10,7 @@
 
     <?php wp_head();?>
 
-    <div class="logo-wrapper wrapper-clear">
+    <div class="logo-wrapper wrapper-clear" id="logo-wrapper">
       <a href="http://localhost:10003" class="logo-top-navbar">
         <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
       </a>
