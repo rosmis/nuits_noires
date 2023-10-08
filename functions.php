@@ -77,16 +77,19 @@ function load_js_assets() {
 
 
         $morphingShapes = get_template_directory_uri() .'/src/assets/lottie/realisations_morphing.json';
+        $controllerShape = get_template_directory_uri() .'/src/assets/lottie/fleche_rond.json';
         $morphingServicesShapes = get_template_directory_uri() .'/src/assets/lottie/morphing_services.json';
 
         if(is_post_type_archive('realisations')) {
 
             wp_localize_script('realisations', 'data', array(
                 'morphingShapes' => $morphingShapes,
+                'controllerShape' => $controllerShape,
             ));
         } else {
             wp_localize_script('realisations', 'data', array(
                 'morphingServicesShapes' => $morphingServicesShapes,
+                'controllerShape' => $controllerShape,
             ));
         }
 

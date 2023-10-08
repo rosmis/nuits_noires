@@ -529,14 +529,20 @@ section.realisations-wrapper .controllers-wrapper {
   z-index: 100;
 }
 section.realisations-wrapper .controllers-wrapper.controller-left {
-  left: 0;
+  left: -2%;
 }
 section.realisations-wrapper .controllers-wrapper.controller-right {
-  right: 0;
+  right: -3%;
 }
 section.realisations-wrapper .controllers-wrapper .controller {
   position: relative;
   cursor: pointer;
+}
+section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next {
+  width: 80%;
+}
+section.realisations-wrapper .controllers-wrapper .controller .arrow-previous {
+  rotate: 180deg;
 }
 section.realisations-wrapper .controllers-wrapper .controller p {
   opacity: 0;

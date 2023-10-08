@@ -12,16 +12,25 @@ section.realisations-wrapper {
         z-index: 100;
 
         &.controller-left {
-            left: 0;
+            left: -2%;
         }
 
         &.controller-right {
-            right: 0;
+            right: -3%;
         }
 
         .controller {
             position: relative;
             cursor: pointer;
+
+            .arrow-previous, .arrow-next {
+                width: 80%;
+            }
+
+            .arrow-previous {
+                rotate: 180deg;
+            }
+
             p {
                 opacity: 0;
                 color: white;

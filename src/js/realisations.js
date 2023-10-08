@@ -4,108 +4,83 @@ const triggers = document.querySelectorAll(".controller");
 const triggerContentPrevious = document.querySelector(".title-previous");
 const triggerContentNext = document.querySelector(".title-next");
 
+const morphingDataUrlPath = data?.morphingShapes;
+const morphingDataUrlServicesPath = data?.morphingServicesShapes;
+const morphingWrapper = document.getElementById("morphing-wrapper");
+
 //HOVER STATE CONTROLLERS
 
-const triggerTimelines = {
-    left: {
-        outer: {
-            timeline: gsap.timeline({
-                defaults: { duration: 0.2 },
-                paused: true,
-            }),
-            triangle: document.getElementById(`left_outer_triangle`),
-        },
-        inner: {
-            timeline: gsap.timeline({
-                defaults: { duration: 0.2 },
-                paused: true,
-            }),
-            triangle: document.getElementById(`left_inner_triangle`),
-        },
-    },
+const controllerShapeDataUrl = data?.controllerShape;
+const morphingControllerNextWrapper = document.querySelector(".arrow-next");
+const morphingControllerPreviousWrapper =
+    document.querySelector(".arrow-previous");
 
-    right: {
-        outer: {
-            timeline: gsap.timeline({
-                defaults: { duration: 0.2 },
-                paused: true,
-            }),
-            triangle: document.getElementById(`right_outer_triangle`),
-        },
-        inner: {
-            timeline: gsap.timeline({
-                defaults: { duration: 0.2 },
-                paused: true,
-            }),
-            triangle: document.getElementById(`right_inner_triangle`),
-        },
-    },
-};
+let morphingControllerNextInstance;
+let morphingControllerPreviousInstance;
+
+fetch(controllerShapeDataUrl)
+    .then((response) => response.json())
+    .then((animationData) => {
+        // create instance for each controller
+
+        [
+            morphingControllerNextWrapper,
+            morphingControllerPreviousWrapper,
+        ].forEach((wrapper) => {
+            const config = {
+                container: wrapper,
+                renderer: "svg",
+                loop: false,
+                autoplay: false,
+                animationData: animationData,
+                rendererSettings: {
+                    preserveAspectRatio: "none",
+                    // viewBoxSize: true,
+                },
+            };
+
+            // Create a Lottie instance
+            const animation = lottie.loadAnimation(config);
+            wrapper === morphingControllerNextWrapper
+                ? (morphingControllerNextInstance = animation)
+                : (morphingControllerPreviousInstance = animation);
+        });
+    })
+    .catch((error) => {
+        console.error("Error loading animation data:", error);
+    });
 
 triggers.forEach((trigger) => {
     trigger.addEventListener("mouseenter", () => {
         if (trigger.classList.contains("next")) {
             const nextIndex = (currentIndex + 1) % slides.length;
-            triggerContentNext.innerText = triggerTitles[nextIndex];
+            // don't show preview titles on service page
 
-            playSvgTriggerAnimation("right").play();
+            morphingDataUrlPath
+                ? (triggerContentNext.innerText = triggerTitles[nextIndex])
+                : undefined;
+
+            morphingControllerNextInstance.playSegments([50, 80], true);
+
             return;
         }
         const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-        triggerContentPrevious.innerText = triggerTitles[prevIndex];
+        morphingDataUrlPath
+            ? (triggerContentPrevious.innerText = triggerTitles[prevIndex])
+            : undefined;
 
-        playSvgTriggerAnimation("left").play();
+        morphingControllerPreviousInstance.playSegments([50, 80], true);
     });
 
     trigger.addEventListener("mouseleave", () => {
         if (trigger.classList.contains("next")) {
-            playSvgTriggerAnimation("right").reverse();
+            morphingControllerNextInstance.playSegments([60, 50], true);
             return;
         }
 
-        playSvgTriggerAnimation("left").reverse();
+        morphingControllerPreviousInstance.playSegments([60, 50], true);
     });
 });
-
-function playSvgTriggerAnimation(trigger) {
-    const outerTimeline = triggerTimelines[trigger]["outer"].timeline;
-    const innerTimeline = triggerTimelines[trigger]["inner"].timeline;
-
-    outerTimeline.to(
-        triggerTimelines[trigger]["outer"].triangle,
-        {
-            morphSVG: {
-                shape: `#${trigger}_outer_circle`,
-            },
-        },
-        {
-            ease: Power4.easeInOut,
-        }
-    );
-
-    innerTimeline.to(
-        triggerTimelines[trigger]["inner"].triangle,
-        {
-            morphSVG: {
-                shape: `#${trigger}_inner_circle`,
-            },
-        },
-        {
-            ease: Power4.easeInOut,
-        }
-    );
-
-    return {
-        play: () => {
-            outerTimeline.play();
-            innerTimeline.play();
-        },
-        reverse: () => {
-            outerTimeline.reverse();
-            innerTimeline.reverse();
-        },
-    };
-}
 
 //DISPLAY NEXT SLIDE STATE
 
@@ -150,10 +125,6 @@ function showNextSlide() {
 }
 
 // MORPH SHAPE STATE
-
-const morphingDataUrlPath = data?.morphingShapes;
-const morphingDataUrlServicesPath = data?.morphingServicesShapes;
-const morphingWrapper = document.getElementById("morphing-wrapper");
 
 let morphingShapesLottieInstance;
 
