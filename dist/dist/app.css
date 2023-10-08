@@ -872,6 +872,9 @@ section.realisation-wrapper .realisation-main-wrapper .cta-wrapper {
   z-index: 5;
   gap: 1em;
 }
+section.realisation-wrapper .realisation-main-wrapper .cta-wrapper a {
+  text-decoration: none;
+}
 section.realisation-wrapper .wrapper-next-project {
   height: 35vh;
   width: 100%;

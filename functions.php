@@ -98,11 +98,12 @@ function load_js_assets() {
     }
 
     if (isset($query_vars['category_name'])) {
-        $category_names = array('culturel', 'art-vivant', 'patrimoine', 'marque');
+        $category_names = array('culturel', 'art-vivant', 'patrimoine', 'marque', 'accompagnement', 'etapes-creation-sonore', 'formes-creation-sonore');
         $is_single_realisations = is_singular('realisations');
+        $is_single_services = is_singular('services');
     
         if (in_array($query_vars['category_name'], $category_names)) {
-            if ($is_single_realisations) {
+            if ($is_single_realisations || $is_single_services) {
                 // Enqueue scripts for realisations
                 $post_id = get_the_ID();
                 wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/90b68b7d84.js', [], 1, true);
@@ -113,7 +114,7 @@ function load_js_assets() {
                     'id' => $post_id,
                 ));
             } else {
-                // Enqueue scripts for categories other than realisations
+                // Enqueue scripts for categories other than realisations or services
                 wp_enqueue_script('scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', [], 1, true);
                 wp_enqueue_script('work', get_template_directory_uri() . '/src/js/work.js', [], 1, true);
             }
@@ -226,7 +227,7 @@ function custom_post_type_services() {
         'public'             => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
-        'show_in_menu'       => false,
+        'show_in_menu'       => true,
         'query_var'          => true,
         'rewrite' => array('slug' => 'services/%category%'),
         'capability_type'    => 'post',

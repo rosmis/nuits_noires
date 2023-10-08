@@ -87,6 +87,9 @@ section.realisation-wrapper {
             @include flex(space-between);
             z-index: 5;
             gap: 1em;
+            a {
+                text-decoration: none;
+            }
         }
     }
 

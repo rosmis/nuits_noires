@@ -7,45 +7,24 @@
         $right_description = get_field( "description_droite" );
         $accompagnement = get_field( "accompagnement" );
         $credit = get_field( "credit" );
+        $post_excerpt = get_field( "post_excerpt" );
         $featured_img_url = get_the_post_thumbnail_url(); 
-        $audio = get_field( "audio" ); 
-        $audio_title = get_field( "audio_title" ); 
-        $title = get_field( "title" ); 
-        $post_excerpt = get_field( "intro" ); 
 
     ?>
 
     <div class="realisation-bg-wrapper" style="background-image: url(<?php echo $featured_img_url?>)">
 
         <div class="realisation-bg-content-header">
-            <h1><?php echo $title?></h1>
+            <h1><?php the_title()?></h1>
             <div class="horizontal-divider"></div>
-            <h2><?php echo $post_excerpt ?></h2>
+
+            <?php if($post_excerpt) { ?>
+                <h2><?php echo $post_excerpt ?></h2>
+            <?php } else {}?>
+            
         </div>
 
     </div>
-
-    <?php if($audio_title) { ?>
-        <div class="realisation-audio-wrapper custom-container-blog">
-            <div class="audio-control-wrapper">
-                <div class="cta-play">
-                    <i class="fa-solid fa-play" id="playToggle"></i>
-                </div>
-
-                <h2><?php echo $audio_title ?></h2>
-
-            </div>
-
-            <div class="audio-wrapper">
-
-            </div>
-
-        </div>
-
-    <?php
-    } else {
-    }
-    ?>
 
     <div class="realisation-main-wrapper custom-container-blog">
 
@@ -73,7 +52,6 @@
             <?php } else {}?>
         </div>
 
-        <?php echo the_content(); ?> 
 
         <div class="cta-wrapper">
             <a href="https://nuitsnoires.com" class="cta">
