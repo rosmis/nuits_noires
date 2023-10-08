@@ -112,27 +112,61 @@ gsap.to("#rotate-circle", {
 
 // INTERSECTION OBSERVERS
 const sectionsToIntercept = document.querySelectorAll(".section-to-intercept");
+const anchorLinks = document.querySelectorAll(".anchor-work-link");
+const circleBackgroundImageContainer = document.querySelector(".circled-image");
 
-function handleIntersection(entries, observer) {
-    // console.log("entries", entries);
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            console.log(`Target element ${index} is in the viewport!`);
-        }
-    });
-}
-
-const intersectionOptions = {
-    root: null,
+let observerOptions = {
     rootMargin: "0px",
     threshold: 0.5,
 };
 
-sectionsToIntercept.forEach((section) => {
-    const observer = new IntersectionObserver(
-        handleIntersection,
-        intersectionOptions
-    );
+const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    observer.observe(section);
+function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const sectionIndex = Array.from(
+                document.querySelectorAll(".section-to-intercept")
+            ).indexOf(entry.target);
+
+            triggerAnchorLinkOpacity(sectionIndex);
+            setCircleBackgroundImage(sectionIndex);
+        }
+    });
+}
+
+sectionsToIntercept.forEach((i) => {
+    if (i) {
+        observer.observe(i);
+    }
 });
+
+function triggerAnchorLinkOpacity(index) {
+    const generateAnchorOpacityTimeline = (index, opacity) => {
+        const anchorTimeline = gsap.timeline({ paused: true });
+
+        anchorTimeline.to(anchorLinks[index], {
+            opacity,
+            duration: 0.8,
+            ease: Power1.easeInOut,
+        });
+
+        anchorTimeline.play();
+    };
+
+    anchorLinks.forEach((_anchorLink, indexAnchor) => {
+        generateAnchorOpacityTimeline(indexAnchor, 0.4);
+    });
+
+    generateAnchorOpacityTimeline(index, 1);
+}
+
+function setCircleBackgroundImage(index) {
+    const backgroundImageDict = {
+        0: "https://nuitsnoires.com/wp-content/uploads/2023/10/Screenshot-2023-06-27-at-21.21.35-1.png",
+        1: "https://nuitsnoires.com/wp-content/uploads/2023/10/immersive-bg-1.png",
+        2: "https://nuitsnoires.com/wp-content/uploads/2023/10/Metiers_du_son_equipe_NuitsNoires.jpg",
+    };
+
+    circleBackgroundImageContainer.style.backgroundImage = `url(${backgroundImageDict[index]})`;
+}

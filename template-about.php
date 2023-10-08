@@ -7,9 +7,9 @@ Template name: A PROPOS
 <?php get_header();?>
 
 <div class="wrapper-circle-content">    
-    <p class="anchor-work-link" style="transform: translateX(-5px) translateY(100px)">HISTOIRE</p>
-    <p class="anchor-work-link" style="transform: translateX(-10px) translateY(100px)">IMMERSIF</p>
-    <p class="anchor-work-link" style="transform: translateX(-15px) translateY(100px)">ÉQUIPE</p>  
+    <p class="anchor-work-link" style="transform:translateY(100px)">HISTOIRE</p>
+    <p class="anchor-work-link" style="transform: translateY(100px)">IMMERSIF</p>
+    <p class="anchor-work-link" style="transform: translateY(100px)">ÉQUIPE</p>  
 </div>
 
 <div class="circle-progress-wrapper" style="z-index: 50">
