@@ -93,59 +93,7 @@ section.realisation-wrapper {
         }
     }
 
-    .wrapper-next-project {
-        height: 35vh;
-        width: 100%;
-        transform: scale(0.8);
-        cursor: pointer;
-        overflow: hidden;
-        text-decoration: none;
-
-        &:hover {
-            .wrapper-next-project-bg {
-                transform: scale(1.1);
-            }
-        }
-        
-        .wrapper-next-project-bg {
-            @include flex(center);
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            transition: 0.2s ease-in-out all;
-
-            &:hover {
-                &::before {
-                    display: block;
-                }
-            }
-
-            &::before {
-                content: "";
-                display: none;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            .wrapper-next-project-content {
-                p {
-                    text-align: center;
-                    color: white; 
-                }
-
-                p.next-project-title {
-                    font-size: 3em;
-                    font-weight: 700;
-                }
-            }
-
-        }        
-    }
+    
 
     .realisation-audio-wrapper {
         display: flex;
@@ -201,4 +149,59 @@ section.realisation-wrapper {
             }
         }
     }
+}
+
+.wrapper-next-project {
+    display: block;
+    height: 35vh;
+    width: 100%;
+    transform: scale(0.8);
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover {
+        .wrapper-next-project-bg {
+            transform: scale(1.1);
+        }
+    }
+    
+    .wrapper-next-project-bg {
+        @include flex(center);
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 0.2s ease-in-out all;
+
+        &:hover {
+            &::before {
+                display: block;
+            }
+        }
+
+        &::before {
+            content: "";
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .wrapper-next-project-content {
+            p {
+                text-align: center;
+                color: white; 
+            }
+
+            p.next-project-title {
+                font-size: 3em;
+                font-weight: 700;
+            }
+        }
+
+    }        
 }

@@ -1,0 +1,54 @@
+footer {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $light-black;
+    gap: 1em;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+
+    .logo-footer {
+        a {
+            img {
+                width: 30vw;
+                height: auto
+            }
+        }
+    }
+
+    .anchor-links-footer {
+        @include flex(space-between);
+        flex-wrap: wrap;
+        gap: 1em;
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                bottom: -3px;
+                border-radius: 5px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                margin-top: 0.3em;
+                background-color: white;
+                transition: all 0.2s ease-in-out;
+              }
+    
+              &:hover {
+                &::after {
+                  width: 100%; 
+                }
+              }
+        }
+    }
+}

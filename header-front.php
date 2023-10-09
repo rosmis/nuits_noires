@@ -22,10 +22,10 @@
       <div class="nav-links-wrapper">
           <ul class="nav-links">
             <li>
-            <a class="nav-link" href="http://localhost:10003/realisations/">Nuits Noires</a>
+            <a class="nav-link" href="https://nuitsnoires.com/realisations/">Nuits Noires</a>
             </li>
             <li>
-              <a class="nav-link" href="http://localhost:10003/">Immersion</a>
+              <a class="nav-link" href="https://nuitsnoires.com/">Immersion</a>
             </li>
           </ul>
 
@@ -53,23 +53,23 @@
 
       <ul class="main-nav-links">
         <li>
-          <a class="nav-link" href="http://localhost:10003/realisations">Réalisations</a>
+          <a class="nav-link" href="https://nuitsnoires.com/realisations">Réalisations</a>
           <span>Notre portfolio</span>
         </li>
         <li>
-          <a class="nav-link" href="http://localhost:10003/about">À propos</a>
+          <a class="nav-link" href="https://nuitsnoires.com/about">À propos</a>
           <span>Mieux nous connaître</span>
         </li>
         <li>
-          <a class="nav-link" href="http://localhost:10003/services">Services</a>
+          <a class="nav-link" href="https://nuitsnoires.com/services">Services</a>
           <span>Découvrir nos prestations</span>
         </li>
-        <!-- <li>
-          <a class="nav-link" href="<?php echo get_permalink(25)?>">Blog</a>
-          <span>En apprendre plus</span>
-        </li> -->
         <li>
-          <a class="nav-link" href="http://localhost:10003/contact">Contact</a>
+          <a class="nav-link" href="https://nuitsnoires.com/blog">Blog</a>
+          <span>En apprendre plus</span>
+        </li>
+        <li>
+          <a class="nav-link" href="https://nuitsnoires.com/contact">Contact</a>
           <span>Échanger avec nous</span>
         </li>
       </ul> 
