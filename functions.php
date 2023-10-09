@@ -120,6 +120,11 @@ function load_js_assets() {
             }
         }
     }
+    
+    if (is_single() && get_post_type() === 'post') {
+        wp_enqueue_script('footer', get_template_directory_uri() . '/src/js/footer.js', [], 1, true);
+    }
+
 }
 
 add_action('wp_enqueue_scripts', 'load_js_assets');
