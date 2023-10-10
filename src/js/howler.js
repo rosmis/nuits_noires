@@ -6,6 +6,8 @@ const ctaBottom = document.querySelector(".cta-subtitles");
 
 const audioEqualizer = document.getElementById("audio-equalizer");
 
+let isScrollBehaviorEnabled = false;
+
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
@@ -17,19 +19,18 @@ ScrollTrigger.create({
 
 // listen for potential scroll from user and redirect to next seaWrapper section
 
-// TODO FIX THIS FUCKING SCROLL LISTENER WITHOUT BREAKING OTHER STUFF FFS
+ScrollTrigger.addEventListener("scrollStart", () => {
+    if (seaWrapperIndex >= 3 || !isScrollBehaviorEnabled) return;
 
-// ScrollTrigger.addEventListener("scrollStart", () => {
-//     if (seaWrapperIndex > 3) return;
-//     if (
-//         !seaWrapperTriggers[seaWrapperIndex].classList.contains(
-//             "display-content"
-//         )
-//     )
-//         return;
+    if (
+        !seaWrapperTriggers[seaWrapperIndex].classList.contains(
+            "display-content"
+        )
+    )
+        return;
 
-//     playNextSound();
-// });
+    playNextSound();
+});
 
 const timeCodeSubtitlesDict = {
     0: [0, 5, 11, 16, 21],
@@ -232,6 +233,7 @@ function triggerSubtitleOpacity(wrapper) {
             );
 
         displaySvgTrigger(seaWrapperIndex);
+        isScrollBehaviorEnabled = true;
     }
 
     subtitlesTranslateTimeline.to(subtitleWrappers, {
@@ -319,6 +321,7 @@ function playNextSound() {
     // reset core variables
     seaWrapperIndex++;
     subtitleIndex = 0;
+    isScrollBehaviorEnabled = false;
 
     paragraphsInWrapper =
         subtitleWrappers[seaWrapperIndex].querySelectorAll("p");

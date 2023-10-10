@@ -42,7 +42,7 @@
         </video>
 
 
-        <div class="svg-trigger display-content">
+        <div class="svg-trigger">
 
             <div class="arrow-lottie"></div>
 
@@ -57,7 +57,7 @@
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/middle.webm'?>" type="video/mp4">
         </video>
 
-        <div class="svg-trigger display-content">
+        <div class="svg-trigger">
 
             <div class="arrow-lottie"></div>
 

@@ -117,8 +117,9 @@ videoContainers.forEach((video, index) => {
 });
 
 // listen for potential scroll end from user and redirect to next seaWrapper section
-// ScrollTrigger.addEventListener("scrollStart", () => {
-//     if (!isMenuSoundToggled) return;
-//     if (svg[counter].classList.contains("display-content"))
-//         triggerNextScreen(counter);
-// });
+ScrollTrigger.addEventListener("scrollStart", () => {
+    if (!isMenuSoundToggled || counter >= 3) return;
+
+    if (svg[counter].classList.contains("display-content"))
+        triggerNextScreen(counter);
+});
