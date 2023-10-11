@@ -11,6 +11,7 @@ let morphingTriangleInstances = [];
 
 let t2 = gsap.timeline({ paused: true });
 let t3 = gsap.timeline({ paused: true });
+let t4 = gsap.timeline({ paused: true });
 
 let counter = 0;
 let isMenuSoundToggled = false;
@@ -34,6 +35,14 @@ function triggerNextScreen(index) {
         ease: Power3.easeInOut,
     });
 
+    // this is to prevent on first home page load to display sea wrappers that are underneath the first one and therefore shouldn't be displayed
+    t4.to(index === 2 ? ".sea-wrapper" : `.sea-wrapper-${index + 1}`, {
+        opacity: 1,
+        duration: 0.2,
+        ease: Power3.easeInOut,
+    });
+
+    t4.play();
     t3.play();
 
     counter++;

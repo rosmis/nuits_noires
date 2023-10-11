@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="sea-wrapper video-container sea-wrapper-1" style="z-index: 3">
+    <div class="sea-wrapper video-container sea-wrapper-1" style="z-index: 3; opacity: 0">
 
         <video muted autoplay loop controlslist="nodownload" class="top-sea-home">
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/sous_la_surface.webm'?>" type="video/mp4">
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="sea-wrapper video-container sea-wrapper-2" style="z-index: 2">
+    <div class="sea-wrapper video-container sea-wrapper-2" style="z-index: 2; opacity: 0">
 
         <video muted autoplay loop controlslist="nodownload" class="top-sea-home">
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/middle.webm'?>" type="video/mp4">
@@ -67,7 +67,7 @@
         
     </div>
 
-    <div class="sea-wrapper video-container" style="z-index: 1">
+    <div class="sea-wrapper video-container" style="z-index: 1; opacity: 0">
 
         <video muted autoplay loop controlslist="nodownload" class="top-sea-home">
             <source src="<?php echo get_template_directory_uri(). '/src/assets/video/fond.webm'?>" type="video/mp4">

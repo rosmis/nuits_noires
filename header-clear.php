@@ -16,7 +16,7 @@
       </a>
     </div>
 
-    <header class="navbar">
+    <header class="navbar" id="navbar-clearer">
         <div class="hamburger">
           <div class="hamburger-lines"></div>
         </div>

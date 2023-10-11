@@ -145,13 +145,21 @@ section.work-wrapper {
                 width: 45vw;
                 height: auto;
                 aspect-ratio: 2/1;
-                background-color: gray;
+                // background-color: gray;
                 transform: rotateX(5deg) rotateY(-4deg) rotateZ(3deg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 35px;
                 filter: blur(2px);
                 z-index: -1;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 35px;
+                    background: linear-gradient(0deg, rgb(0 0 0 / 80%) 0%, rgb(255 255 255 / 10%) 100%);
+                }
             }
         }
     }

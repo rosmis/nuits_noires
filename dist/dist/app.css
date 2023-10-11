@@ -151,6 +151,11 @@ header.navbar.display-navbar {
 header.navbar.background {
   background-color: #090909;
 }
+header.navbar#navbar-clearer {
+  background-color: rgba(9, 9, 9, 0.6) !important;
+  -webkit-backdrop-filter: blur(60px) !important;
+          backdrop-filter: blur(60px) !important;
+}
 header.navbar .hamburger {
   display: flex;
   justify-content: center;
@@ -596,10 +601,10 @@ section.realisations-wrapper .category-wrapper .gray-filter {
 }
 section.realisations-wrapper .title-wrapper {
   position: absolute;
-  top: 30%;
+  top: 46%;
   left: 50%;
-  transform: translateX(-50%);
-  padding: 5em;
+  transform: translate(-50%, -50%);
+  padding: 1em;
   display: flex;
   text-decoration: none;
   flex-direction: column;
@@ -766,13 +771,19 @@ section.work-wrapper .work .card-wrapper-transform .card-wrapper {
   width: 45vw;
   height: auto;
   aspect-ratio: 2/1;
-  background-color: gray;
   transform: rotateX(5deg) rotateY(-4deg) rotateZ(3deg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 35px;
   filter: blur(2px);
   z-index: -1;
+}
+section.work-wrapper .work .card-wrapper-transform .card-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 
 section.realisation-wrapper {
