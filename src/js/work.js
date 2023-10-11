@@ -168,7 +168,7 @@ function incrementArcRotation(postsLength, direction) {
         window.getComputedStyle(scrollArc)["transform"];
 
     // Parse the rotation from the matrix
-    let rotateValue = 0;
+    let rotateValue = 347;
     const matrixPattern = /^matrix\((.+)\)$/;
     const match = arcPreviousMatrixTransform.match(matrixPattern);
 
