@@ -167,6 +167,7 @@ section.realisation-wrapper {
     }
     
     .wrapper-next-project-bg {
+        position: relative;
         @include flex(center);
         flex-direction: column;
         height: 100%;
@@ -174,6 +175,13 @@ section.realisation-wrapper {
         background-size: cover;
         background-repeat: no-repeat;
         transition: 0.2s ease-in-out all;
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgb(0 0 0 / 60%) 0%, rgb(255 255 255 / 10%) 100%);
+        }
 
         &:hover {
             &::before {

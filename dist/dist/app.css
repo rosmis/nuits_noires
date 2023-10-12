@@ -9,22 +9,22 @@
 
 @font-face {
   font-family: "Butler";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/butler_bold.otf");
+  src: url("/wp-content/themes/nuits_noires/fonts/butler_bold.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Butler";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/butler_regular.otf");
+  src: url("/wp-content/themes/nuits_noires/fonts/butler_regular.otf");
   font-weight: normal;
 }
 @font-face {
   font-family: "Helvetica Now";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/helveticanowdisplay-bold.ttf");
+  src: url("/wp-content/themes/nuits_noires/fonts/helveticanowdisplay-bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Helvetica Now";
-  src: url("/wp-content/themes/nuits_noires/src/fonts/helveticanowdisplay-regular.ttf");
+  src: url("/wp-content/themes/nuits_noires/fonts/helveticanowdisplay-regular.ttf");
   font-weight: normal;
 }
 h1 {
@@ -949,6 +949,7 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
   transform: scale(1.1);
 }
 .wrapper-next-project .wrapper-next-project-bg {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -958,6 +959,12 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.2s ease-in-out all;
+}
+.wrapper-next-project .wrapper-next-project-bg:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 .wrapper-next-project .wrapper-next-project-bg:hover::before {
   display: block;
