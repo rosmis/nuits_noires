@@ -91,6 +91,11 @@ h1 {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media screen and (max-width: 992px) {
+  .circle-progress-wrapper {
+    display: none;
+  }
+}
 .circle-progress-wrapper .circled-image {
   position: absolute;
   top: 50%;
@@ -115,6 +120,11 @@ h1 {
   left: 0;
   gap: 0.8em;
   z-index: 80;
+}
+@media screen and (max-width: 992px) {
+  .wrapper-circle-content {
+    display: none;
+  }
 }
 .wrapper-circle-content p {
   font-size: 0.8em;
@@ -604,8 +614,18 @@ section.realisations-wrapper .controllers-wrapper {
 section.realisations-wrapper .controllers-wrapper.controller-left {
   left: -2%;
 }
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .controllers-wrapper.controller-left {
+    left: 0%;
+  }
+}
 section.realisations-wrapper .controllers-wrapper.controller-right {
   right: -3%;
+}
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .controllers-wrapper.controller-right {
+    right: -11%;
+  }
 }
 section.realisations-wrapper .controllers-wrapper .controller {
   position: relative;
@@ -613,6 +633,11 @@ section.realisations-wrapper .controllers-wrapper .controller {
 }
 section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next {
   width: 80%;
+}
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next {
+    width: 50%;
+  }
 }
 section.realisations-wrapper .controllers-wrapper .controller .arrow-previous {
   rotate: 180deg;
@@ -644,6 +669,11 @@ section.realisations-wrapper #morphing-wrapper {
   transform: translate(-50%, -50%);
   width: 110%;
 }
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper #morphing-wrapper {
+    width: 200%;
+  }
+}
 section.realisations-wrapper .category-wrapper {
   display: flex;
   flex-direction: column;
@@ -656,6 +686,11 @@ section.realisations-wrapper .category-wrapper {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 8% 0;
+}
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .category-wrapper {
+    justify-content: space-around;
+  }
 }
 section.realisations-wrapper .category-wrapper .description-wrapper p {
   text-align: center;
@@ -683,6 +718,11 @@ section.realisations-wrapper .title-wrapper {
   z-index: 101;
   will-change: transform;
 }
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .title-wrapper {
+    top: 47%;
+  }
+}
 section.realisations-wrapper .title-wrapper:hover h1 {
   transform: translate3d(0, -0.5rem, 0);
 }
@@ -695,7 +735,7 @@ section.realisations-wrapper .title-wrapper h2 {
   transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 section.realisations-wrapper .title-wrapper h1 {
-  font-size: 3em;
+  font-size: 4vw;
   width: 50vw;
   transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -717,6 +757,11 @@ section.work-wrapper .work-template {
   z-index: -1;
   background-color: #090909;
 }
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work-template {
+    padding-left: 10%;
+  }
+}
 section.work-wrapper .work-template h1 {
   position: absolute;
   top: 0;
@@ -729,11 +774,24 @@ section.work-wrapper .work-template h1 {
   color: white;
   padding: 2em;
 }
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work-template h1 {
+    padding: 4em 1em;
+    font-size: 1.5em;
+  }
+}
 section.work-wrapper .work-template h1 span {
   height: 13px;
   width: 13px;
   border-radius: 100%;
   background-color: #C9961B;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work-template h1 span {
+    width: 7%;
+    padding-bottom: 5%;
+    border-radius: 50%;
+  }
 }
 section.work-wrapper .work-template .background-wrapper {
   height: auto;
@@ -745,12 +803,22 @@ section.work-wrapper .work-template .background-wrapper {
   background-repeat: no-repeat;
   opacity: 60%;
 }
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work-template .background-wrapper {
+    width: 80vw;
+  }
+}
 section.work-wrapper .work {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding-left: 10%;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work {
+    padding-right: 10%;
+  }
 }
 section.work-wrapper .work .card-wrapper-transform {
   position: relative;
@@ -764,9 +832,15 @@ section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper {
 }
 section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more {
   position: relative;
-  height: 140px;
-  width: 140px;
+  height: 10vw;
+  width: 10vw;
   cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more {
+    height: 25vw;
+    width: 25vw;
+  }
 }
 section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .inner-circle {
   height: 100%;
@@ -825,12 +899,25 @@ section.work-wrapper .work .card-wrapper-transform .content-card-wrapper {
   position: absolute;
   bottom: 0;
   left: -10%;
-  max-width: 60%;
+  width: 60%;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work .card-wrapper-transform .content-card-wrapper {
+    width: 90%;
+    bottom: -110%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 section.work-wrapper .work .card-wrapper-transform .content-card-wrapper h1 {
   font-size: 2.5em;
   color: white;
   text-transform: uppercase;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work .card-wrapper-transform .content-card-wrapper h1 {
+    font-size: 1.5em;
+  }
 }
 section.work-wrapper .work .card-wrapper-transform .content-card-wrapper p {
   color: white;
@@ -847,6 +934,11 @@ section.work-wrapper .work .card-wrapper-transform .card-wrapper {
   border-radius: 35px;
   filter: blur(2px);
   z-index: -1;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work .card-wrapper-transform .card-wrapper {
+    width: 85vw;
+  }
 }
 section.work-wrapper .work .card-wrapper-transform .card-wrapper::before {
   content: "";

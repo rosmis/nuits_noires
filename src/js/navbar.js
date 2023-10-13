@@ -188,7 +188,7 @@ if (menuToggleAudioCtas.length) {
 let prevScrollpos = window.scrollY;
 
 window.onscroll = () => {
-    if (!logoWrapper) return;
+    if (!logoWrapper || logoWrapper.classList.contains("no-scroll")) return;
 
     const currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {

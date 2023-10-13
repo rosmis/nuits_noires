@@ -109,6 +109,10 @@ h1 {
         width: fit-content;
     }
 
+    @include media-max('tablet') {
+        display: none;
+    }
+
     .circled-image {
         position: absolute;
         top: 50%;
@@ -134,6 +138,10 @@ h1 {
     left: 0;
     gap: 0.8em;
     z-index: 80;
+
+    @include media-max('tablet') {
+        display: none;
+    }
     p {
         font-size: 0.8em;
         line-height: 0.8em;

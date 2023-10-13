@@ -11,6 +11,10 @@ section.work-wrapper {
         z-index: -1;
         background-color: $black;
 
+        @include media-max('tablet') {
+            padding-left: 10%;
+        }
+
         h1 {
             position: absolute;
             top: 0;
@@ -23,11 +27,22 @@ section.work-wrapper {
             color: white;
             padding: 2em;
 
+            @include media-max('tablet') {
+                padding: 4em 1em;
+                font-size: 1.5em;
+            }
+
             span {
                 height: 13px;
                 width: 13px;
                 border-radius: 100%;
                 background-color: $brown;
+
+                @include media-max('tablet') {
+                    width: 7%;
+                    padding-bottom: 5%;
+                    border-radius: 50%;
+                }
             }
         }
 
@@ -40,12 +55,21 @@ section.work-wrapper {
             background-size: cover;
             background-repeat: no-repeat;
             opacity: 60%;
+
+            @include media-max('tablet') {
+                width: 80vw;
+            }
         }
     }
     .work {
         @include flex(center);
         height: 100vh;
         padding-left: 10%;
+
+        @include media-max('tablet') {
+            padding-right: 10%;
+        }
+
         .card-wrapper-transform {
             position: relative;
             perspective: 800px;
@@ -56,9 +80,14 @@ section.work-wrapper {
                 right: 10%;
                 .cta-more {
                     position: relative;
-                    height: 140px;
-                    width: 140px;
+                    height: 10vw;
+                    width: 10vw;
                     cursor: pointer;
+
+                    @include media-max('tablet') {
+                        height: 25vw;
+                        width: 25vw;
+                    }
 
                     &:hover {
                         .inner-circle {
@@ -128,11 +157,23 @@ section.work-wrapper {
                 position: absolute;
                 bottom: 0;
                 left: -10%;
-                max-width: 60%;
+                width: 60%;
+
+                @include media-max('tablet') {
+                    width: 90%;
+                    bottom: -110%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
                 h1 {
                     font-size: 2.5em;
                     color: white;
                     text-transform: uppercase;
+
+                    @include media-max('tablet') {
+                        font-size: 1.5em;
+                    }
                 }
     
                 p {
@@ -145,13 +186,16 @@ section.work-wrapper {
                 width: 45vw;
                 height: auto;
                 aspect-ratio: 2/1;
-                // background-color: gray;
                 transform: rotateX(5deg) rotateY(-4deg) rotateZ(3deg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 35px;
                 filter: blur(2px);
                 z-index: -1;
+
+                @include media-max('tablet') {
+                    width: 85vw;
+                }
 
                 &::before {
                     content: '';
