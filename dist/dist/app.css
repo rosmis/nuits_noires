@@ -127,6 +127,10 @@ h1 {
   white-space: nowrap !important;
 }
 
+.elementor-heading-title {
+  color: white !important;
+}
+
 header.navbar {
   opacity: 0;
   position: fixed;
@@ -155,6 +159,11 @@ header.navbar#navbar-clearer {
   background-color: rgba(9, 9, 9, 0.6) !important;
   -webkit-backdrop-filter: blur(60px) !important;
           backdrop-filter: blur(60px) !important;
+}
+@media screen and (max-width: 992px) {
+  header.navbar {
+    width: 80%;
+  }
 }
 header.navbar .hamburger {
   display: flex;
@@ -275,6 +284,11 @@ header.navbar .nav-links-wrapper .nav-icon-wrapper {
   justify-content: flex-end;
   gap: 1.5em;
 }
+@media screen and (max-width: 992px) {
+  header.navbar .nav-links-wrapper .nav-icon-wrapper {
+    display: none;
+  }
+}
 header.navbar .nav-links-wrapper .nav-icon-wrapper a {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -295,8 +309,10 @@ header.nav-fullpage .nav-fullpage-bg {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header.nav-fullpage ul.main-nav-links {
   display: flex;
@@ -308,6 +324,11 @@ header.nav-fullpage ul.main-nav-links {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 8%;
+}
+@media screen and (max-width: 992px) {
+  header.nav-fullpage ul.main-nav-links {
+    gap: 3em;
+  }
 }
 header.nav-fullpage ul.main-nav-links li {
   display: flex;
@@ -336,6 +357,11 @@ header.nav-fullpage ul.main-nav-links li a {
   color: rgba(255, 255, 255, 0.8);
   font-size: 2em;
   transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 992px) {
+  header.nav-fullpage ul.main-nav-links li a {
+    font-size: 1.2em;
+  }
 }
 
 #audio-equalizer {
@@ -379,12 +405,24 @@ header.nav-fullpage ul.main-nav-links li a {
 }
 
 .logo_navbar_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 50%;
   top: 4%;
   transform: translateX(-50%);
   padding: 0 1em 1em 1em;
   z-index: 80;
+}
+.logo_navbar_wrapper img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .logo_navbar_wrapper {
+    max-width: 50%;
+  }
 }
 
 section.home_wrapper {
@@ -398,6 +436,9 @@ section.home_wrapper .sea-wrapper {
   overflow: hidden;
 }
 section.home_wrapper .sea-wrapper .svg-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   bottom: 15%;
   left: 50%;
@@ -407,6 +448,11 @@ section.home_wrapper .sea-wrapper .svg-trigger {
   opacity: 0;
   transition: 0.2s ease-in-out opacity;
   width: 5%;
+}
+@media screen and (max-width: 992px) {
+  section.home_wrapper .sea-wrapper .svg-trigger {
+    width: 15%;
+  }
 }
 section.home_wrapper .sea-wrapper .svg-trigger .svg-arrow-wrapper {
   position: absolute;
@@ -428,7 +474,9 @@ section.home_wrapper .sea-wrapper .svg-trigger.display-content {
 }
 section.home_wrapper .sea-wrapper .top-sea-home {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
   z-index: -1;
 }
 section.home_wrapper .activate-sound-wrapper {
@@ -444,11 +492,21 @@ section.home_wrapper .activate-sound-wrapper {
   width: 100%;
   z-index: 80;
 }
+@media screen and (max-width: 992px) {
+  section.home_wrapper .activate-sound-wrapper {
+    max-width: 80%;
+  }
+}
 section.home_wrapper .activate-sound-wrapper h1 {
   font-size: 2.5em;
   text-align: center;
   color: white;
   font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+  section.home_wrapper .activate-sound-wrapper h1 {
+    font-size: 1.5em;
+  }
 }
 section.home_wrapper .activate-sound-wrapper h1 span {
   color: #C9961B;
@@ -458,6 +516,11 @@ section.home_wrapper .activate-sound-wrapper p {
   text-align: center;
   color: white;
   margin-top: 0.5em;
+}
+@media screen and (max-width: 992px) {
+  section.home_wrapper .activate-sound-wrapper p {
+    font-size: 1em;
+  }
 }
 section.home_wrapper .subtitles-content {
   display: flex;
@@ -474,6 +537,12 @@ section.home_wrapper .subtitles-content {
   overflow: hidden;
   z-index: 70;
   padding: 5em;
+}
+@media screen and (max-width: 992px) {
+  section.home_wrapper .subtitles-content {
+    width: 100vw;
+    padding: 2em;
+  }
 }
 section.home_wrapper .subtitles-content .subtitles-wrapper {
   display: flex;
@@ -502,6 +571,7 @@ section.home_wrapper .subtitles-content .subtitles-wrapper p {
   width: 100%;
   justify-content: center;
   margin-top: 2em;
+  flex-wrap: wrap;
 }
 .cta-wrapper.cta-subtitles a {
   text-decoration: none;

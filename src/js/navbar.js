@@ -131,8 +131,10 @@ const animationLogoDataUrl = data.animationLogoDataUrl;
 
 const logoTimelineTranslate = gsap.timeline({ paused: true });
 
+const logoWidthTransition = window.innerWidth < 992 ? "80%" : "39%";
+
 logoTimelineTranslate.to(logoContainer, {
-    width: "39%",
+    width: logoWidthTransition,
     top: "7%",
     duration: 1,
     ease: Power3.easeInOut,

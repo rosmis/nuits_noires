@@ -8,6 +8,9 @@ section.home_wrapper {
         overflow: hidden;
 
         .svg-trigger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: absolute;
             bottom: 15%;
             left: 50%;
@@ -17,6 +20,10 @@ section.home_wrapper {
             opacity: 0;
             transition: 0.2s ease-in-out opacity;
             width: 5%;
+
+            @include media-max('tablet') {
+                width: 15%;
+            }
 
             .svg-arrow-wrapper {
                 position: absolute;
@@ -45,7 +52,8 @@ section.home_wrapper {
 
         .top-sea-home {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover !important;
             z-index: -1;
         }
     }
@@ -63,11 +71,19 @@ section.home_wrapper {
         width: 100%;
         z-index: 80;
 
+        @include media-max('tablet') {
+            max-width: 80%;
+        }
+
         h1 {
             font-size: 2.5em;
             text-align: center;
             color: white;
             font-weight: bold;
+
+            @include media-max('tablet') {
+                font-size: 1.5em;
+            }
 
             span {
                 color: $brown;
@@ -79,6 +95,10 @@ section.home_wrapper {
             text-align: center;
             color: white;
             margin-top: 0.5em;
+
+            @include media-max('tablet') {
+                font-size: 1em;
+            }
         }
     }
 
@@ -97,6 +117,11 @@ section.home_wrapper {
         overflow: hidden;
         z-index: 70;
         padding: 5em;
+
+        @include media-max('tablet') {
+            width: 100vw;
+            padding: 2em;
+        }
 
         .subtitles-wrapper {
             display: flex;
@@ -126,6 +151,7 @@ section.home_wrapper {
         width: 100%;
         justify-content: center;
         margin-top: 2em;
+        flex-wrap: wrap;
 
         a {
             text-decoration: none;

@@ -5,6 +5,7 @@ const subtitleWrappers = document.querySelectorAll(".subtitles-wrapper");
 const ctaBottom = document.querySelector(".cta-subtitles");
 
 const audioEqualizer = document.getElementById("audio-equalizer");
+const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
 
 let isScrollBehaviorEnabled = false;
 
@@ -37,6 +38,13 @@ const timeCodeSubtitlesDict = {
     1: [4, 10],
     2: [1, 6, 17],
     3: [3, 11],
+};
+
+const mobileTranslateYValuesDict = {
+    0: 1.3,
+    1: 4,
+    2: 8,
+    3: 4,
 };
 
 let subtitleIndex = 0;
@@ -217,13 +225,19 @@ function triggerSubtitleOpacity(wrapper) {
     let subtitleTimeline = gsap.timeline({ paused: true });
     let subtitlesTranslateTimeline = gsap.timeline({ paused: true });
 
+    const translateYValue = isDeviceWidthPhone
+        ? mobileTranslateYValuesDict[seaWrapperIndex]
+        : 1.3;
+
+    console.log("translateYValue", translateYValue);
+
     subtitleTimeline.to(paragraphsInWrapper[subtitleIndex], {
         duration: 1,
         opacity: 1,
         ease: Power3.easeInOut,
     });
 
-    translateCounter += subtitleIndex * -1.3;
+    translateCounter += subtitleIndex * -translateYValue;
 
     // trigger opacity next seaWrapper
     if (lastParagraph === paragraphsInWrapperArray[subtitleIndex]) {
@@ -283,6 +297,9 @@ function playNextSound() {
         paused: true,
     });
 
+    const translateYValue = isDeviceWidthPhone ? 9 : 4.4;
+    console.log("translateYValueNEXTSCREEN", translateYValue);
+
     displayOpacityNextParagraphContainer(seaWrapperIndex + 1);
 
     // if there are remaining paragraphs that have not been translated on trigger action, sum these translations and move container accordingly
@@ -293,17 +310,15 @@ function playNextSound() {
         );
     }
 
-    // setTimeout(() => {
     subtitlesTranslateInterludeTimeline.to(subtitleWrappers, {
         duration: 1,
-        transform: `translateY(${translateCounter - 4.4}em)`,
+        transform: `translateY(${translateCounter - translateYValue}em)`,
         ease: Power3.easeInOut,
     });
 
     console.log("EXECUTING MAIN TRANSLATION");
 
     subtitlesTranslateInterludeTimeline.play();
-    // }, 100);
 
     // trigger sound transition based on seaWrapper index
 
@@ -313,7 +328,7 @@ function playNextSound() {
     soundsTimelineDict[seaWrapperIndex].transition.play();
     soundsTimelineDict[seaWrapperIndex].transition.fade(0, 1, 2000);
 
-    translateCounter -= 4.4;
+    translateCounter -= translateYValue;
 
     // TODO bring back this
     // forceRemainingParagraphOpacity();
