@@ -5,6 +5,11 @@ section.contact-wrapper {
     background-color: $black;
     padding: 8%;
     height: 100%;
+    overflow-x: hidden;
+
+    @include media-max('tablet') {
+        padding: 22% 10%;
+    }
 
     h1 {
         @include flex(flex-start);
@@ -28,6 +33,11 @@ section.contact-wrapper {
         border-top: 2px solid white;
         margin: 5em 0;
         padding: 1em 0;
+
+        @include media-max('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
      
         p {
             flex: 1;
@@ -81,8 +91,17 @@ section.contact-wrapper {
             justify-content: space-between;
             width: 100%;
 
+            @include media-max('tablet') {
+                flex-direction: column;
+                gap: 1em;
+            }
+
             a {
                 color: white;
+                @include media-max('tablet') {
+                    width: 100%;
+                    text-align: end;
+                }
             }
 
             .contact-item {
@@ -115,6 +134,11 @@ section.contact-wrapper {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1em;
+
+            @include media-max('tablet') {
+                display: flex;
+                flex-direction: column;
+            }
 
             .contact-img {
                 width: 100%;

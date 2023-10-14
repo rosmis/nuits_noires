@@ -1039,6 +1039,13 @@ section.realisation-wrapper .realisation-main-wrapper .realisation-main-wrapper-
        column-gap: 3em;
   row-gap: 5em;
 }
+@media screen and (max-width: 992px) {
+  section.realisation-wrapper .realisation-main-wrapper .realisation-main-wrapper-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+}
 section.realisation-wrapper .realisation-main-wrapper .support-wrapper, section.realisation-wrapper .realisation-main-wrapper .claim-wrapper {
   display: flex;
   align-items: flex-start;
@@ -1646,6 +1653,12 @@ section.contact-wrapper {
   background-color: #090909;
   padding: 8%;
   height: 100%;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 992px) {
+  section.contact-wrapper {
+    padding: 22% 10%;
+  }
 }
 section.contact-wrapper h1 {
   display: flex;
@@ -1671,6 +1684,12 @@ section.contact-wrapper .contact-form-container {
   border-top: 2px solid white;
   margin: 5em 0;
   padding: 1em 0;
+}
+@media screen and (max-width: 992px) {
+  section.contact-wrapper .contact-form-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 section.contact-wrapper .contact-form-container p {
   flex: 1;
@@ -1718,8 +1737,20 @@ section.contact-wrapper .contact-infos .contact-infos-row {
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 992px) {
+  section.contact-wrapper .contact-infos .contact-infos-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
 section.contact-wrapper .contact-infos .contact-infos-row a {
   color: white;
+}
+@media screen and (max-width: 992px) {
+  section.contact-wrapper .contact-infos .contact-infos-row a {
+    width: 100%;
+    text-align: end;
+  }
 }
 section.contact-wrapper .contact-infos .contact-infos-row .contact-item {
   display: flex;
@@ -1747,6 +1778,12 @@ section.contact-wrapper .contact-infos .contact-img-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
+@media screen and (max-width: 992px) {
+  section.contact-wrapper .contact-infos .contact-img-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
 section.contact-wrapper .contact-infos .contact-img-grid .contact-img {
   width: 100%;
   height: 30vh;
@@ -1767,6 +1804,11 @@ section.article-wrapper .article-content {
   align-items: flex-start;
   gap: 3em;
   padding: 10% 0;
+}
+@media screen and (max-width: 992px) {
+  section.article-wrapper .article-content {
+    padding: 22% 10%;
+  }
 }
 section.article-wrapper .article-content .article-main-content * {
   color: white;
@@ -1803,6 +1845,11 @@ section.archive-wrapper {
   background-color: #090909;
   padding: 8% 0;
 }
+@media screen and (max-width: 992px) {
+  section.archive-wrapper {
+    padding: 22% 0;
+  }
+}
 section.archive-wrapper h1 {
   display: flex;
   align-items: center;
@@ -1831,6 +1878,11 @@ section.archive-wrapper .posts-wrapper .post-group-wrapper {
   gap: 1em;
   width: 100%;
 }
+@media screen and (max-width: 992px) {
+  section.archive-wrapper .posts-wrapper .post-group-wrapper {
+    flex-direction: column;
+  }
+}
 section.archive-wrapper .posts-wrapper .post-group-wrapper .main-post {
   flex: 2;
   width: 100%;
@@ -1843,6 +1895,11 @@ section.archive-wrapper .posts-wrapper .post-group-wrapper .post-column-wrapper 
   align-items: flex-start;
   gap: 1em;
   height: 100%;
+}
+@media screen and (max-width: 992px) {
+  section.archive-wrapper .posts-wrapper .post-group-wrapper .post-column-wrapper {
+    width: 100%;
+  }
 }
 
 .post-wrapper-overflow {
@@ -1897,7 +1954,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(9, 9, 9, 0.9333333333);
+  background: rgba(9, 9, 9, 0.98);
   gap: 1em;
   overflow: hidden;
   z-index: 0;
@@ -1907,12 +1964,22 @@ footer .logo-footer a img {
   width: 25vw;
   height: auto;
 }
+@media screen and (max-width: 992px) {
+  footer .logo-footer a img {
+    width: 40vw;
+  }
+}
 footer .anchor-links-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1em;
+}
+@media screen and (max-width: 992px) {
+  footer .anchor-links-footer {
+    padding: 0 5%;
+  }
 }
 footer .anchor-links-footer a {
   position: relative;

@@ -74,6 +74,12 @@ section.realisation-wrapper {
             grid-template-columns: repeat(2, 1fr);
             column-gap: 3em;
             row-gap: 5em;
+
+            @include media-max('tablet') {
+                display: flex;
+                flex-direction: column;
+                padding: 5%;
+            }
         }
 
         .support-wrapper, .claim-wrapper {

@@ -15,7 +15,7 @@ get_header()
     <h1><span></span> Contact</h1>
 
     <div class="contact-form-container">
-        <p>Tout commence par une idée. <br> Faites qu'elle devienne réalité</p>
+        <p>Nous avons hâte d’échanger avec vous pour imaginer votre projet</p>
 
         <div class="contact-form-wrapper">
             <?php the_content();?>

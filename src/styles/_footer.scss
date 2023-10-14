@@ -15,7 +15,11 @@ footer {
         a {
             img {
                 width: 25vw;
-                height: auto
+                height: auto;
+
+                @include media-max('tablet') {
+                    width: 40vw;
+                }
             }
         }
     }
@@ -24,6 +28,10 @@ footer {
         @include flex(space-between);
         flex-wrap: wrap;
         gap: 1em;
+
+        @include media-max('tablet') {
+            padding: 0 5%;
+        }
 
         a {
             position: relative;
