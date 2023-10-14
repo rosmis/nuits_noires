@@ -71,7 +71,7 @@ menuToggleAudio.forEach((toggle) => {
             0: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_1_cut.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part-1.mp3",
                     ],
                     html5: true,
                     mute: isSoundDisabled,
@@ -86,14 +86,14 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.mp3",
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.mp3",
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -101,7 +101,7 @@ menuToggleAudio.forEach((toggle) => {
             1: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.mp3",
                     ],
                     html5: true,
                     mute: isSoundDisabled,
@@ -116,14 +116,14 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.mp3",
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.mp3",
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -131,7 +131,7 @@ menuToggleAudio.forEach((toggle) => {
             2: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.mp3",
                     ],
                     html5: true,
                     mute: isSoundDisabled,
@@ -146,14 +146,14 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.mp3",
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.mp3",
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -161,7 +161,7 @@ menuToggleAudio.forEach((toggle) => {
             3: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.mp3",
                     ],
                     html5: true,
                     mute: isSoundDisabled,
@@ -176,14 +176,14 @@ menuToggleAudio.forEach((toggle) => {
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.mp3",
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.ogg",
+                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.mp3",
                     ],
                     mute: isSoundDisabled,
                 }),

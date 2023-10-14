@@ -386,6 +386,8 @@ header.nav-fullpage ul.main-nav-links li a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  width: 30px;
+  height: auto;
 }
 
 .toggle-navbar {

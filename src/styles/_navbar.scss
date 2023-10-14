@@ -266,6 +266,9 @@ header.nav-fullpage {
 #audio-equalizer {
   @include flex(center);
   cursor: pointer;
+  width: 30px;
+  height: auto;
+
 }
 
 .toggle-navbar {
