@@ -32,10 +32,18 @@ section.realisation-wrapper {
             gap: 1em;
             z-index: 5;
 
+            @include media-max('tablet') {
+                max-width: 80%;
+            }
+
             h1 {
                 font-size: 2.5em;
                 color: white;
                 text-align: center;
+
+                @include media-max('tablet') {
+                    font-size: 1.5em;
+                }
             }
             .horizontal-divider {
                 height: 2em;
@@ -46,6 +54,10 @@ section.realisation-wrapper {
                 color: white;
                 text-align: center;
                 font-weight: 400;
+
+                @include media-max('tablet') {
+                    font-size: 1em;
+                }
             }
         }
 
@@ -87,8 +99,17 @@ section.realisation-wrapper {
             @include flex(space-between);
             z-index: 5;
             gap: 1em;
+
+            @include media-max('tablet') {
+                flex-direction: column;
+                justify-content: center;
+                max-width: 80%;
+            }
+
             a {
                 text-decoration: none;
+                width: 100%;
+                text-align: center;
             }
         }
     }
@@ -208,6 +229,10 @@ section.realisation-wrapper {
             p.next-project-title {
                 font-size: 3em;
                 font-weight: 700;
+
+                @include media-max('tablet') {
+                    font-size: 1.5em;
+                }
             }
         }
 

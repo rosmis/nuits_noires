@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<section class="article-wrapper">
+<section class="article-wrapper trigger-footer">
     <?php if( have_posts() ): while( have_posts() ): the_post(); ?>
 
     <div class="article-content custom-container-blog">

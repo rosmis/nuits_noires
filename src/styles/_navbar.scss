@@ -28,6 +28,7 @@ header.navbar {
 
     @include media-max('tablet') {
       width: 80%;
+      bottom: 3%;
     }
 
 
@@ -130,6 +131,12 @@ header.navbar {
       gap: 10%;
       width: 100%;
       padding: 0 10%;
+
+      @include media-max('tablet') {
+        padding: 0 5%;
+        justify-content: space-around !important
+      }
+
       .nav-links {
         @include flex(flex-start);
         gap: 2em;
@@ -213,7 +220,7 @@ header.nav-fullpage {
     margin-left: 8%;
 
     @include media-max('tablet') {
-      gap: 3em;
+      gap: 2em;
     }
 
     li {

@@ -12,6 +12,10 @@ const cardWrappers = gsap.utils.toArray(".card-wrapper-transform");
 const circleBackgroundImageContainer = document.querySelector(".circled-image");
 const backgroundImageContainer = document.querySelector(".background-wrapper");
 
+// let lastScrollTime = 0;
+// const debounceTime = 500;
+let isScrolling = false;
+
 // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
 document.addEventListener(
     "touchstart",
@@ -43,6 +47,9 @@ function goToSection(i, direction, self) {
             observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
             observer.enable();
 
+            // lastScrollTime = now;
+            // isScrolling = true;
+
             setCardAnimation(direction === 1 ? i - 1 : i, direction);
 
             setCircleBackgroundImage(i);
@@ -51,6 +58,7 @@ function goToSection(i, direction, self) {
 
             counter++;
             // this is to prevent the incrementArcRotation to trigger itself at when dom is mounted - didn't find a prettier way to do it
+
             if (counter === 1) return;
 
             incrementArcRotation(cardWrappers.length, direction);
@@ -58,7 +66,14 @@ function goToSection(i, direction, self) {
         },
         duration: 0.8,
         ease: Power1.easeInOut,
-        onComplete: () => (scrollTween = null),
+        onComplete: () => {
+            scrollTween = null;
+
+            // setTimeout(() => {
+            //     console.log("completed", isScrolling);
+            //     isScrolling = false;
+            // }, 100);
+        },
         overwrite: true,
     });
 }

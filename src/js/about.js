@@ -5,6 +5,7 @@ const playButton = document.querySelector(".cta-play");
 const playToggle = document.getElementById("playToggle");
 
 const sections = gsap.utils.toArray(".panel");
+const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
 
 function GSAPHorizontalScroll() {
     let GSAPHorizontalScrollTL = gsap.timeline({
@@ -32,7 +33,7 @@ function GSAPHorizontalScroll() {
             trigger: item,
             containerAnimation: scrollTween,
             toggleClass: "active",
-            start: "center 40%",
+            start: isDeviceWidthPhone ? "center 60%" : "center 40%",
         });
     });
 }
