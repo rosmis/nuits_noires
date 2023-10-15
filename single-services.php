@@ -6,7 +6,7 @@
         $description = get_field( "description" );
         $accompagnement = get_field( "accompagnement" );
         $credit = get_field( "credit" );
-        $post_excerpt = get_field( "post_excerpt" );
+        $post_excerpt = get_field( "intro" );
         $featured_img_url = get_the_post_thumbnail_url(); 
 
     ?>
@@ -27,14 +27,13 @@
 
     <div class="realisation-main-wrapper custom-container-blog">
 
-        <div class="realisation-main-wrapper-content">
-            
-
             <?php if($description) { ?>
                 <div class="main-content-realisation-primary">
                     <?php echo $description ?>
                 </div>
             <?php } else {}?>
+
+        <div class="realisation-main-wrapper-content">
 
             <?php if($accompagnement) { ?>
                 <div class="support-wrapper">

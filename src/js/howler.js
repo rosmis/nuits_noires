@@ -11,6 +11,10 @@ let isScrollBehaviorEnabled = false;
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Check if the browser supports the Ogg audio format
+const audio = new Audio();
+const canPlayOgg = audio.canPlayType("audio/ogg");
+
 ScrollTrigger.create({
     trigger: "body",
     start: "top top",
@@ -71,29 +75,27 @@ menuToggleAudio.forEach((toggle) => {
             0: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part-1.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/${
+                            !!canPlayOgg ? "Part_1_cut.ogg" : "Part-1.mp3"
+                        }`,
                     ],
                     html5: true,
                     mute: isSoundDisabled,
-                    onend: () => {
-                        soundsTimelineDict[seaWrapperIndex].loop.play();
-                        soundsTimelineDict[seaWrapperIndex].loop.fade(
-                            0,
-                            1,
-                            5000
-                        );
-                    },
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_1.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_1.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -101,29 +103,27 @@ menuToggleAudio.forEach((toggle) => {
             1: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Part_2.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     html5: true,
                     mute: isSoundDisabled,
-                    onend: () => {
-                        soundsTimelineDict[seaWrapperIndex].loop.play();
-                        soundsTimelineDict[seaWrapperIndex].loop.fade(
-                            0,
-                            1,
-                            5000
-                        );
-                    },
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_2.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_2.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -131,29 +131,27 @@ menuToggleAudio.forEach((toggle) => {
             2: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Part_3.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     html5: true,
                     mute: isSoundDisabled,
-                    onend: () => {
-                        soundsTimelineDict[seaWrapperIndex].loop.play();
-                        soundsTimelineDict[seaWrapperIndex].loop.fade(
-                            0,
-                            1,
-                            5000
-                        );
-                    },
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_3.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -161,29 +159,27 @@ menuToggleAudio.forEach((toggle) => {
             3: {
                 content: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Part_4.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     html5: true,
                     mute: isSoundDisabled,
-                    onend: () => {
-                        soundsTimelineDict[seaWrapperIndex].loop.play();
-                        soundsTimelineDict[seaWrapperIndex].loop.fade(
-                            0,
-                            1,
-                            5000
-                        );
-                    },
                 }),
                 loop: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Loop_Strate_4.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                     loop: true,
                 }),
                 transition: new Howl({
                     src: [
-                        "https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.mp3",
+                        `https://nuitsnoires.com/wp-content/uploads/2023/10/Transition_3.${
+                            !!canPlayOgg ? "ogg" : "mp3"
+                        }`,
                     ],
                     mute: isSoundDisabled,
                 }),
@@ -210,9 +206,12 @@ menuToggleAudio.forEach((toggle) => {
             }
         }, 300);
 
-        // trigger first voice content
+        // trigger first voice content and loop in bg
         // soundsTimelineDict[seaWrapperIndex].content.seek(22);
         soundsTimelineDict[seaWrapperIndex].content.play();
+
+        soundsTimelineDict[seaWrapperIndex].loop.play();
+        soundsTimelineDict[seaWrapperIndex].loop.fade(0, 1, 5000);
     });
 });
 
@@ -349,8 +348,11 @@ function playNextSound() {
     // if first seaWrapper paragraph , set opacity 0.6 to other children
     displayOpacityOtherParagraphs(remainingParagraphsBeforeNextContainer);
 
-    // then trigger next content's voice
+    // then trigger next content's voice and loop
     soundsTimelineDict[seaWrapperIndex].content.play();
+
+    soundsTimelineDict[seaWrapperIndex].loop.play();
+    soundsTimelineDict[seaWrapperIndex].loop.fade(0, 1, 5000);
 }
 
 function displayOpacityOtherParagraphs(paragraphs) {

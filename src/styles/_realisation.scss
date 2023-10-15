@@ -69,6 +69,14 @@ section.realisation-wrapper {
         gap: 5em;
         padding: 3% 0;
 
+        .main-content-realisation-primary {
+            width: 100%;
+
+            * {
+                color: white;
+            }
+        }
+
         .realisation-main-wrapper-content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

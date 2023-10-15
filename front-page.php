@@ -99,13 +99,13 @@
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.3">Votre création sonore, nous la pensons pour qu'elle immerge tous vos publics, <br> dans votre univers.</p>
-            <p style="opacity: 0.2">Pour que votre contenu sonore éveille leurs imaginaires, <br> les transporte vers des voyages et des sensations, en mêlant son immersif et narration dans une subtile composition. </p>
-            <p style="opacity: 0.1"> <em style="font-weight: 700">Pour rendre visible, l’invisible…</em>  </p>
+            <p style="opacity: 0.3">Votre immersion sonore, nous la pensons pour qu'elle immerge tous vos publics, <br> dans votre univers.</p>
+            <p style="opacity: 0.2">Pour que votre histoire éveille les imaginaires, <br> les transporte vers des voyages et des sensations, en mêlant son immersif et narration, dans une subtile composition. </p>
+            <p style="opacity: 0.1; margin-top: 0.5em"> <em style="font-weight: 700">Pour rendre visible, l’invisible…</em>  </p>
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.2">Nous vous accompagnons dans votre création sonore de l’idée à la diffusion <br> dans une démarche personnalisée et adaptée à vos besoins.</p>
+            <p style="opacity: 0.2">Nous vous accompagnons de l’idée à la diffusion <br> dans une démarche personnalisée et adaptée à votre besoins.</p>
 
             <div class="cta-wrapper cta-subtitles">
                 <a href="https://nuitsnoires.com/realisations" class="cta cta-home">
