@@ -8,6 +8,8 @@ const morphingDataUrlPath = data?.morphingShapes;
 const morphingDataUrlServicesPath = data?.morphingServicesShapes;
 const morphingWrapper = document.getElementById("morphing-wrapper");
 
+const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
+
 //HOVER STATE CONTROLLERS
 
 const controllerShapeDataUrl = data?.controllerShape;
@@ -52,6 +54,9 @@ fetch(controllerShapeDataUrl)
 
 triggers.forEach((trigger) => {
     trigger.addEventListener("mouseenter", () => {
+        // don't toggle morphing shape on mobile as there is no hover effect
+        if (isDeviceWidthPhone) return;
+
         if (trigger.classList.contains("next")) {
             const nextIndex = (currentIndex + 1) % slides.length;
             // don't show preview titles on service page
@@ -73,6 +78,8 @@ triggers.forEach((trigger) => {
     });
 
     trigger.addEventListener("mouseleave", () => {
+        if (isDeviceWidthPhone) return;
+
         if (trigger.classList.contains("next")) {
             morphingControllerNextInstance.playSegments([60, 50], true);
             return;

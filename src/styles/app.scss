@@ -158,6 +158,12 @@ h1 {
 	color: white !important;
 }
 
+// Disable IOS controls for videos
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+
 
 @import "navbar";
 @import "home";

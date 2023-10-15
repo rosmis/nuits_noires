@@ -68,32 +68,28 @@ menuToggleSound.forEach((toggle) => {
 });
 
 window.addEventListener("DOMContentLoaded", async () => {
+    const response = await fetch(morphingTriangle);
+
+    const animationData = await response.json();
+
     triangleWrappers.forEach((_triangleWraper, index) =>
-        toggleTriangleMorph(index)
+        toggleTriangleMorph(index, animationData)
     );
 });
 
-async function toggleTriangleMorph(index) {
-    try {
-        const response = await fetch(morphingTriangle);
+async function toggleTriangleMorph(index, animationData) {
+    const config = {
+        container: triangleWrappers[index],
+        renderer: "svg", // Choose the appropriate renderer (svg, canvas, html)
+        loop: false, // Set whether the animation should loop
+        autoplay: false, // Set whether the animation should autoplay
+        animationData: animationData,
+    };
 
-        const animationData = await response.json();
+    // Create a Lottie instance
+    const animation = lottie.loadAnimation(config);
 
-        const config = {
-            container: triangleWrappers[index],
-            renderer: "svg", // Choose the appropriate renderer (svg, canvas, html)
-            loop: false, // Set whether the animation should loop
-            autoplay: false, // Set whether the animation should autoplay
-            animationData: animationData,
-        };
-
-        // Create a Lottie instance
-        const animation = lottie.loadAnimation(config);
-
-        morphingTriangleInstances.push(animation);
-    } catch (error) {
-        console.error(error);
-    }
+    morphingTriangleInstances.push(animation);
 }
 
 svg.forEach((trigger, index) => {

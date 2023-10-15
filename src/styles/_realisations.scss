@@ -4,6 +4,11 @@ section.realisations-wrapper {
     width: 100vw;
     overflow: hidden;
 
+    @include media-max('tablet') {
+        // dynamic viewport height unit or dvh to fill up the entire viewport vertically while keeping the UA UI into consideration for sizing and responding accordingly.
+        height: 100dvh;
+    }
+
     .controllers-wrapper {
         position: absolute;
         padding: 0 3%;
@@ -23,7 +28,7 @@ section.realisations-wrapper {
             right: -3%;
 
             @include media-max('tablet') {
-                right: -11%;
+                right: -12%;
             }
         }
 
@@ -32,6 +37,7 @@ section.realisations-wrapper {
             cursor: pointer;
 
             .arrow-previous, .arrow-next {
+                @include flex(center);
                 width: 80%;
 
                 @include media-max('tablet') {
@@ -94,12 +100,12 @@ section.realisations-wrapper {
         background-size: cover;
         background-repeat: no-repeat;
         padding: 8% 0;
-
-        @include media-max('tablet') {
-            justify-content: space-around;
-        }
     
         .description-wrapper {
+            @include media-max('tablet') {
+                margin-bottom: 15%;
+            }   
+
             p {
                 text-align: center;
                 color: white;

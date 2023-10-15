@@ -48,10 +48,10 @@
     </header>
 
     <header class="nav-fullpage">
-      <video muted autoplay loop controlslist="nodownload" class="nav-fullpage-bg">
+      <video muted autoplay loop controlslist="nodownload" playsinline class="nav-fullpage-bg">
           <source src="<?php echo get_template_directory_uri(). '/src/assets/video/sur_la_surface.webm'?>" type="video/webm">
 
-          <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/fond_recompressed.mp4'?>" type="video/mp4">
+          <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/top_resized.mp4'?>" type="video/mp4">
       </video>
       <div class="logo_navbar_wrapper">
         <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />

@@ -133,7 +133,7 @@ header.navbar {
       padding: 0 10%;
 
       @include media-max('tablet') {
-        padding: 0 5%;
+        padding: 0 3%;
         justify-content: space-around !important
       }
 
@@ -256,7 +256,7 @@ header.nav-fullpage {
         transition: all 0.2s ease-in-out;
 
         @include media-max('tablet') {
-          font-size: 1.2em;
+          font-size: 1.5em;
         }
       }
     }

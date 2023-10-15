@@ -11,6 +11,7 @@ const cardWrappers = gsap.utils.toArray(".card-wrapper-transform");
 
 const circleBackgroundImageContainer = document.querySelector(".circled-image");
 const backgroundImageContainer = document.querySelector(".background-wrapper");
+const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
 
 // let lastScrollTime = 0;
 // const debounceTime = 500;
@@ -33,6 +34,7 @@ panels.forEach((panel, i) => {
         trigger: panel,
         start: "top bottom",
         end: "+=199%",
+        toggleActions: "play none none none", // Optimize the animation
         onToggle: (self) =>
             self.isActive && !scrollTween && goToSection(i, self.direction),
     });
@@ -47,33 +49,29 @@ function goToSection(i, direction, self) {
             observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
             observer.enable();
 
-            // lastScrollTime = now;
-            // isScrolling = true;
+            if (isDeviceWidthPhone) {
+                setCardAnimation(direction === 1 ? i - 1 : i, direction);
+                console.log("here mobile");
+                return;
+            }
 
             setCardAnimation(direction === 1 ? i - 1 : i, direction);
 
             setCircleBackgroundImage(i);
 
-            generateAnchorOpacity(i);
+            // // generateAnchorOpacity(i);
 
             counter++;
-            // this is to prevent the incrementArcRotation to trigger itself at when dom is mounted - didn't find a prettier way to do it
+            // // this is to prevent the incrementArcRotation to trigger itself at when dom is mounted - didn't find a prettier way to do it
 
             if (counter === 1) return;
 
             incrementArcRotation(cardWrappers.length, direction);
-            translateAnchorLinks(i, direction);
+            // // translateAnchorLinks(i, direction);
         },
-        duration: 0.8,
-        ease: Power1.easeInOut,
-        onComplete: () => {
-            scrollTween = null;
-
-            // setTimeout(() => {
-            //     console.log("completed", isScrolling);
-            //     isScrolling = false;
-            // }, 100);
-        },
+        duration: 1,
+        // ease: Power1.easeInOut,
+        onComplete: () => (scrollTween = null),
         overwrite: true,
     });
 }
