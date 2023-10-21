@@ -19,7 +19,7 @@ header.navbar {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 35%;
     height: 50px;
     border-radius: 10px;
     border: 1px solid white;
@@ -138,7 +138,8 @@ header.navbar {
       }
 
       .nav-links {
-        @include flex(flex-start);
+        @include flex(center);
+        width: 100%;
         gap: 2em;
         list-style-type: none;
         li {

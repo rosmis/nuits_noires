@@ -105,15 +105,11 @@
         </div>
 
         <div class="subtitles-wrapper" style="opacity: 0">
-            <p style="opacity: 0.2">Nous vous accompagnons de l’idée à la diffusion <br> dans une démarche personnalisée et adaptée à votre besoins.</p>
+            <p style="opacity: 0.2">Nous vous accompagnons de l’idée à la diffusion <br> dans une démarche personnalisée et adaptée à votre besoin.</p>
 
             <div class="cta-wrapper cta-subtitles">
                 <a href="https://nuitsnoires.com/realisations" class="cta cta-home">
-                    Découvrez nos créations
-                </a>
-
-                <a href="https://nuitsnoires.com/contact" class="cta cta-home">
-                    Nous contacter
+                    Découvrez nos réalisations
                 </a>
             </div>
         </div>

@@ -38,7 +38,7 @@
       <div class="nav-links-wrapper">
           <ul class="nav-links">
             <li>
-            <a class="nav-link" href="https://nuitsnoires.com/realisations/">Nuits Noires</a>
+            <a class="nav-link" href="https://nuitsnoires.com/realisations/">Projets</a>
             </li>
             <li>
               <a class="nav-link" href="https://nuitsnoires.com/">Immersion</a>
