@@ -11,7 +11,7 @@ get_header()
 
 
 
-<section class="contact-wrapper">
+<section class="contact-wrapper trigger-footer">
     <h1><span></span> Contact</h1>
 
     <div class="contact-form-container">
@@ -58,4 +58,4 @@ get_header()
 
 
 
-<?php get_footer();?>
+<?php get_footer('parallax');?>

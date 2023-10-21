@@ -1,13 +1,23 @@
-gsap.set("footer", { yPercent: -50 });
+const footerWrapper = document.querySelector(".trigger-footer");
 
-const uncover = gsap.timeline({ paused: true });
+if (footerWrapper) {
+    gsap.set(".footer-section", { yPercent: -50 });
 
-uncover.to("footer", { yPercent: 0, ease: "none" });
+    const uncover = gsap.timeline({ paused: true });
 
-ScrollTrigger.create({
-    trigger: ".trigger-footer",
-    start: "bottom bottom",
-    end: "+=55%",
-    animation: uncover,
-    scrub: true,
-});
+    uncover.to(".footer-section", {
+        yPercent: 0,
+        ease: "none",
+    });
+
+    ScrollTrigger.create({
+        trigger: ".trigger-footer",
+        start: "bottom bottom",
+        end: "+=45%",
+        animation: uncover,
+        scrub: true,
+        markers: false,
+    });
+
+    ScrollTrigger.refresh();
+}

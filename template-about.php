@@ -28,7 +28,7 @@ Template name: A PROPOS
 
 </div>
 
-<section class="about-wrapper">
+<section class="about-wrapper trigger-footer">
 
     <div class="history-wrapper section-to-intercept" id="history-wrapper">
         <h1><span></span> Notre histoire</h1>
@@ -289,4 +289,4 @@ Template name: A PROPOS
     </div>
 </section>
 
-<?php get_footer();?>
+<?php get_footer('parallax');?>

@@ -1,6 +1,6 @@
 footer {
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,13 +8,13 @@ footer {
     background: $light-black;
     gap: 1em;
     overflow: hidden;
-    z-index: 0;
+    z-index: -1;
     position: relative;
 
     .logo-footer {
         a {
             img {
-                width: 25vw;
+                width: 20vw;
                 height: auto;
 
                 @include media-max('tablet') {

@@ -4,7 +4,7 @@ Template Name: Archives
 */
 get_header(); ?>
 
-<section class="archive-wrapper">
+<section class="archive-wrapper trigger-footer">
 
     <h1><span></span> Nos articles</h1>
 
@@ -92,4 +92,4 @@ get_header(); ?>
 </section>
 
 
-<?php get_footer(); ?>
+<?php get_footer('parallax'); ?>
