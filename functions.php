@@ -49,7 +49,14 @@ function load_js_assets() {
     if( is_page(13) ) {
         wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/90b68b7d84.js', [], 1, true);
         wp_enqueue_script('WaveSurfer', 'https://unpkg.com/wavesurfer.js@7', [], 1, true);
+        wp_enqueue_script('howler', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js', [], 1, true);
         wp_enqueue_script('about', get_template_directory_uri() . '/src/js/about.js', [], 1, true);
+
+        $brandEqualizer = get_template_directory_uri() .'/src/assets/lottie/brand_equalizer.json';
+
+        wp_localize_script('about', 'data', array(
+            'brandEqualizer' => $brandEqualizer,
+        ));
     }
 
     if( is_page(30) ) {

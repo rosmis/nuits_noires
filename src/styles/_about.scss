@@ -311,8 +311,8 @@ section.about-wrapper {
             }
 
             &.inner-top-right {
-                bottom: 66%;
-                right: 16%;
+                bottom: 86%;
+                right: 34%;
 
                 @include media-max('tablet') {
                     right: 46%;
@@ -320,7 +320,7 @@ section.about-wrapper {
             }
 
             &.inner-bottom-middle {
-                bottom: 30%;
+                bottom: 26%;
                 right: 35%;
             }
 
@@ -334,13 +334,14 @@ section.about-wrapper {
             }
 
             &.middle {
-                bottom: 36%;
-                right: 22%;
+                bottom: 29%;
+                right: 24%;
                 transform: translate(-50%, -50%);
             }
 
 
             .brand-hover-preview {
+                @include flex(center);
                 position: relative;
                 background-size: cover;
                 border-radius: 10px;
@@ -352,6 +353,11 @@ section.about-wrapper {
                 width: 20vh;
                 aspect-ratio: 16/9;
                 transition: all 0.4s ease-in-out;
+
+                .equalizer-brand-wrapper {
+                    width: 50%;
+                    height: auto;
+                }
 
                 @include media-max('tablet') {
                     display: none;

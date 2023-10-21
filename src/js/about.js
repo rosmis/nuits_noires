@@ -7,6 +7,17 @@ const playToggle = document.getElementById("playToggle");
 const sections = gsap.utils.toArray(".panel");
 const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
 
+const brandWrappers = document.querySelectorAll(".brand-wrapper");
+const brandWrapperEqualizers = document.querySelectorAll(
+    ".equalizer-brand-wrapper"
+);
+
+const audioEqualizer = document.getElementById("audio-equalizer");
+const animationEqualierPath = data.brandEqualizer;
+let brandEqualizerInstancesDict = {};
+let brandSoundsInstancesDict = {};
+let animationData;
+
 function GSAPHorizontalScroll() {
     let GSAPHorizontalScrollTL = gsap.timeline({
         scrollTrigger: {
@@ -38,13 +49,21 @@ function GSAPHorizontalScroll() {
     });
 }
 
-window.onload = () => GSAPHorizontalScroll();
+window.addEventListener("DOMContentLoaded", async () => {
+    GSAPHorizontalScroll();
+
+    const response = await fetch(animationEqualierPath);
+
+    animationData = await response.json();
+
+    playBrandSound();
+});
 
 // AUDIO PLAYER
 
 window.addEventListener("DOMContentLoaded", () =>
     wavesurfer.load(
-        "https://nuitsnoires.com/wp-content/uploads/2023/10/Exp_Binaural_Rdv_Nuits_Noires-_1_-1.mp3"
+        "https://nuitsnoires.com/wp-content/uploads/2023/10/Exp_Binaural_Rdv_Nuits_Noires.mp3"
     )
 );
 
@@ -75,7 +94,83 @@ const options = {
     sampleRate: 8000,
 };
 
+brandSoundsDict = {
+    0: "https://nuitsnoires.com/wp-content/uploads/2023/09/Art-explora.mp3",
+    1: "https://nuitsnoires.com/wp-content/uploads/2023/09/Billecart.mp3",
+    2: "https://nuitsnoires.com/wp-content/uploads/2023/09/centre-Pompidou.mp3",
+    3: "https://nuitsnoires.com/wp-content/uploads/2023/09/Louis-Vuitton.mp3",
+    4: "https://nuitsnoires.com/wp-content/uploads/2023/09/ak.mp3",
+    5: "https://nuitsnoires.com/wp-content/uploads/2023/09/MNHN-Chroniques-de-notr-eplanete.mp3",
+    6: "https://nuitsnoires.com/wp-content/uploads/2023/09/MQB.mp3",
+    7: "https://nuitsnoires.com/wp-content/uploads/2023/09/Contrappunto.mp3",
+    8: "https://nuitsnoires.com/wp-content/uploads/2023/09/Palais-de-Tokyo.mp3",
+    9: "https://nuitsnoires.com/wp-content/uploads/2023/09/PMO.mp3",
+    10: "https://nuitsnoires.com/wp-content/uploads/2023/09/Salomon.mp3",
+};
+
 const wavesurfer = WaveSurfer.create(options);
+
+//TOGGLE SOUNDS FROM EACH BRAND SHOWCASE
+
+brandWrappers.forEach((brandWrapper, index) => {
+    brandWrapper.addEventListener("mouseenter", () => playBrandSound(index));
+
+    brandWrapper.addEventListener("mouseleave", () => {
+        brandEqualizerInstancesDict[index].stop();
+        brandSoundsInstancesDict[index].stop();
+    });
+});
+
+// mute toggle
+
+audioEqualizer.addEventListener("click", () => {
+    const localStorageEqualizerStatus = JSON.parse(
+        localStorage.getItem("equalizerStatus")
+    );
+
+    for (const key in brandSoundsInstancesDict) {
+        brandSoundsInstancesDict[key].mute(!localStorageEqualizerStatus);
+    }
+});
+
+function playBrandSound(index) {
+    if (!brandEqualizerInstancesDict[index]) {
+        const config = {
+            container: brandWrapperEqualizers[index],
+            renderer: "svg",
+            loop: true,
+            autoplay: false,
+            animationData,
+        };
+
+        const animation = lottie.loadAnimation(config);
+
+        brandEqualizerInstancesDict = {
+            ...brandEqualizerInstancesDict,
+            [index]: animation,
+        };
+    }
+
+    brandEqualizerInstancesDict[index].play();
+    brandEqualizerInstancesDict[index].setSpeed(0.5);
+
+    // play according brand sound
+
+    if (!brandSoundsInstancesDict[index]) {
+        const localStorageEqualizerStatus = JSON.parse(
+            localStorage.getItem("equalizerStatus")
+        );
+
+        brandSoundsInstancesDict[index] = new Howl({
+            src: [brandSoundsDict[index]],
+            mute: localStorageEqualizerStatus,
+            loop: true,
+        });
+    }
+
+    brandSoundsInstancesDict[index].play();
+    brandSoundsInstancesDict[index].fade(0, 1, 2000);
+}
 
 wavesurfer.once("decode", () => {
     playButton.addEventListener("click", () => {

@@ -44,59 +44,20 @@ get_header('clear')
         <h1>Patrimoine</h1>
     </a>
 
-    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/realisations.png); opacity: 1">                 
-
-    
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/realisations.png); opacity: 1">
         <div class="gray-filter"></div>
-
-        <div></div>
-
-        <div class="description-wrapper">
-            <p>Commissariat d’exposition sonore. <br>
-                Direction artistique, accompagnement et conseil <br>
-                auprès des lieux et événements culturels.
-            </p>
-        </div>
-
     </div>
+
     <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/marque.png); opacity: 0">                 
-
-    
         <div class="gray-filter"></div>
-
-        <div></div>
-
-        <div class="description-wrapper">
-            <p>Sublimer et émerveiller. Conter un savoir-faire et <br>
-                intensifier une histoire en reconnectant à l’imaginaire. 
-            </p>
-        </div>
     </div>
+
     <div class="category-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/categories/art_vivant.webp'?>); opacity: 0">                 
-
-    
         <div class="gray-filter"></div>
-
-        <div></div>
-
-        <div class="description-wrapper">
-            <p>Révéler la puissance de l’art. Parfaire son art <br>
-                par un médium aussi sensible que puissant.
-            </p>
-        </div>
     </div>
+
     <div class="category-wrapper" style="background-image: url(<?php echo get_template_directory_uri(). '/src/assets/categories/patrimoine.webp'?>); opacity: 0">                 
-
-    
         <div class="gray-filter"></div>
-
-        <div></div>
-
-        <div class="description-wrapper">
-            <p>Valoriser et rendre visible. Reconstituer ce qui <br>
-                était pour mettre en lumière notre héritage.
-            </p>
-        </div>
     </div>
 
     <div id="morphing-wrapper"></div>

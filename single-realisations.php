@@ -76,12 +76,11 @@
         <?php echo the_content(); ?> 
 
         <div class="cta-wrapper">
-            <a href="https://nuitsnoires.com" class="cta">
-                Plongez dans l'univers sonore
-            </a>
-
             <a href="https://nuitsnoires.com/contact" class="cta">
                 Nous contacter
+            </a>
+            <a href="https://nuitsnoires.com/about" class="cta">
+                Notre équipe
             </a>
         </div>
     </div>

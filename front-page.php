@@ -111,6 +111,9 @@
                 <a href="https://nuitsnoires.com/realisations" class="cta cta-home">
                     Découvrez nos réalisations
                 </a>
+                <a href="https://nuitsnoires.com/about" class="cta cta-home">
+                    Notre équipe
+                </a>
             </div>
         </div>
     </div>

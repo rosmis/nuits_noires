@@ -1525,8 +1525,8 @@ section.about-wrapper .brand-showcase .brand-wrapper.inner-top-left {
   }
 }
 section.about-wrapper .brand-showcase .brand-wrapper.inner-top-right {
-  bottom: 66%;
-  right: 16%;
+  bottom: 86%;
+  right: 34%;
 }
 @media screen and (max-width: 992px) {
   section.about-wrapper .brand-showcase .brand-wrapper.inner-top-right {
@@ -1534,7 +1534,7 @@ section.about-wrapper .brand-showcase .brand-wrapper.inner-top-right {
   }
 }
 section.about-wrapper .brand-showcase .brand-wrapper.inner-bottom-middle {
-  bottom: 30%;
+  bottom: 26%;
   right: 35%;
 }
 section.about-wrapper .brand-showcase .brand-wrapper.middle-middle-left {
@@ -1547,11 +1547,14 @@ section.about-wrapper .brand-showcase .brand-wrapper.middle-middle-left {
   }
 }
 section.about-wrapper .brand-showcase .brand-wrapper.middle {
-  bottom: 36%;
-  right: 22%;
+  bottom: 29%;
+  right: 24%;
   transform: translate(-50%, -50%);
 }
 section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background-size: cover;
   border-radius: 10px;
@@ -1562,6 +1565,10 @@ section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview {
   width: 20vh;
   aspect-ratio: 16/9;
   transition: all 0.4s ease-in-out;
+}
+section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview .equalizer-brand-wrapper {
+  width: 50%;
+  height: auto;
 }
 @media screen and (max-width: 992px) {
   section.about-wrapper .brand-showcase .brand-wrapper .brand-hover-preview {
