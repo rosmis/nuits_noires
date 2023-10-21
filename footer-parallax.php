@@ -1,7 +1,7 @@
 <footer class="footer-section">
     <div class="logo-footer">
         <a href="https://nuitsnoires.com/">
-            <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" />
+            <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" />
         </a>
     </div>
 

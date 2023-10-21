@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuits Noires</title>
 
+    <meta name="description" content="Transmettre des savoirs en associant excellence et accessibilité ! Nous créons des contenus sonores immersifs à destination des musées, des patrimoines des marques et des territoires" />
+
     <link rel="icon" href="<?php echo get_template_directory_uri() . '/src/assets/favicon.png'?>" type="image/x-icon">
 
     <?php wp_head();?>
@@ -50,7 +52,7 @@
           <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/top_resized.mp4'?>" type="video/mp4">
       </video>
       <div class="logo_navbar_wrapper">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
       </div>
 
       <ul class="main-nav-links">

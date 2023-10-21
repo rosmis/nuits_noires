@@ -6,13 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuits Noires</title>
 
+    <?php
+        $description = '';
+
+        if( is_post_type_archive('realisations') )
+          $description = 'Plongez vos publics dans votre histoire, sublimez votre savoir-faire, rendez vos connaissances accessibles à tous par le médium de l\'audio';
+
+        if( is_post_type_archive('services') )
+          $description = 'Vous recherchez des professionnels de l\'audio immersif ? Nuits Noires propose des services de création sonore immersive et sensible pour les musées, les marques, les territoires et le patrimoine.';
+      ?>
+
+    <meta name="description" content="<?php echo $description ?>" />
+
     <link rel="icon" href="<?php echo get_template_directory_uri() . '/src/assets/favicon.png'?>" type="image/x-icon">
 
     <?php wp_head();?>
 
     <div class="logo-wrapper wrapper-clear" id="logo-wrapper">
       <a href="https://nuitsnoires.com" class="logo-top-navbar">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
       </a>
     </div>
 
@@ -54,7 +66,7 @@
           <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/top_resized.mp4'?>" type="video/mp4">
       </video>
       <div class="logo_navbar_wrapper">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
       </div>
 
       <ul class="main-nav-links">

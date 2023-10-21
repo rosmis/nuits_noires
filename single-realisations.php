@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<section class="realisation-wrapper">
+<section class="realisation-wrapper trigger-footer">
 
     <?php if( have_posts() ): while( have_posts() ): the_post();
         $left_description = get_field( "description_gauche" );
@@ -121,4 +121,4 @@
 
 
 
-<?php get_footer();?>
+<?php get_footer('parallax');?>

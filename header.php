@@ -8,11 +8,25 @@
 
     <link rel="icon" href="<?php echo get_template_directory_uri() . '/src/assets/favicon.png'?>" type="image/x-icon">
 
+    <?php
+        $description = '';
+
+        // about
+        if( is_page(13) )
+          $description = 'C\'est quoi un son immersif ? Nuits Noires travaille l\'immersion sonore depuis 2019 avec son équipe de professionnels de l\'audio et vous accompagne de la direction artistique sonore à la diffusion de l\'audio spatialisé.';
+
+          // contact
+        if( is_page(50) )
+          $description = 'Nous co-créons avec nos clients leurs immersions sonores sur-mesure. Nous avons a coeur de travailler la création sonore la plus sensiblee et captivante pour plongez vos publics dans vos histoires.';
+      ?>
+
+    <meta name="description" content="<?php echo $description ?>" />
+
     <?php wp_head();?>
 
     <div class="logo-wrapper" id="logo-wrapper">
       <a href="https://nuitsnoires.com" class="logo-top-navbar">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
       </a>
     </div>
 
@@ -54,7 +68,7 @@
           <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/top_resized.mp4'?>" type="video/mp4">
       </video>
       <div class="logo_navbar_wrapper">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.svg'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
       </div>
 
       <ul class="main-nav-links">

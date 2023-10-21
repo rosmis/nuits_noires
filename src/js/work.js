@@ -70,7 +70,7 @@ function goToSection(i, direction, self) {
             // // translateAnchorLinks(i, direction);
         },
         duration: 1,
-        // ease: Power1.easeInOut,
+        ease: Power1.easeInOut,
         onComplete: () => (scrollTween = null),
         overwrite: true,
     });
