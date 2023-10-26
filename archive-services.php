@@ -19,17 +19,17 @@ get_header('clear')
 
     <a href="https://nuitsnoires.com/services/etapes-creation-sonore" class="title-wrapper" style="opacity: 1">
         <h2>Service</h1>
-        <h1>Les étapes de la création sonore</h1>
+        <h1>Services</h1>
     </a>
 
     <a href="https://nuitsnoires.com/services/formes-creation-sonore" class="title-wrapper" style="opacity: 0; pointer-events: none">
         <h2>Service</h1>
-        <h1>Les formes de création sonore</h1>
+        <h1>Formats</h1>
     </a>
 
     <a href="https://nuitsnoires.com/services/accompagnement"  class="title-wrapper" style="opacity: 0; pointer-events: none">
         <h2>Service</h1>
-        <h1>Accompagnement en diffusion</h1>
+        <h1>Diffusion</h1>
     </a>
 
     <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-03-at-12.28.29-PM.jpeg); opacity: 1">

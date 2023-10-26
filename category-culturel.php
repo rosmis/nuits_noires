@@ -71,7 +71,7 @@ get_header('category')
                         <div class="hidden-circle"></div>
                         <div class="outer-circle"></div>
                         <div class="inner-circle"></div>
-                        <p>more</p>
+                        <p>plus</p>
                     </div>
                 </a>
 

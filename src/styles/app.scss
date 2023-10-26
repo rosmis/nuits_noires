@@ -53,6 +53,17 @@ h1 {
     font-weight: bold;
 }
 
+.bg-black {
+    background-color: #090909;
+    height: 100%;
+    padding: 10% 0;
+    line-height: 1.5em;
+
+    * {
+        color: white;
+    }
+}
+
 .cta {
     position: relative;
     cursor: pointer;

@@ -97,7 +97,7 @@
         <a class="wrapper-next-project" id="next-project" href="<?php echo esc_url($next_post_url) ?>">
             <div class="wrapper-next-project-bg" style="background-image: url(<?php echo $next_featured_img_url?>)">
                 <div class="wrapper-next-project-content">
-                    <p>next project</p>
+                    <p>prochaine réalisation</p>
                     <p class="next-project-title"><?php echo $title ?></p>
                 </div>
             </div>

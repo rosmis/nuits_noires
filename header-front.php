@@ -24,10 +24,10 @@
       <div class="nav-links-wrapper">
           <ul class="nav-links">
             <li>
-            <a class="nav-link" href="https://nuitsnoires.com/realisations/">Projets</a>
+            <a class="nav-link" href="https://nuitsnoires.com/realisations/">Réalisations</a>
             </li>
             <li>
-              <a class="nav-link" href="https://nuitsnoires.com/">Immersion</a>
+              <a class="nav-link" href="https://nuitsnoires.com/contact">Contact</a>
             </li>
           </ul>
 

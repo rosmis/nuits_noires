@@ -25,22 +25,22 @@ get_header('clear')
     </div>
 
     <a href="https://nuitsnoires.com/realisations/culturel" class="title-wrapper" style="opacity: 1">
-        <h2>Réalisation</h1>
+        <h2>Réalisations</h1>
         <h1>Culture</h1>
     </a>
 
     <a href="https://nuitsnoires.com/realisations/marque" class="title-wrapper" style="opacity: 0; pointer-events: none">
-        <h2>Réalisation</h1>
+        <h2>Réalisations</h1>
         <h1>Marque</h1>
     </a>
 
     <a href="https://nuitsnoires.com/realisations/art-vivant" class="title-wrapper" style="opacity: 0; pointer-events: none">
-        <h2>Réalisation</h1>
+        <h2>Réalisations</h1>
         <h1>Art Vivant</h1>
     </a>
 
     <a href="https://nuitsnoires.com/realisations/patrimoine" class="title-wrapper" style="opacity: 0; pointer-events: none">
-        <h2>Réalisation</h1>
+        <h2>Réalisations</h1>
         <h1>Patrimoine</h1>
     </a>
 

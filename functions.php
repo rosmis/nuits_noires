@@ -252,6 +252,7 @@ add_action( 'init', 'custom_post_type_services' );
 function add_elementor_support_for_custom_post_type()
 {
     add_post_type_support('realisations', 'elementor');
+    add_post_type_support('services', 'elementor');
 }
 add_action('init', 'add_elementor_support_for_custom_post_type');
 

@@ -50,6 +50,8 @@
             <?php } else {}?>
         </div>
 
+        <?php echo the_content(); ?> 
+
 
         <div class="cta-wrapper">
             <a href="https://nuitsnoires.com" class="cta">
@@ -74,7 +76,7 @@
         <a class="wrapper-next-project" id="next-project" href="<?php echo esc_url($next_post_url) ?>">
             <div class="wrapper-next-project-bg" style="background-image: url(<?php echo $next_featured_img_url?>)">
                 <div class="wrapper-next-project-content">
-                    <p>next service</p>
+                    <p>prochain service</p>
                     <p class="next-project-title"><?php echo $title ?></p>
                 </div>
             </div>
