@@ -14,7 +14,7 @@
 
     <div class="logo-container" ></div>
 
-    <header class="navbar">
+    <header class="navbar display-navbar">
         <div class="hamburger">
           <div class="hamburger-lines"></div>
         </div>

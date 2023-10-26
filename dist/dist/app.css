@@ -37,9 +37,15 @@ h1 {
   height: 100%;
   padding: 10% 0;
   line-height: 1.5em;
+  z-index: 50;
 }
 .bg-black * {
   color: white;
+}
+
+.contact-wrapper, .about-wrapper, .article-wrapper, .realisation-wrapper, .archive-wrapper {
+  position: relative;
+  z-index: 50;
 }
 
 .cta {
@@ -2004,7 +2010,6 @@ footer {
   background: rgba(9, 9, 9, 0.98);
   gap: 1em;
   overflow: hidden;
-  z-index: -1;
   position: relative;
 }
 footer .logo-footer a img {

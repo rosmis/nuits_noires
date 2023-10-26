@@ -12,7 +12,7 @@ Template name: A PROPOS
     <p class="anchor-work-link" style="transform: translateY(100px)">ÉQUIPE</p>  
 </div>
 
-<div class="circle-progress-wrapper" style="z-index: 50">
+<div class="circle-progress-wrapper" style="z-index: 60">
     <div id="circle-progress">
         <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 785.693 823.191" id="rotate-circle">
             <g id="Groupe_1932" data-name="Groupe 1932" transform="translate(-13.759 10.013)">

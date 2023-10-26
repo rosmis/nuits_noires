@@ -50,8 +50,6 @@ function triggerNextScreen(index) {
 
 menuToggleSound.forEach((toggle) => {
     toggle.addEventListener("click", () => {
-        navbarHome.classList.add("display-navbar");
-
         const displaySubtitlesTimeline = gsap.timeline({ paused: true });
 
         displaySubtitlesTimeline.to(subtitlesWrapper, {

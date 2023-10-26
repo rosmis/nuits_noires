@@ -259,8 +259,8 @@ function triggerAnchorLinkOpacity(index) {
 
 function setCircleBackgroundImage(index) {
     const backgroundImageDict = {
-        0: "https://nuitsnoires.com/wp-content/uploads/2023/10/Screenshot-2023-06-27-at-21.21.35-1.png",
-        1: "https://nuitsnoires.com/wp-content/uploads/2023/10/immersive-bg-1.png",
+        0: "https://nuitsnoires.com/wp-content/uploads/2023/10/Histoire-createur-nuits-noires.webp",
+        1: "https://nuitsnoires.com/wp-content/uploads/2023/10/Neumann-KU100.webp",
         2: "https://nuitsnoires.com/wp-content/uploads/2023/10/Metiers_du_son_equipe_NuitsNoires.jpg",
     };
 
