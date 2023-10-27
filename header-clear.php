@@ -24,7 +24,7 @@
 
     <div class="logo-wrapper wrapper-clear" id="logo-wrapper">
       <a href="https://nuitsnoires.com" class="logo-top-navbar">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.webp'?>" class="logo_navbar" />
       </a>
     </div>
 
@@ -66,7 +66,7 @@
           <source src="<?php echo get_template_directory_uri(). '/src/assets/video/mp4/top_resized.mp4'?>" type="video/mp4">
       </video>
       <div class="logo_navbar_wrapper">
-        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.png'?>" class="logo_navbar" />
+        <img src="<?php echo get_template_directory_uri() . '/src/assets/logo.webp'?>" class="logo_navbar" />
       </div>
 
       <ul class="main-nav-links">

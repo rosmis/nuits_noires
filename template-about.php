@@ -39,7 +39,7 @@ Template name: A PROPOS
                 <div class="panel timeline-item">
                     <div class="timeline-item-content">
                         <p class="timeline-item-title">2016</p>
-                        <p>Elodie et Jérémie se rencontrent à Lyon, et sont tous deux passionnés par le monde de l’art pluridisciplinaire.</p>
+                        <p>Élodie et Jérémie se rencontrent à Lyon et sont passionnés par le monde de l’art pluridisciplinaire</p>
                     </div>
                         
                     <p class="timeline-date">2016</p>
@@ -48,7 +48,7 @@ Template name: A PROPOS
                 <div class="panel timeline-item">
                     <div class="timeline-item-content">
                         <p class="timeline-item-title">2017</p>
-                        <p>Ils se lancent dans les concerts dans le noir afin de montrer que la musique se vit par le sensoriel. Chaque date est sold out avec plus de 10 000 spectateurs au total. Ils ont reçu un public ému de 18 à 80 ans avec toujours cette envie d’accessibilité à tous.</p>
+                        <p>Ils organisent des concerts dans le noir afin de faire vivre la musique autrement par le sensoriel. Chaque représentation est complète avec plus de 10 000 spectateurs (18-80 ans) au total. Leur objectif de rendre la culture accessible à tous et a été un franc succès!</p>
                     </div>
                         
                     <p class="timeline-date">2017</p>
@@ -265,13 +265,13 @@ Template name: A PROPOS
             <div class="team-column">
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Elodie_Parmentier_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Élodie Parmentier <span></span></h3>
-                        <p>Directrice associée. En charge du développement et de la direction artistique sonore, elle vous accompagne pour dessiner votre projet de création sonore immersive et sur-mesure.</p>
+                        <a href="https://www.linkedin.com/in/elodie-parmentier-95902426/" target="_blank">Élodie Parmentier <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /></a>
+                        <p>Présidente associée. En charge du développement et de la direction artistique sonore, elle vous accompagne pour dessiner votre projet de création sonore immersive et sur-mesure. Sa leitmotiv est de conjuguer : médiation culturelle, muséographie, création sonore, immersion pour tisser un lien fort entre œuvres et le public en mêlant le ludisme au didactisme.</p>
                     </div>
                 </div>
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jade_Dumont_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Jade Dumont <span></span></h3>
+                        <a href="https://www.linkedin.com/in/jade-dumont-1a58ba196/" target="_blank">Jade Dumont <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /></a>
                         <p>Chargée de communication et de développement. C’est moi qui écris les lignes que vous lisez depuis que vous êtes arrivé sur notre site ! Je fais en sorte que le travail de l’équipe de Nuits Noires arrive jusqu'à vos oreilles…</p>
                     </div>
                 </div>
@@ -282,7 +282,7 @@ Template name: A PROPOS
 
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jeremie_Nicolas_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Jeremie Nicolas <span></span></h3>
+                        <a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-nicolas-65547340/" target="_blank">Jeremie Nicolas <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /></a>
                         <p>Directeur associé. En charge de la direction artistique et de la coordination des productions sonores, il pilote vos projets et vous guide dès le début de la production jusqu'à la diffusion. Pendant plus de 10 ans, il a été ingénieur du son en studio d’enregistrement et régisseur général dans le spectacle vivant.</p>
                     </div>
                 </div>
@@ -296,13 +296,13 @@ Template name: A PROPOS
             <div class="team-column">
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Lucie_Baverel_NuitsNoires.jpg);">
                     <div class="team-member-content">
-                        <h3>Lucie Baverel <span></span></h3>
+                        <a href="https://www.linkedin.com/in/lucie-baverel-5b2433193/" target="_blank">Lucie Baverel <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /> </a>
                         <p>Autrice et journaliste qui écrit vos immersions sonores avec sensibilité et créativité.</p>
                     </div>
                 </div>
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Remi_Seve_NuitsNoires.jpg);" id="photo-remi">
                     <div class="team-member-content">
-                        <h3>Remi Sève <span></span></h3>
+                        <a href="https://www.linkedin.com/in/remi-seve/" target="_blank">Remi Sève <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /></a>
                         <p>Compositeur et réalisateur en son binaural, il imagine, compose et crée vos immersions sonores avec subtilité et créativité.</p>
                     </div>
                 </div>

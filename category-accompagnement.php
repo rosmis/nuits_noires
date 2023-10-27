@@ -10,44 +10,6 @@ get_header('category')
     </div>
 
     <div class="wrapper-circle-content">
-
-        <?php
-        // Custom loop for Realizations
-        $args = array(
-            'post_type' => 'services',
-            'posts_per_page' => -1, 
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'category', 
-                    'field'    => 'slug',                 
-                    'terms'    => 'accompagnement',             
-                ),
-            )
-        );
-
-        $query = new WP_Query($args);
-
-        if ($query->have_posts()) :
-            $i=0;
-
-            while ($query->have_posts()) : $query->the_post(); 
-
-            $i-=5; ?>
-
-            <!-- <p class="anchor-work-link" style="transform: translateY(100px)"><?php the_title() ?></p> -->
-            <p class="anchor-work-link" style="transform: translateX(<?php echo ($i)?>px) translateY(100px)"><?php the_title() ?></p>
-                
-
-            <?php endwhile;
-
-            // Restore original post data
-            wp_reset_postdata();
-
-            else : ?>
-
-            <p>Aucuns articles</p>
-        <?php endif;
-        ?>
     </div>
 
     <div class="circle-progress-wrapper">

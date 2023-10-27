@@ -6,7 +6,7 @@
     <div class="activate-sound-wrapper">
         <div>
             <h1>Nuits Noires vous invite à plonger en immersion<span>.</span></h1>
-            <p>Souhaitez vous activer le son pour une expérience plus immersive ?</p>
+            <p>Souhaitez-vous activer le son pour une expérience plus immersive ?</p>
         </div>
 
         <div class="cta-wrapper">

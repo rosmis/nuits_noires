@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1533" data-name="Rectangle 1533" width="20" height="20" fill="#a47608"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_1827" data-name="Groupe 1827" clip-path="url(#clip-path)">
+    <path id="Tracé_2185" data-name="Tracé 2185" d="M17.348,0H2.478A2.481,2.481,0,0,0,0,2.478v14.87a2.481,2.481,0,0,0,2.478,2.478h14.87a2.481,2.481,0,0,0,2.478-2.478V2.478A2.481,2.481,0,0,0,17.348,0m.826,17.348a.826.826,0,0,1-.826.826H2.478a.826.826,0,0,1-.826-.826V2.478a.826.826,0,0,1,.826-.826h14.87a.826.826,0,0,1,.826.826Z" fill="#a47608"/>
+    <path id="Tracé_2186" data-name="Tracé 2186" d="M14.239,9.724a3.1,3.1,0,0,0-3.095,3.1v3.5a.826.826,0,1,0,1.652,0v-3.5a1.443,1.443,0,1,1,2.886,0v3.5a.826.826,0,1,0,1.652,0v-3.5a3.1,3.1,0,0,0-3.1-3.1" transform="translate(-1.938 -1.691)" fill="#a47608"/>
+    <path id="Tracé_2187" data-name="Tracé 2187" d="M7.189,9.724a.826.826,0,0,0-.826.826v5.77a.826.826,0,1,0,1.652,0V10.55a.826.826,0,0,0-.826-.826" transform="translate(-1.107 -1.691)" fill="#a47608"/>
+    <path id="Tracé_2188" data-name="Tracé 2188" d="M7.189,7.942a.826.826,0,1,0-.826-.825.826.826,0,0,0,.826.825" transform="translate(-1.107 -1.094)" fill="#a47608"/>
+  </g>
+</svg>
