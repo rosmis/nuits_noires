@@ -1,5 +1,11 @@
 section.work-wrapper {
     position: relative;
+    background: $black;
+
+    @include media-max('tablet') {
+        padding-bottom: 30%;
+        z-index: 50;
+    }
 
     .work-template {
         display: flex;
@@ -8,11 +14,14 @@ section.work-wrapper {
         position: fixed;
         padding-right: 10%;
         inset: 0;
-        z-index: -1;
+        // z-index: -1;
         background-color: $black;
 
         @include media-max('tablet') {
             padding-left: 10%;
+            position: relative;
+            inset: unset;
+            z-index: auto;
         }
 
         h1 {
@@ -57,7 +66,8 @@ section.work-wrapper {
             opacity: 60%;
 
             @include media-max('tablet') {
-                width: 80vw;
+                // width: 80vw;
+                display: none
             }
         }
     }
@@ -69,9 +79,11 @@ section.work-wrapper {
 
         @include media-max('tablet') {
             padding-right: 10%;
-            height: 100dvh;
+            // height: 100dvh;
             margin-top: 45%;
             align-items: flex-start;
+            height: fit-content;
+            padding-bottom: 20%;
         }
 
         .card-wrapper-transform {
@@ -199,6 +211,7 @@ section.work-wrapper {
 
                 @include media-max('tablet') {
                     width: 85vw;
+                    transform: rotateX(28deg) rotateY(-23deg) rotateZ(15deg) !important;
                 }
 
                 &::before {

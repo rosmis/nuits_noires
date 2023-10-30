@@ -3,7 +3,7 @@ get_header('category')
 ?>
 
 
-<section class="work-wrapper">
+<section class="work-wrapper trigger-footer">
     <div class="work-template">
         <h1><span></span> Nos réalisations culturelles</h1>
         <div class="background-wrapper"></div>
@@ -102,4 +102,4 @@ get_header('category')
 </section>
 
 
-<?php get_footer();?>
+<?php get_footer('parallax');?>

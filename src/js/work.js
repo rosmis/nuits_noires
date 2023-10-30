@@ -17,6 +17,17 @@ const isDeviceWidthPhone = window.matchMedia("(max-width: 992px)").matches;
 // const debounceTime = 500;
 let isScrolling = false;
 
+document.addEventListener("DOMContentLoaded", () => {
+    const workWrapper = document.querySelector(".work-wrapper");
+    const footer = document.querySelector("footer");
+
+    if (isDeviceWidthPhone) return;
+
+    // don't display the footer section on desktop
+    footer.style.display = "none";
+    workWrapper.classList.remove("trigger-footer");
+});
+
 // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
 document.addEventListener(
     "touchstart",
@@ -30,6 +41,8 @@ document.addEventListener(
 );
 
 panels.forEach((panel, i) => {
+    if (isDeviceWidthPhone) return;
+
     ScrollTrigger.create({
         trigger: panel,
         start: "top bottom",
@@ -77,11 +90,13 @@ function goToSection(i, direction, self) {
 }
 
 // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
-ScrollTrigger.create({
-    start: 0,
-    end: "max",
-    snap: 1 / (panels.length - 1),
-});
+if (!isDeviceWidthPhone) {
+    ScrollTrigger.create({
+        start: 0,
+        end: "max",
+        snap: 1 / (panels.length - 1),
+    });
+}
 
 // ANIMATION CARD ON SCROLL
 
@@ -166,8 +181,6 @@ function setCardAnimation(index, direction) {
 }
 
 // SCROLLING ARC ANIMATION ON SCROLL
-document.addEventListener("DOMContentLoaded", () => console.log("loaaded"));
-
 const scrollArc = document.getElementById("circle-progress");
 
 const scrollingArcTimeline = gsap.timeline({ paused: true });

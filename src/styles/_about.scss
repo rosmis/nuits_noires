@@ -138,6 +138,7 @@ section.about-wrapper {
                 width: 100%;
 
                 @include media-max('tablet') {
+                    display: none !important;
                     justify-content: flex-start;
                 }
 
@@ -519,6 +520,17 @@ section.about-wrapper {
                     width: 100%;
                     text-align: center;
                     text-decoration: none;
+
+                    @include media-max('tablet') {
+                        display: none;
+                    }
+
+                    &.contact-mobile {
+                        display: none;
+                        @include media-max('tablet') {
+                            display: block !important;
+                        }   
+                    }
                 }
             }
         }

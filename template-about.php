@@ -238,10 +238,11 @@ Template name: A PROPOS
 
             <div class="immersive-column section-to-intercept">
                 <div>
-                    <p>Le son immersif c’est quoi ? </p>
+                    <p>« Nous recherchons le même sentiment à partir d’une expérience psychologiquement immersive qu’à partir d’un plongeon dans l’océan ou dans une piscine : la sensation d’être entouré d’une toute autre réalité, aussi différente que l’eau est de l’air, qui envahit toute notre attention, tout notre appareil perceptif ” – Janet Murray </p>
                     <p>
-                        Nos créations sonores sont réalisées à partir de captation ambisonique et/ou binaurale pour reproduire à la perfection un environnement sonore. Une technique de traitement du son qui restitue l’écoute naturelle en trois dimensions pour se sentir au cœur de l’action et de l’espace sonore.
+                        <b>L’audio immersif</b> est un médium, tout comme l’image, l’installation artistique, la peinture, la musique…Il semble fondamental d’introduire par le fait que le son 3D est au service d’un propos et non l’inverse. 
                     </p>
+                    <p>Si vous êtes aspirer à proposer des créations sonores immersives c’est pour sublimer, préserver, valoriser vos histoires et vos savoirs avec la plus grande des subtilités. L’usage du <b>son 3D</b> et de l’immersion ont plusieurs vertus : transporter vos imaginaires dans des univers, vous donner l’impression de voyager dans le temps, vous faire écouter des histoires que nous imaginons à partir de propos vérifiés par des comités scientifiques. </p>
                 </div>
 
                 <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Micro_Neumann_KU100.jpeg" alt="image son immersif" id="Micro_Neumann_KU100">
@@ -249,10 +250,11 @@ Template name: A PROPOS
 
             <div class="immersive-column">
                 <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/LIVEROOM1PS.png" alt="image son immersif">
-                <p>Associé à un sound design sensible l’auditeur se sentira en totale immersion dans un environnement virtuel grâce à une écoute au casque ou un système de diffusion spatialisée.</p>
+                <p><b>Le son immersif</b> est réalisé à partir de captation ambisonique ou binaurale pour reproduire à la perfection un environnement sonore. Le but étant de restituer l’écoute naturelle le plus fidèlement possible pour se sentir au cœur de l’action et de l’espace sonore. </p>
                 <p>
-                    Nous captons avec une tête Neumann KU100 que vous voyez ci joint. Cet outil technologique est au service de votre message. Nous réfléchissons avec vous comment créer de l’expérientiel sur mesure avec un conseil en diffusion à la pointe.  Grâce à ce micro spécifique, nous créons la majorité de nos créations sonores pour vous proposer toujours des immersions les plus réalistes qu’ils soient et offrir à vos auditeurs une qualité sonore imparable. 
+                    Associé à un <b>sound design</b> sensible l’auditeur se sentira en totale immersion dans un <b>environnement virtuel</b> grâce à une écoute au casque ou sur un système de diffusion spatialisée.
                 </p>
+                <p>Pour l’enregistrement binaural, nous captons avec la tête Neumann KU100 que vous voyez ci-joint. Grâce à ce micro spécifique, nous créons des immersions sonores réalistes pour offrir à vos auditeurs une excellente qualité sonore à 360°.</p>
             </div>
 
         </div>
@@ -306,6 +308,8 @@ Template name: A PROPOS
                         <p>Compositeur et réalisateur en son binaural, il imagine, compose et crée vos immersions sonores avec subtilité et créativité.</p>
                     </div>
                 </div>
+
+                <a href="https://nuitsnoires.com/contact" class="cta cta-team contact-mobile">Nous contacter</a>
             </div>
         </div>
     </div>
