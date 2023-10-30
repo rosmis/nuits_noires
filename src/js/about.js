@@ -14,6 +14,10 @@ const brandWrapperEqualizers = document.querySelectorAll(
 
 const audioEqualizer = document.getElementById("audio-equalizer");
 const animationEqualierPath = data.brandEqualizer;
+
+const aboutToggleSound = document.querySelectorAll(".cta-home");
+const aboutWrapper = document.querySelector(".about-wrapper");
+
 let brandEqualizerInstancesDict = {};
 let brandSoundsInstancesDict = {};
 let animationData;
@@ -50,6 +54,8 @@ function GSAPHorizontalScroll() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+    if (isDeviceWidthPhone) aboutWrapper.classList.remove("about-blurred");
+
     GSAPHorizontalScroll();
 
     const response = await fetch(animationEqualierPath);
@@ -266,3 +272,21 @@ function setCircleBackgroundImage(index) {
 
     circleBackgroundImageContainer.style.backgroundImage = `url(${backgroundImageDict[index]})`;
 }
+
+// HIDE TOGGLE SOUND AFTER USER GESTURE
+
+let hideToggleSoundOnUserGestureTimeline = gsap.timeline({ paused: true });
+
+hideToggleSoundOnUserGestureTimeline.to(".activate-sound-wrapper", {
+    duration: 1,
+    bottom: "120%",
+    display: "none",
+    ease: Power3.easeInOut,
+});
+
+aboutToggleSound.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+        aboutWrapper.classList.remove("about-blurred");
+        hideToggleSoundOnUserGestureTimeline.play();
+    });
+});

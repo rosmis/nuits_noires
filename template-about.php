@@ -7,9 +7,25 @@ Template name: A PROPOS
 <?php get_header();?>
 
 <div class="wrapper-circle-content">    
-    <p class="anchor-work-link" style="transform:translateY(100px)">HISTOIRE</p>
+    <!-- <p class="anchor-work-link" style="transform:translateY(100px)">HISTOIRE</p>
     <p class="anchor-work-link" style="transform: translateY(100px)">IMMERSIF</p>
-    <p class="anchor-work-link" style="transform: translateY(100px)">ÉQUIPE</p>  
+    <p class="anchor-work-link" style="transform: translateY(100px)">ÉQUIPE</p>   -->
+</div>
+
+<div class="activate-sound-wrapper about-toggle-sound">
+    <div>
+        <h1>Souhaitez-vous activer le son pour une expérience plus immersive ? <span></span></h1>
+    </div>
+
+    <div class="cta-wrapper">
+        <div class="cta cta-home unmute">
+            Oui
+        </div>
+
+        <div class="cta cta-home mute">
+            Non
+        </div>
+    </div>
 </div>
 
 <div class="circle-progress-wrapper" style="z-index: 60">
@@ -28,7 +44,7 @@ Template name: A PROPOS
 
 </div>
 
-<section class="about-wrapper trigger-footer">
+<section class="about-wrapper trigger-footer about-blurred">
 
     <div class="history-wrapper section-to-intercept" id="history-wrapper">
         <h1><span></span> Notre histoire</h1>
@@ -238,7 +254,7 @@ Template name: A PROPOS
 
             <div class="immersive-column section-to-intercept">
                 <div>
-                    <p>« Nous recherchons le même sentiment à partir d’une expérience psychologiquement immersive qu’à partir d’un plongeon dans l’océan ou dans une piscine : la sensation d’être entouré d’une toute autre réalité, aussi différente que l’eau est de l’air, qui envahit toute notre attention, tout notre appareil perceptif ” – Janet Murray </p>
+                    <p>« <i>Nous recherchons le même sentiment à partir d’une expérience psychologiquement immersive qu’à partir d’un plongeon dans l’océan ou dans une piscine : la sensation d’être entouré d’une toute autre réalité, aussi différente que l’eau est de l’air, qui envahit toute notre attention, tout notre appareil perceptif ”</i>  – Janet Murray </p>
                     <p>
                         <b>L’audio immersif</b> est un médium, tout comme l’image, l’installation artistique, la peinture, la musique…Il semble fondamental d’introduire par le fait que le son 3D est au service d’un propos et non l’inverse. 
                     </p>

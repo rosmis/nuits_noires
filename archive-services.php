@@ -18,17 +18,14 @@ get_header('clear')
     </div>
 
     <a href="https://nuitsnoires.com/services/etapes-creation-sonore" class="title-wrapper" style="opacity: 1">
-        <h2>Service</h1>
         <h1>Services</h1>
     </a>
 
     <a href="https://nuitsnoires.com/services/formes-creation-sonore" class="title-wrapper" style="opacity: 0; pointer-events: none">
-        <h2>Service</h1>
         <h1>Formats</h1>
     </a>
 
     <a href="https://nuitsnoires.com/services/accompagnement"  class="title-wrapper" style="opacity: 0; pointer-events: none">
-        <h2>Service</h1>
         <h1>Diffusion</h1>
     </a>
 

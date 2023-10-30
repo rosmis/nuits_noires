@@ -4,6 +4,7 @@ const menuToggleAudioCtas = document.querySelectorAll(".cta-home");
 
 const logoContainer = document.querySelector(".logo-container");
 const logoWrapper = document.getElementById("logo-wrapper");
+const isUserDeviceMobile = window.matchMedia("(max-width: 992px)").matches;
 
 let displayToggleSoundWrapperTimeline = gsap.timeline({ paused: true });
 let toggleNavFullPageTimeline = gsap.timeline({ paused: true });
@@ -19,15 +20,29 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!logoContainer) toggleSoundWrapperVisibility();
 });
 
+function toggleNavbarVisibility() {
+    navbar.classList.add("display-navbar");
+    navbar.classList.add("background");
+}
+
 function toggleSoundWrapperVisibility() {
     const toggleSoundWrapper = document.querySelector(
         ".activate-sound-wrapper"
     );
 
-    if (!toggleSoundWrapper) {
-        navbar.classList.add("display-navbar");
-        navbar.classList.add("background");
+    //business rule: on about page on mobile don't display the toggle sound wrapper
 
+    if (
+        isUserDeviceMobile &&
+        toggleSoundWrapper.classList.contains("about-toggle-sound")
+    ) {
+        toggleNavbarVisibility();
+        return;
+    }
+
+    if (!toggleSoundWrapper) {
+        console.log("still here");
+        toggleNavbarVisibility();
         return;
     }
 
@@ -40,6 +55,7 @@ function toggleSoundWrapperVisibility() {
     });
 
     displayToggleSoundWrapperTimeline.play();
+    toggleNavbarVisibility();
 }
 
 hamburger.addEventListener("click", () => {

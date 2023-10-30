@@ -59,50 +59,6 @@ section.home_wrapper {
         }
     }
 
-    .activate-sound-wrapper {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5em;
-        position: absolute;
-        bottom: -25%;
-        left: 50%;
-        opacity: 0;
-        transform: translateX(-50%);
-        width: 100%;
-        z-index: 80;
-
-        @include media-max('tablet') {
-            max-width: 80%;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-
-            @include media-max('tablet') {
-                font-size: 1.5em;
-            }
-
-            span {
-                color: $brown;
-            }
-        }
-
-        p {
-            font-size: 1.5em;
-            text-align: center;
-            color: white;
-            margin-top: 0.5em;
-
-            @include media-max('tablet') {
-                font-size: 1em;
-            }
-        }
-    }
-
     .subtitles-content {
         display: flex;
         flex-direction: column;

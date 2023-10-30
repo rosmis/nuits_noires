@@ -12,6 +12,17 @@ section.about-wrapper {
     background-color: $black;
     overflow-x: hidden;
 
+    &.about-blurred {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 1em;
+            backdrop-filter: blur(2px);
+            z-index: 20;
+        }
+    }
+
     @include media-max('tablet') {
         padding: 8% 10%;
     }
@@ -219,6 +230,10 @@ section.about-wrapper {
         margin-left: auto;
         margin-right: auto;
         padding: 3em 0;
+
+        @include media-max('tablet') {
+            display: none;
+        }
 
         .brand-elipsis {
             width: 100%;
