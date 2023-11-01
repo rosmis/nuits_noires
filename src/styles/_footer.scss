@@ -5,7 +5,7 @@ footer {
     align-items: center;
     justify-content: center;
     background: $light-black;
-    gap: 1em;
+    gap: 1.5em;
     overflow: hidden;
     position: relative;
 
@@ -55,6 +55,17 @@ footer {
                   width: 100%; 
                 }
               }
+        }
+    }
+
+    .footer-socials-wrapper {
+        @include flex(flex-start);
+        gap: 1em;
+        a {
+            img {
+                width: 25px;
+                height: auto;
+            }
         }
     }
 }

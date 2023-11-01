@@ -61,17 +61,17 @@ window.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(animationEqualierPath);
 
     animationData = await response.json();
-
-    playBrandSound();
 });
 
 // AUDIO PLAYER
 
-window.addEventListener("DOMContentLoaded", () =>
+window.addEventListener("DOMContentLoaded", () => {
+    if (isDeviceWidthPhone) return;
+
     wavesurfer.load(
-        "https://nuitsnoires.com/wp-content/uploads/2023/10/Exp_Binaural_Rdv_Nuits_Noires.mp3"
-    )
-);
+        "https://nuitsnoires.com/wp-content/uploads/2023/11/Exp_Binaural_Rdv_Nuits_Noires_V2.mp3"
+    );
+});
 
 const options = {
     container: audioWrapper,
@@ -119,7 +119,12 @@ const wavesurfer = WaveSurfer.create(options);
 //TOGGLE SOUNDS FROM EACH BRAND SHOWCASE
 
 brandWrappers.forEach((brandWrapper, index) => {
-    brandWrapper.addEventListener("mouseenter", () => playBrandSound(index));
+    brandWrapper.addEventListener("mouseenter", () => {
+        playEqualizerInstance(index);
+
+        brandSoundsInstancesDict[index].play();
+        brandSoundsInstancesDict[index].fade(0, 1, 2000);
+    });
 
     brandWrapper.addEventListener("mouseleave", () => {
         brandEqualizerInstancesDict[index].stop();
@@ -139,7 +144,7 @@ audioEqualizer.addEventListener("click", () => {
     }
 });
 
-function playBrandSound(index) {
+function playEqualizerInstance(index) {
     if (!brandEqualizerInstancesDict[index]) {
         const config = {
             container: brandWrapperEqualizers[index],
@@ -159,9 +164,9 @@ function playBrandSound(index) {
 
     brandEqualizerInstancesDict[index].play();
     brandEqualizerInstancesDict[index].setSpeed(0.5);
+}
 
-    // play according brand sound
-
+function createBrandSoundInstance(index) {
     if (!brandSoundsInstancesDict[index]) {
         const localStorageEqualizerStatus = JSON.parse(
             localStorage.getItem("equalizerStatus")
@@ -173,9 +178,6 @@ function playBrandSound(index) {
             loop: true,
         });
     }
-
-    brandSoundsInstancesDict[index].play();
-    brandSoundsInstancesDict[index].fade(0, 1, 2000);
 }
 
 wavesurfer.once("decode", () => {
@@ -267,7 +269,7 @@ function setCircleBackgroundImage(index) {
     const backgroundImageDict = {
         0: "https://nuitsnoires.com/wp-content/uploads/2023/10/Histoire-createur-nuits-noires.webp",
         1: "https://nuitsnoires.com/wp-content/uploads/2023/10/Neumann-KU100.webp",
-        2: "https://nuitsnoires.com/wp-content/uploads/2023/10/Metiers_du_son_equipe_NuitsNoires.jpg",
+        2: "https://nuitsnoires.com/wp-content/uploads/2023/11/Professionnel-immersion-sonore-artistique-3.webp",
     };
 
     circleBackgroundImageContainer.style.backgroundImage = `url(${backgroundImageDict[index]})`;
@@ -288,5 +290,10 @@ aboutToggleSound.forEach((toggle) => {
     toggle.addEventListener("click", () => {
         aboutWrapper.classList.remove("about-blurred");
         hideToggleSoundOnUserGestureTimeline.play();
+
+        // create brand wrapper audio instances
+        brandWrappers.forEach((_brandWrapper, index) =>
+            createBrandSoundInstance(index)
+        );
     });
 });

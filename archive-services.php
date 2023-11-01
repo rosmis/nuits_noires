@@ -44,7 +44,7 @@ get_header('clear')
         </div>
 
     </div>
-    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-03-at-12.28.29-PM.jpeg); opacity: 0">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/11/Formes-de-creation-sonores-immersives-nuits-noires-scaled.webp); opacity: 0">                 
 
     
         <div class="gray-filter"></div>
@@ -57,7 +57,7 @@ get_header('clear')
             </p> -->
         </div>
     </div>
-    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-10-03-at-12.28.29-PM.jpeg); opacity: 0">                 
+    <div class="category-wrapper" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/11/Comment-diffuser-immersion-sonore-scaled.webp); opacity: 0">                 
 
     
         <div class="gray-filter"></div>

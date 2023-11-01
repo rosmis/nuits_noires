@@ -2106,7 +2106,7 @@ footer {
   align-items: center;
   justify-content: center;
   background: rgba(9, 9, 9, 0.98);
-  gap: 1em;
+  gap: 1.5em;
   overflow: hidden;
   position: relative;
 }
@@ -2151,4 +2151,14 @@ footer .anchor-links-footer a::after {
 }
 footer .anchor-links-footer a:hover::after {
   width: 100%;
+}
+footer .footer-socials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+footer .footer-socials-wrapper a img {
+  width: 25px;
+  height: auto;
 }

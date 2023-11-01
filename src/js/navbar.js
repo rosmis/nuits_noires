@@ -30,18 +30,17 @@ function toggleSoundWrapperVisibility() {
         ".activate-sound-wrapper"
     );
 
+    if (!toggleSoundWrapper) {
+        toggleNavbarVisibility();
+        return;
+    }
+
     //business rule: on about page on mobile don't display the toggle sound wrapper
 
     if (
         isUserDeviceMobile &&
         toggleSoundWrapper.classList.contains("about-toggle-sound")
     ) {
-        toggleNavbarVisibility();
-        return;
-    }
-
-    if (!toggleSoundWrapper) {
-        console.log("still here");
         toggleNavbarVisibility();
         return;
     }

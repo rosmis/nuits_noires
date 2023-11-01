@@ -143,7 +143,7 @@ Template name: A PROPOS
 
         <img class="brand-elipsis" src="<?php echo get_template_directory_uri() . '/src/assets/svg/brand-elipsis.svg'?>"  alt="brand showcase" />
 
-        <a href="https://nuitsnoires.com/realisations/culturel/dans-lair-les-machines-volantes-podcast-de-mediation-culturelle-pour-art-explora-et-le-hangar-y/" class="brand-wrapper outer-top-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/art-explora/" class="brand-wrapper outer-top-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Parcours-mediation-culturelle-enfant-nuits-noires-e1697263742903.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -159,7 +159,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Billecart_salmon_cuvee_nicolas_francois.webp'?>" loading=lazy alt="logo swatch">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/patrimoine/le-centre-pompidou-dans-les-tuyaux-du-centre-pompidou/" class="brand-wrapper outer-bottom-left">
+        <a href="https://nuitsnoires.com/realisations/patrimoine/centre-pompidou/" class="brand-wrapper outer-bottom-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/podcast-medition-culturelle-valorisation-architecture-pompidou--e1697273589803.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -167,7 +167,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/centre_pompidou_mediation_numerique.webp'?>" loading=lazy alt="logo seine musicale">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/fondation-louis-vuitton-nocturne-pour-lexposition-de-cindy-sherman/" class="brand-wrapper outer-bottom-right">
+        <a href="https://nuitsnoires.com/realisations/culturel/fondation-louis-vuitton/" class="brand-wrapper outer-bottom-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/ambiance-sonore-immersive-nuits-noires.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -175,7 +175,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Fondation_Louis_vuitton_exposition.webp'?>" loading=lazy alt="logo salomon">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/musee-albert-kahn-exposition-rio-buenos-aires-1909-modernites-sud-americaines/" class="brand-wrapper middle-bottom-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/musee-albert-kahn/" class="brand-wrapper middle-bottom-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/parcours-sonore-immersif-musee-nuits-noires--e1697298321488.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -183,7 +183,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/musee_albert_kahn_mediation.webp'?>" loading=lazy alt="logo red bull">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/chroniques-de-notre-planete/" class="brand-wrapper middle-bottom-right">
+        <a href="https://nuitsnoires.com/realisations/culturel/museum-national-dhistoire-naturelle/" class="brand-wrapper middle-bottom-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Exposition-transmedia-nuits-noires-.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -191,7 +191,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Musee_national_histoire_naturelle_exposition.webp'?>" loading=lazy alt="logo paris musee mediation podcast">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/le-jardin-du-musee-du-quai-branly-jacques-chirac-au-fil-de-saisons-podcast-de-mediation-culturelle/" class="brand-wrapper inner-top-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/musee-du-quai-branly-jacques-chirac/" class="brand-wrapper inner-top-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/podcast-mediation-culturelle-nuits-noires.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -207,7 +207,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/opera_de_lyon_composition.webp'?>" loading=lazy alt="logo opera de lyon">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/palais-de-tokyo-sentiment-oceanique-et-affect-communiste/" class="brand-wrapper inner-bottom-middle">
+        <a href="https://nuitsnoires.com/realisations/culturel/palais-de-tokyo/" class="brand-wrapper inner-bottom-middle">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/mediation-culturelle-sonore-1-e1695731457864.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -215,7 +215,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Palais_de_tokyo_mediation.webp'?>" loading=lazy alt="logo fondation louis vuitton experience">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/paris-musees-olympiques-podcast-de-mediation-culturelle-pour-paris-musees/" class="brand-wrapper middle-middle-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/paris-musees/" class="brand-wrapper middle-middle-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Paris-musees-olympiques-podcast-mediation.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -223,7 +223,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Paris_musees_mediation_podcast.webp'?>" loading=lazy alt="logo musee nationnal histoire naturel">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/marque/salomon-asmr-project/" class="brand-wrapper middle">
+        <a href="https://nuitsnoires.com/realisations/marque/salomon/" class="brand-wrapper middle">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/ours-d_or-de-la-communication-scaled.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>

@@ -13,6 +13,16 @@
         <a href="https://nuitsnoires.com/politique-de-confidentialite">Politique de confidentialité</a>
         <a href="https://nuitsnoires.com/mentions-legales">Mentions légales</a>
     </div>
+
+    <div class="footer-socials-wrapper">
+        <a href="https://www.linkedin.com/company/nuits-noires/" target="_blank">
+            <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin.svg'?>" />
+        </a>
+
+        <a href="https://www.instagram.com/nuitsnoiresexperiences/" target="_blank">
+            <img src="<?php echo get_template_directory_uri() . '/src/assets/instagram.svg'?>" />
+        </a>
+    </div>
 </footer>
 
 
