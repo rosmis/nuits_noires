@@ -103,7 +103,7 @@ h1 {
   transform: translateY(-50%);
 }
 .circle-progress-wrapper #circle-progress {
-  rotate: 347deg;
+  rotate: 0deg;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1226,6 +1226,11 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper h2
   color: white;
   font-size: 2em;
 }
+@media screen and (max-width: 992px) {
+  section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper h2 {
+    font-size: 1.5em;
+  }
+}
 section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play {
   display: flex;
   align-items: center;
@@ -1236,6 +1241,11 @@ section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .c
   background-color: #C9961B;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 992px) {
+  section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play {
+    min-width: 60px !important;
+  }
 }
 section.realisation-wrapper .realisation-audio-wrapper .audio-control-wrapper .cta-play:hover {
   background-color: rgba(201, 149, 27, 0.6941176471);

@@ -207,7 +207,7 @@ gsap.to("#rotate-circle", {
         onUpdate: (self) => {
             const incrementProgress = self.progress * 100;
 
-            const newRotation = 320 + incrementProgress;
+            const newRotation = 340 + incrementProgress;
 
             scrollArc.style.rotate = `${newRotation}deg`;
         },

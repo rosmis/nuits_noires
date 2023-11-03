@@ -162,8 +162,13 @@ section.realisation-wrapper {
 
             h2 {
                 color: white;
-                font-size: 2em
+                font-size: 2em;
+
+                @include media-max('tablet') {
+                    font-size: 1.5em;
+                }
             }
+            
 
             .cta-play {
                 @include flex(center);
@@ -173,6 +178,10 @@ section.realisation-wrapper {
                 background-color: $brown;
                 cursor: pointer;
                 transition: all 0.2s ease-in-out;
+
+                @include media-max('tablet') {
+                    min-width: 60px !important;
+                }
 
                 &:hover {
                     background-color: #c9951bb1;
