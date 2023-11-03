@@ -9,6 +9,8 @@ get_header('category')
         <div class="background-wrapper"></div>
     </div>
 
+    <h1 class="mobile-title"><span></span> Accompagnement en diffusion</h1>
+
     <div class="wrapper-circle-content">
     </div>
 
