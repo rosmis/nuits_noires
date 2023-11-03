@@ -261,11 +261,11 @@ Template name: A PROPOS
                     <p>Si vous êtes aspirer à proposer des créations sonores immersives c’est pour sublimer, préserver, valoriser vos histoires et vos savoirs avec la plus grande des subtilités. L’usage du <b>son 3D</b> et de l’immersion ont plusieurs vertus : transporter vos imaginaires dans des univers, vous donner l’impression de voyager dans le temps, vous faire écouter des histoires que nous imaginons à partir de propos vérifiés par des comités scientifiques. </p>
                 </div>
 
-                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Micro_Neumann_KU100.jpeg" alt="image son immersif" id="Micro_Neumann_KU100">
+                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Micro_Neumann_KU100.jpeg" alt="image son immersif" id="Micro_Neumann_KU100" loading="lazy">
             </div>
 
             <div class="immersive-column">
-                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/LIVEROOM1PS.png" alt="image son immersif">
+                <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/LIVEROOM1PS.png" alt="image son immersif" loading="lazy">
                 <p><b>Le son immersif</b> est réalisé à partir de captation ambisonique ou binaurale pour reproduire à la perfection un environnement sonore. Le but étant de restituer l’écoute naturelle le plus fidèlement possible pour se sentir au cœur de l’action et de l’espace sonore. </p>
                 <p>
                     Associé à un <b>sound design</b> sensible l’auditeur se sentira en totale immersion dans un <b>environnement virtuel</b> grâce à une écoute au casque ou sur un système de diffusion spatialisée.

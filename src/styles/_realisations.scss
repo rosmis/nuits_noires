@@ -26,10 +26,6 @@ section.realisations-wrapper {
 
         &.controller-right {
             right: -3%;
-
-            @include media-max('tablet') {
-                right: -12%;
-            }
         }
 
         .controller {
@@ -40,8 +36,12 @@ section.realisations-wrapper {
                 @include flex(center);
                 width: 80%;
 
-                @include media-max('tablet') {
-                    width: 50%;
+                #mobile-arrow-previous, #mobile-arrow-next {
+                    display: none;
+
+                    @include media-max('tablet') {
+                        display: block;
+                    }
                 }
             }
 

@@ -7,7 +7,7 @@
 
     <div class="anchor-links-footer">
         <a href="https://nuitsnoires.com/">Vivre le son immersif</a>
-        <a href="https://nuitsnoires.com/about">Ils parlent de nous</a>
+        <a href="https://nuitsnoires.com/ils-parlent-de-nous/">Ils parlent de nous</a>
         <a href="https://nuitsnoires.com/contact">Nous contacter</a>
         <a href="https://nuitsnoires.com/cgu">CGU</a>
         <a href="https://nuitsnoires.com/politique-de-confidentialite">Politique de confidentialité</a>

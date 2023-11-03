@@ -162,12 +162,15 @@ fetch(animationLogoDataUrl)
             container: logoContainer,
             renderer: "svg",
             loop: false,
-            autoplay: true,
+            autoplay: false,
             animationData: animationData,
         };
 
         // Create a Lottie instance
         const animation = lottie.loadAnimation(config);
+
+        animation.play();
+        animation.setSpeed(0.6);
 
         animation.addEventListener("complete", () => {
             logoTimelineTranslate.play();

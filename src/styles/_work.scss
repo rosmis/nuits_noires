@@ -18,10 +18,7 @@ section.work-wrapper {
         background-color: $black;
 
         @include media-max('tablet') {
-            padding-left: 10%;
-            position: relative;
-            inset: unset;
-            z-index: auto;
+            display: none;
         }
 
         h1 {
@@ -69,6 +66,37 @@ section.work-wrapper {
                 // width: 80vw;
                 display: none
             }
+        }
+    }
+
+    .mobile-title {
+        display: none;
+
+        span {
+            display: none;
+            height: 13px;
+            width: 13px;
+            border-radius: 100%;
+            background-color: $brown;
+
+            @include media-max('tablet') {
+                display: block;
+                width: 7%;
+                padding-bottom: 7%;
+                border-radius: 50%;
+            }
+        }
+
+        @include media-max('tablet') {
+            display: flex;
+            gap: 1em;
+            align-items: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding: 4em 1em;
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: -50%;
         }
     }
 

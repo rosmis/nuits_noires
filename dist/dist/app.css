@@ -685,11 +685,6 @@ section.realisations-wrapper .controllers-wrapper.controller-left {
 section.realisations-wrapper .controllers-wrapper.controller-right {
   right: -3%;
 }
-@media screen and (max-width: 992px) {
-  section.realisations-wrapper .controllers-wrapper.controller-right {
-    right: -12%;
-  }
-}
 section.realisations-wrapper .controllers-wrapper .controller {
   position: relative;
   cursor: pointer;
@@ -700,9 +695,12 @@ section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, s
   justify-content: center;
   width: 80%;
 }
+section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-next, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-next {
+  display: none;
+}
 @media screen and (max-width: 992px) {
-  section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next {
-    width: 50%;
+  section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-next, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-next {
+    display: block;
   }
 }
 section.realisations-wrapper .controllers-wrapper .controller .arrow-previous {
@@ -833,10 +831,7 @@ section.work-wrapper .work-template {
 }
 @media screen and (max-width: 992px) {
   section.work-wrapper .work-template {
-    padding-left: 10%;
-    position: relative;
-    inset: unset;
-    z-index: auto;
+    display: none;
   }
 }
 section.work-wrapper .work-template h1 {
@@ -883,6 +878,37 @@ section.work-wrapper .work-template .background-wrapper {
 @media screen and (max-width: 992px) {
   section.work-wrapper .work-template .background-wrapper {
     display: none;
+  }
+}
+section.work-wrapper .mobile-title {
+  display: none;
+}
+section.work-wrapper .mobile-title span {
+  display: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 100%;
+  background-color: #C9961B;
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .mobile-title span {
+    display: block;
+    width: 7%;
+    padding-bottom: 7%;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  section.work-wrapper .mobile-title {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding: 4em 1em;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: -50%;
   }
 }
 section.work-wrapper .work {

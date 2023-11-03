@@ -20,37 +20,44 @@ const morphingControllerPreviousWrapper =
 let morphingControllerNextInstance;
 let morphingControllerPreviousInstance;
 
-fetch(controllerShapeDataUrl)
-    .then((response) => response.json())
-    .then((animationData) => {
-        // create instance for each controller
+window.addEventListener("DOMContentLoaded", () => {
+    if (!isDeviceWidthPhone) {
+        fetch(controllerShapeDataUrl)
+            .then((response) => response.json())
+            .then((animationData) => {
+                // create instance for each controller
 
-        [
-            morphingControllerNextWrapper,
-            morphingControllerPreviousWrapper,
-        ].forEach((wrapper) => {
-            const config = {
-                container: wrapper,
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                animationData: animationData,
-                rendererSettings: {
-                    preserveAspectRatio: "none",
-                    // viewBoxSize: true,
-                },
-            };
+                [
+                    morphingControllerNextWrapper,
+                    morphingControllerPreviousWrapper,
+                ].forEach((wrapper) => {
+                    const config = {
+                        container: wrapper,
+                        renderer: "svg",
+                        loop: false,
+                        autoplay: false,
+                        animationData: animationData,
+                        rendererSettings: {
+                            preserveAspectRatio: "none",
+                            // viewBoxSize: true,
+                        },
+                    };
 
-            // Create a Lottie instance
-            const animation = lottie.loadAnimation(config);
-            wrapper === morphingControllerNextWrapper
-                ? (morphingControllerNextInstance = animation)
-                : (morphingControllerPreviousInstance = animation);
-        });
-    })
-    .catch((error) => {
-        console.error("Error loading animation data:", error);
-    });
+                    // Create a Lottie instance
+                    const animation = lottie.loadAnimation(config);
+                    wrapper === morphingControllerNextWrapper
+                        ? (morphingControllerNextInstance = animation)
+                        : (morphingControllerPreviousInstance = animation);
+                });
+
+                // morphingControllerPreviousWrapper.style.width = "50%";
+                // morphingControllerNextWrapper.style.width = "50%";
+            })
+            .catch((error) => {
+                console.error("Error loading animation data:", error);
+            });
+    }
+});
 
 triggers.forEach((trigger) => {
     trigger.addEventListener("mouseenter", () => {
