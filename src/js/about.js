@@ -174,7 +174,7 @@ function createBrandSoundInstance(index) {
 
         brandSoundsInstancesDict[index] = new Howl({
             src: [brandSoundsDict[index]],
-            mute: localStorageEqualizerStatus,
+            mute: !localStorageEqualizerStatus,
             loop: true,
         });
     }

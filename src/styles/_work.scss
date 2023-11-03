@@ -145,6 +145,10 @@ section.work-wrapper {
 
                         p {
                             font-size: 1.2em;
+
+                            @include media-max('tablet') {
+                                font-size: 1em !important;
+                            }
                         }
 
                         .hidden-circle {

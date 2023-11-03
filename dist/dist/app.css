@@ -960,6 +960,11 @@ section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:h
 section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover p {
   font-size: 1.2em;
 }
+@media screen and (max-width: 992px) {
+  section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover p {
+    font-size: 1em !important;
+  }
+}
 section.work-wrapper .work .card-wrapper-transform .cta-more-wrapper .cta-more:hover .hidden-circle {
   opacity: 1;
   height: 60%;
