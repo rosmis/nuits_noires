@@ -36,6 +36,10 @@ section.realisations-wrapper {
                 @include flex(center);
                 width: 80%;
 
+                @include media-max('tablet') {
+                    width: 45px !important;
+                }
+
                 #mobile-arrow-previous, #mobile-arrow-next {
                     display: none;
 

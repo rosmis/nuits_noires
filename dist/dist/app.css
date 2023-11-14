@@ -600,6 +600,16 @@ section.home_wrapper .subtitles-content {
   z-index: 70;
   padding: 5em;
 }
+section.home_wrapper .subtitles-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1em;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
 @media screen and (max-width: 992px) {
   section.home_wrapper .subtitles-content {
     width: 100vw;
@@ -694,6 +704,11 @@ section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, s
   align-items: center;
   justify-content: center;
   width: 80%;
+}
+@media screen and (max-width: 992px) {
+  section.realisations-wrapper .controllers-wrapper .controller .arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next {
+    width: 45px !important;
+  }
 }
 section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-previous #mobile-arrow-next, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-previous, section.realisations-wrapper .controllers-wrapper .controller .arrow-next #mobile-arrow-next {
   display: none;
@@ -1567,6 +1582,9 @@ section.about-wrapper .brand-showcase .brand-wrapper img {
   max-width: 120px;
   height: auto;
 }
+section.about-wrapper .brand-showcase .brand-wrapper img#branly-img {
+  max-width: 150px;
+}
 @media screen and (max-width: 992px) {
   section.about-wrapper .brand-showcase .brand-wrapper img {
     max-width: 40px;
@@ -1624,7 +1642,7 @@ section.about-wrapper .brand-showcase .brand-wrapper.middle-bottom-right {
 }
 section.about-wrapper .brand-showcase .brand-wrapper.inner-top-left {
   bottom: 62%;
-  right: 55%;
+  right: 47%;
 }
 @media screen and (max-width: 992px) {
   section.about-wrapper .brand-showcase .brand-wrapper.inner-top-left {
@@ -1641,8 +1659,8 @@ section.about-wrapper .brand-showcase .brand-wrapper.inner-top-right {
   }
 }
 section.about-wrapper .brand-showcase .brand-wrapper.inner-bottom-middle {
-  bottom: 26%;
-  right: 35%;
+  bottom: 50%;
+  right: 0%;
 }
 section.about-wrapper .brand-showcase .brand-wrapper.middle-middle-left {
   bottom: 47%;
@@ -1837,6 +1855,7 @@ section.about-wrapper .team-wrapper .team-grid-wrapper .team-column .cta-team.co
 section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column #Micro_Neumann_KU100 {
   max-width: 70%;
   height: auto;
+  border-radius: 5px;
 }
 
 section.contact-wrapper {
@@ -1983,6 +2002,14 @@ section.contact-wrapper .contact-infos .contact-img-grid .contact-img {
   background-size: cover;
   border-radius: 10px;
   border: 1px solid #C9961B;
+}
+
+.wpcf7-response-output {
+  color: white;
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 16px;
 }
 
 section.article-wrapper {

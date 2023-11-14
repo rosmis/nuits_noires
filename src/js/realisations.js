@@ -70,7 +70,8 @@ triggers.forEach((trigger) => {
 
             morphingDataUrlPath
                 ? (triggerContentNext.innerText = triggerTitles[nextIndex])
-                : undefined;
+                : (triggerContentNext.innerText =
+                      triggerServiceTitles[nextIndex]);
 
             morphingControllerNextInstance.playSegments([50, 80], true);
 
@@ -79,7 +80,8 @@ triggers.forEach((trigger) => {
         const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
         morphingDataUrlPath
             ? (triggerContentPrevious.innerText = triggerTitles[prevIndex])
-            : undefined;
+            : (triggerContentPrevious.innerText =
+                  triggerServiceTitles[prevIndex]);
 
         morphingControllerPreviousInstance.playSegments([50, 80], true);
     });
@@ -101,6 +103,8 @@ triggers.forEach((trigger) => {
 const slides = gsap.utils.toArray(".category-wrapper");
 const anchorCategoryTags = gsap.utils.toArray(".title-wrapper");
 const triggerTitles = ["Culturel", "Marque", "Art Vivant", "Patrimoine"];
+const triggerServiceTitles = ["Services", "Formats", "Diffusion"];
+
 let currentIndex = 0;
 
 triggers.forEach((trigger) => {

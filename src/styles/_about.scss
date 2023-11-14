@@ -261,6 +261,10 @@ section.about-wrapper {
                 max-width: 120px;
                 height: auto;
 
+                &#branly-img {
+                    max-width: 150px;
+                }
+
                 @include media-max('tablet') {
                     max-width: 40px;
                 }
@@ -319,7 +323,7 @@ section.about-wrapper {
 
             &.inner-top-left {
                 bottom: 62%;
-                right: 55%;
+                right: 47%;
 
                 @include media-max('tablet') {
                     display: none;
@@ -336,8 +340,8 @@ section.about-wrapper {
             }
 
             &.inner-bottom-middle {
-                bottom: 26%;
-                right: 35%;
+                bottom: 50%;
+                right: 0%;
             }
 
             &.middle-middle-left {
@@ -559,4 +563,5 @@ section.about-wrapper {
 section.about-wrapper .immersive-wrapper .immersive-content-wrapper .immersive-column #Micro_Neumann_KU100 {
     max-width: 70%;
     height: auto;
+    border-radius: 5px;
 }  

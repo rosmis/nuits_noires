@@ -48,7 +48,7 @@ Template name: A PROPOS
                 <div class="panel timeline-item">
                     <div class="timeline-item-content">
                         <p class="timeline-item-title">2016</p>
-                        <p>Élodie et Jérémie se rencontrent à Lyon et sont passionnés par le monde de l’art pluridisciplinaire</p>
+                        <p>Élodie et Jérémie se rencontrent à Lyon et sont passionnés par le monde de l’art pluridisciplinaire.</p>
                     </div>
                         
                     <p class="timeline-date">2016</p>
@@ -57,7 +57,7 @@ Template name: A PROPOS
                 <div class="panel timeline-item">
                     <div class="timeline-item-content">
                         <p class="timeline-item-title">2017</p>
-                        <p>Ils organisent des concerts dans le noir afin de faire vivre la musique autrement par le sensoriel. Chaque représentation est complète avec plus de 10 000 spectateurs (18-80 ans) au total. Leur objectif de rendre la culture accessible à tous et a été un franc succès!</p>
+                        <p>Ils organisent des concerts dans le noir afin de faire vivre la musique autrement par le sensoriel. Chaque représentation est complète et a connu un franc succès avec plus de 10 000 spectateurs (18-80 ans) au total. Leur objectif est de rendre la culture accessible à tout type de public et c'est mission réussie !</p>
                     </div>
                         
                     <p class="timeline-date">2017</p>
@@ -66,7 +66,7 @@ Template name: A PROPOS
                 <div class="panel timeline-item">
                     <div class="timeline-item-content">
                         <p class="timeline-item-title">2019</p>
-                        <p>La presse s’intéresse progressivement à leurs expériences et des marques leur confient des événements corporate pour faire vivre des expériences sensibles à leurs publics.
+                        <p>La presse s’intéresse progressivement à leurs expériences et des marques leur confient des événements corporates pour faire vivre des expériences sensibles à leurs publics.
                             C’est ainsi qu’est né Nuits Noires.
                         </p>
                     </div>
@@ -136,7 +136,7 @@ Template name: A PROPOS
 
         <img class="brand-elipsis" src="<?php echo get_template_directory_uri() . '/src/assets/svg/brand-elipsis.svg'?>"  alt="brand showcase" />
 
-        <a href="https://nuitsnoires.com/realisations/culturel/art-explora/" class="brand-wrapper outer-top-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/enfant-au-musee-parcours-mediation-sonore-enfant-et-adulte-dans-lair-les-machines-volantes/" class="brand-wrapper outer-top-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Parcours-mediation-culturelle-enfant-nuits-noires-e1697263742903.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -144,7 +144,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Art_explora_mediation.webp'?>" loading=lazy alt="logo ville villeurbanne">
         </a>
 
-        <a hre="https://nuitsnoires.com/realisations/marque/billecart-salmon/" class="brand-wrapper outer-top-right">
+        <a hre="https://nuitsnoires.com/realisations/marque/marketing-immersif-sonore-valoriser-savoir-faire/" class="brand-wrapper outer-top-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Campagne-marketing-immersif-nuits-noires-e1697265913965.webp);">
                 <div class="equalizer-brand-wrapper"></div> 
             </div>
@@ -152,7 +152,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Billecart_salmon_cuvee_nicolas_francois.webp'?>" loading=lazy alt="logo swatch">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/patrimoine/centre-pompidou/" class="brand-wrapper outer-bottom-left">
+        <a href="https://nuitsnoires.com/realisations/patrimoine/podcast-mediation-culturelle-raconter-et-valoriser-histoire-du-lieu/" class="brand-wrapper outer-bottom-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/podcast-medition-culturelle-valorisation-architecture-pompidou--e1697273589803.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -160,7 +160,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/centre_pompidou_mediation_numerique.webp'?>" loading=lazy alt="logo seine musicale">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/fondation-louis-vuitton/" class="brand-wrapper outer-bottom-right">
+        <a href="https://nuitsnoires.com/realisations/culturel/ambiance-sonore-immersive-enrichir-une-exposition/" class="brand-wrapper outer-bottom-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/ambiance-sonore-immersive-nuits-noires.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -168,7 +168,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Fondation_Louis_vuitton_exposition.webp'?>" loading=lazy alt="logo salomon">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/musee-albert-kahn/" class="brand-wrapper middle-bottom-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/parcours-sonore-immersif-valoriser-oeuvres-voyage-sensoriel/" class="brand-wrapper middle-bottom-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/parcours-sonore-immersif-musee-nuits-noires--e1697298321488.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -176,7 +176,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/musee_albert_kahn_mediation.webp'?>" loading=lazy alt="logo red bull">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/museum-national-dhistoire-naturelle/" class="brand-wrapper middle-bottom-right">
+        <a href="https://nuitsnoires.com/realisations/culturel/podcast-mediation-scientifique-culture-accessible-exposition-transmedia/" class="brand-wrapper middle-bottom-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Exposition-transmedia-nuits-noires-.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -184,15 +184,15 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Musee_national_histoire_naturelle_exposition.webp'?>" loading=lazy alt="logo paris musee mediation podcast">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/musee-du-quai-branly-jacques-chirac/" class="brand-wrapper inner-top-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/conserver-une-oeuvre-podcast-mediation-numerique-conservation-oeuvre-art/" class="brand-wrapper inner-top-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/podcast-mediation-culturelle-nuits-noires.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
 
-            <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/musee_quai_branly_podcast_mediation.webp'?>" loading=lazy alt="logo palais de tokyo">
+            <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/musee_quai_branly_podcast_mediation.webp'?>" id="branly-img" loading=lazy alt="logo palais de tokyo">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/art-vivant/opera-de-lyon-pockemon-crew-contrappunto/" class="brand-wrapper inner-top-right">
+        <a href="https://nuitsnoires.com/realisations/art-vivant/spectacle-vivant-immersif-composition-musicale-opera-de-lyon-spectacle-art-vivant/" class="brand-wrapper inner-top-right">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Composition-musicale-sensible-spectacle.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -200,7 +200,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/opera_de_lyon_composition.webp'?>" loading=lazy alt="logo opera de lyon">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/palais-de-tokyo/" class="brand-wrapper inner-bottom-middle">
+        <a href="https://nuitsnoires.com/realisations/culturel/ambiance-sonore-immersive-enrichir-une-exposition/" class="brand-wrapper inner-bottom-middle">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/mediation-culturelle-sonore-1-e1695731457864.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -208,7 +208,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Palais_de_tokyo_mediation.webp'?>" loading=lazy alt="logo fondation louis vuitton experience">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/culturel/paris-musees/" class="brand-wrapper middle-middle-left">
+        <a href="https://nuitsnoires.com/realisations/culturel/podcast-de-mediation-culturelle-pour-valoriser-oeuvre-art-olympiades-culturelles-2024/" class="brand-wrapper middle-middle-left">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/Paris-musees-olympiques-podcast-mediation.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -216,7 +216,7 @@ Template name: A PROPOS
             <img src="<?php echo get_template_directory_uri(). '/src/assets/brands/Paris_musees_mediation_podcast.webp'?>" loading=lazy alt="logo musee nationnal histoire naturel">
         </a>
 
-        <a href="https://nuitsnoires.com/realisations/marque/salomon/" class="brand-wrapper middle">
+        <a href="https://nuitsnoires.com/realisations/marque/marketing-immersif-sonore-lancement-produit/" class="brand-wrapper middle">
             <div class="brand-hover-preview" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/09/ours-d_or-de-la-communication-scaled.webp);">
                 <div class="equalizer-brand-wrapper"></div>
             </div>
@@ -251,7 +251,7 @@ Template name: A PROPOS
                     <p>
                         <b>L’audio immersif</b> est un médium, tout comme l’image, l’installation artistique, la peinture, la musique…Il semble fondamental d’introduire par le fait que le son 3D est au service d’un propos et non l’inverse. 
                     </p>
-                    <p>Si vous êtes aspirer à proposer des créations sonores immersives c’est pour sublimer, préserver, valoriser vos histoires et vos savoirs avec la plus grande des subtilités. L’usage du <b>son 3D</b> et de l’immersion ont plusieurs vertus : transporter vos imaginaires dans des univers, vous donner l’impression de voyager dans le temps, vous faire écouter des histoires que nous imaginons à partir de propos vérifiés par des comités scientifiques. </p>
+                    <p>L'immersion sonore permet de sublimer, préserver, valoriser vos histoires et vos savoirs avec la plus grande des subtilités, et ce, pour différents usages pérennes. Vous pouvez transporter vos publics dans votre univers en stimulant leurs imaginaires. </p>
                 </div>
 
                 <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/Micro_Neumann_KU100.jpeg" alt="image son immersif" id="Micro_Neumann_KU100" loading="lazy">
@@ -259,11 +259,11 @@ Template name: A PROPOS
 
             <div class="immersive-column">
                 <img src="https://nuitsnoires.com/wp-content/uploads/2023/10/LIVEROOM1PS.png" alt="image son immersif" loading="lazy">
-                <p><b>Le son immersif</b> est réalisé à partir de captation ambisonique ou binaurale pour reproduire à la perfection un environnement sonore. Le but étant de restituer l’écoute naturelle le plus fidèlement possible pour se sentir au cœur de l’action et de l’espace sonore. </p>
+                <p>L’objectif de l’audio immersif est de restituer l’écoute naturelle de l’oreille humaine le plus fidèlement possible. Il permet de se sentir au cœur de l’action et de l’espace sonore grâce à des techniques de captation “ambisonique” et “binaurale”.  </p>
                 <p>
-                    Associé à un <b>sound design</b> sensible l’auditeur se sentira en totale immersion dans un <b>environnement virtuel</b> grâce à une écoute au casque ou sur un système de diffusion spatialisée.
+                    Au même titre qu'un tournage de cinéma, nous concevons les scénarios en mêlant voix et sound design sensible pour permettre à l’auditeur de se sentir en immersion totale à 360°. 
                 </p>
-                <p>Pour l’enregistrement binaural, nous captons avec la tête Neumann KU100 que vous voyez ci-joint. Grâce à ce micro spécifique, nous créons des immersions sonores réalistes pour offrir à vos auditeurs une excellente qualité sonore à 360°.</p>
+                <p>Pour un rendu optimal, nous captons, entre autres, avec l'un de nos micros KU100 que vous pouvez voir ici. Pour ce qui est de l'écoute, de simples écouteurs, casques ou enceintes suffisent. </p>
             </div>
 
         </div>
@@ -277,7 +277,7 @@ Template name: A PROPOS
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Elodie_Parmentier_NuitsNoires.jpg);">
                     <div class="team-member-content">
                         <a href="https://www.linkedin.com/in/elodie-parmentier-95902426/" target="_blank">Élodie Parmentier <img src="<?php echo get_template_directory_uri() . '/src/assets/linkedin_gold.svg'?>" loading="lazy" /></a>
-                        <p>Présidente associée. En charge du développement et de la direction artistique sonore, elle vous accompagne pour dessiner votre projet de création sonore immersive et sur-mesure. Sa leitmotiv est de conjuguer : médiation culturelle, muséographie, création sonore, immersion pour tisser un lien fort entre œuvres et le public en mêlant le ludisme au didactisme.</p>
+                        <p>Présidente associée. En charge du développement et de la direction artistique sonore, elle vous accompagne pour dessiner votre projet de création sonore immersive et sur-mesure. Sa leitmotiv est de conjuguer : médiation culturelle, muséographie, création sonore, immersion pour tisser un lien fort entre les œuvres et le public en mêlant le ludisme au didactisme.</p>
                     </div>
                 </div>
                 <div class="team-member-card" style="background-image: url(https://nuitsnoires.com/wp-content/uploads/2023/10/Jade_Dumont_NuitsNoires.jpg);">
