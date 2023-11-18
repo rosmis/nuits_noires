@@ -177,7 +177,7 @@ header.navbar {
         @include flex(flex-end);
         gap: 1.5em;
 
-        @include media-max('tablet') {
+        @include media-max('desktop') {
           display: none;
         }
 

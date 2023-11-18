@@ -375,7 +375,7 @@ header.navbar .nav-links-wrapper .nav-icon-wrapper {
   justify-content: flex-end;
   gap: 1.5em;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1300px) {
   header.navbar .nav-links-wrapper .nav-icon-wrapper {
     display: none;
   }
@@ -599,16 +599,6 @@ section.home_wrapper .subtitles-content {
   overflow: hidden;
   z-index: 70;
   padding: 5em;
-}
-section.home_wrapper .subtitles-content::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1em;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
 }
 @media screen and (max-width: 992px) {
   section.home_wrapper .subtitles-content {
