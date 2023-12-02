@@ -64,7 +64,6 @@ menuToggleAudio.forEach((toggle) => {
     toggle.addEventListener("click", () => {
         if (toggle.classList.contains("mute")) {
             localStorage.setItem("equalizerStatus", false);
-            console.log("muted");
 
             isSoundDisabled = true;
         } else {
@@ -228,8 +227,6 @@ function triggerSubtitleOpacity(wrapper) {
         ? mobileTranslateYValuesDict[seaWrapperIndex]
         : 1.3;
 
-    console.log("translateYValue", translateYValue);
-
     subtitleTimeline.to(paragraphsInWrapper[subtitleIndex], {
         duration: 1,
         opacity: 1,
@@ -254,8 +251,6 @@ function triggerSubtitleOpacity(wrapper) {
         transform: `translateY(${translateCounter}em)`,
         ease: Power3.easeInOut,
     });
-
-    console.log("triggering single opacity");
 
     // TODO bring back also this
     // paragraphsInWrapper[subtitleIndex].classList.add("displayed");
@@ -296,14 +291,12 @@ function playNextSound() {
         paused: true,
     });
 
-    const translateYValue = isDeviceWidthPhone ? 9 : 4.4;
-    console.log("translateYValueNEXTSCREEN", translateYValue);
+    const translateYValue = isDeviceWidthPhone ? 9 : 4.7;
 
     displayOpacityNextParagraphContainer(seaWrapperIndex + 1);
 
     // if there are remaining paragraphs that have not been translated on trigger action, sum these translations and move container accordingly
     if (remainingParagraphsBeforeNextContainer.length > 0) {
-        console.log("triggering plss");
         remainingParagraphsBeforeNextContainer.forEach((_paragraph) =>
             triggerSubtitleOpacity(subtitleWrappers[seaWrapperIndex])
         );
@@ -314,8 +307,6 @@ function playNextSound() {
         transform: `translateY(${translateCounter - translateYValue}em)`,
         ease: Power3.easeInOut,
     });
-
-    console.log("EXECUTING MAIN TRANSLATION");
 
     subtitlesTranslateInterludeTimeline.play();
 
@@ -357,8 +348,6 @@ function playNextSound() {
 
 function displayOpacityOtherParagraphs(paragraphs) {
     const otherChildrenOpacityTimeline = gsap.timeline({ paused: true });
-
-    console.log("HERE");
 
     otherChildrenOpacityTimeline.to(paragraphs, {
         duration: 0.7,
@@ -411,8 +400,6 @@ audioEqualizer.addEventListener("click", () => {
         localStorage.getItem("equalizerStatus")
     );
 
-    console.log("localStorageEqualizerStatus", localStorageEqualizerStatus);
-
     triggerAllSoundsSystem(!localStorageEqualizerStatus);
 });
 
@@ -427,6 +414,5 @@ function triggerAllSoundsSystem(status) {
 }
 
 window.addEventListener("beforeunload", () => {
-    console.log("unmount");
     return clearInterval(timeCodeInterval);
 });
